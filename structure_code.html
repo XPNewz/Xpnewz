@@ -12,7 +12,107 @@
         name="description">
     </meta>
     <style>
-        .progress-percentage {
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            border: 1px solid greenyellow;
+            box-shadow: 0 2px 10px skyblue;
+
+
+        }
+
+        h1,
+        h2 {
+            color: #000000;
+        }
+
+        a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .system-requirements {
+            background: #f0f0f0;
+            padding: 10px;
+            border-left: 4px solid #4CAF50;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .creator-info {
+            margin: 20px 0;
+            font-style: italic;
+        }
+
+        footer {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .slider {
+            position: relative;
+            max-width: 100%;
+            margin: 20px 0;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .slides img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 5px;
+            flex-shrink: 0;
+        }
+
+        .slider-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .slider-buttons button {
+            background: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        .slider-buttons button:hover {
+            background: rgba(0, 0, 0, 0.7);
+        }
+	.progress-percentage {
             position: fixed;
             top: 50%;
             left: 0;
@@ -120,106 +220,7 @@
         .modal-content button:hover {
             background: #45a049;
         }
-
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-
-        }
-
-        main {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background: white;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-            border: 1px solid greenyellow;
-            box-shadow: 0 2px 10px skyblue;
-
-
-        }
-
-        h1,
-        h2 {
-            color: #000000;
-        }
-
-        a {
-            color: #000000;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .system-requirements {
-            background: #f0f0f0;
-            padding: 10px;
-            border-left: 4px solid #4CAF50;
-            margin: 20px 0;
-            border-radius: 5px;
-        }
-
-        .creator-info {
-            margin: 20px 0;
-            font-style: italic;
-        }
-
-        footer {
-            text-align: center;
-            margin: 20px 0;
-            font-size: 0.9em;
-            color: #666;
-        }
-
-        .slider {
-            position: relative;
-            max-width: 100%;
-            margin: 20px 0;
-            overflow: hidden;
-            border-radius: 5px;
-        }
-
-        .slides {
-            display: flex;
-            transition: transform 0.5s ease;
-        }
-
-        .slides img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-            border-radius: 5px;
-            flex-shrink: 0;
-        }
-
-        .slider-buttons {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            transform: translateY(-50%);
-        }
-
-        .slider-buttons button {
-            background: rgba(0, 0, 0, 0.5);
-            border: none;
-            color: white;
-            padding: 10px;
-            cursor: pointer;
-            border-radius: 50%;
-        }
-
-        .slider-buttons button:hover {
-            background: rgba(0, 0, 0, 0.7);
-        }
+    
     </style>
 </head>
 
@@ -227,21 +228,45 @@
 
     <main>
         <article>
-            <!--content start-->
-
-	    	
-            <div class="slider">
+            <!--Content start-->
+		
+               <!--1st image slider-->
+	      <div class="slider">
                 <div class="slides" id="slides">
-
-
+                    <!--paste image here for both thumbnail and main image-->
+			
+			<!---->
+			<!--paste here other images-->
+                    <img alt="Screenshot 2" src="" />
+                <img alt="Screenshot 3" src="" />
                     <div class="slider-buttons">
                         <button id="prev">❮</button>
                         <button id="next">❯</button>
                     </div>
                 </div>
-                <!--content end-->
+	      </div>	      
+		    <!--Write other content here after 1st image slider-->
+		      
+                <!--2nd image slider-->
+	        <div class="slider">
+                <div class="slides" id="slides">
+                    <!--paste image here for both thumbnail and main image-->
+			
+			<!---->
+			<!--paste here other images-->
+                    <img alt="Screenshot 2" src="" />
+                <img alt="Screenshot 3" src="" />
+                    <div class="slider-buttons">
+                        <button id="prev">❮</button>
+                        <button id="next">❯</button>
+                    </div>
+                </div>
+		</div>	
+		<!--Write other content here after 2nd image slider-->
+			
+	<!--Content end-->	    
         </article>
-    </main>
+       
     <div class="rating-container">
         <h2 id="rating">Rate Your Experience on this Blog</h2>
         <div class="stars" id="stars">
@@ -346,6 +371,7 @@
             }
         });
     </script>
+   </main>	    
 </body>
 
 </html>
