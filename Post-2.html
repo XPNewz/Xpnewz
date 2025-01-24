@@ -1,0 +1,348 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8"></meta>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"></meta>
+    <title>Anant Shrankhla is an indie game project developed by InstanityCrew, a team led by AsasinoManik. AsasinoManik is a video game designer and YouTuber with over 18.5k subscribers.</title>
+	<meta content="Anant Shrankhla is an indie game project developed by InstanityCrew, a team led by AsasinoManik. AsasinoManik is a video game designer and YouTuber with over 18.5k subscribers.." name="description"></meta>
+    <style>
+      .progress-percentage {
+            position: fixed;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            background-color: #ffcc00;
+            color: #000;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 0 10px 10px 0;
+            font-size: 16px;
+            z-index: 1000;
+        }
+    
+      .rating-container {
+            display: flex;
+            align-items: flex-start;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            flex-direction: column;
+        }
+
+        .stars {
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+            margin: 0;
+        }
+
+        .star {
+            font-size: 40px;
+            color: #e0e0e0;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+        .star:hover,
+        .star.selected {
+            color: #ffc107;
+        }
+
+        .rating-value {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .average-rating,
+        .rating-stats {
+            font-size: 16px;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            background: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #45a049;
+        }
+        #rating{
+            margin-top: 0;
+        }
+            /* Modal Styling */
+    .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .modal-content {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .modal-content button {
+        margin-top: 15px;
+        padding: 10px 15px;
+        background: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .modal-content button:hover {
+        background: #45a049;
+    }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+   			box-shadow: 0px 2px 15px #ff0707;
+    		box-shadow: 0px 2px 15px #ff1e00;
+
+        }
+        h1, h2 {
+            color: #000000;
+        }
+        a {
+            color:  #000000;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .system-requirements {
+            background: #f0f0f0;
+            padding: 10px;
+            border-left: 4px solid #4CAF50;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .creator-info {
+            margin: 20px 0;
+            font-style: italic;
+        }
+        footer {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 0.9em;
+            color: #666;
+        }
+        .slider {
+            position: relative;
+            max-width: 100%;
+            margin: 20px 0;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .slides img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 5px;
+            flex-shrink: 0;
+        }
+        .slider-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .slider-buttons button {
+            background: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        .slider-buttons button:hover {
+            background: rgba(0, 0, 0, 0.7);
+        }
+      
+    </style>
+</head>
+<body>
+
+<main>
+    <article>
+        <h2 id="titile">Anant Shrankhla</h2>
+        <p><strong>Anant Shrankhla</strong> is an indie game project developed by <strong>InstanityCrew</strong>, a team led by <strong><a href="https://youtube.com/@asasinomanik?si=2CK3ugF3V34AboPo">AsasinoManik</a></strong>. AsasinoManik is a video game designer and YouTuber with over 18.5k subscribers. He began his game development career in 10th grade while working at his father’s café, where he fell in love with creating games. After working on several projects, he decided to develop his own indie game.</p>
+
+        <p>The project, initially known as <strong>"ABE CHUP: A Mysterious Journey,"</strong> was later renamed <strong>Anant Shrankhla</strong>. While he started the project alone, he eventually gathered a team of passionate individuals via Discord to help him achieve his dream. On <strong>January 7, 2021</strong>, the first glimpses of the game were revealed through an alpha demo game trailer. <a href="https://youtu.be/JmrhVCb55ME?si=TGddi0ZpVO6ipOQm"> See the video</a>.</p>
+
+        <h2>About the Game</h2>
+        <p>This first-person mystery adventure game is deeply rooted in Indian culture. It follows a clueless protagonist who finds himself in an unknown place in the Himalayas. The story revolves around mysterious voices, places, and narratives. The game is a heart-pumping adventure through historical Indian landmarks and their mysteries, ultimately leading the protagonist to discover his true purpose.</p>
+
+        <div class="slider">
+            <div class="slides" id="slides">
+               <div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh4ayVxwmDFysEL4gpwzTzCq2RGTbtzjtDvyDiOFoTy5oIZN8ZikmxFEdYt7vEcyIbF7rgKg_eysDR8Dj6JNfqhwVIZo7mYecpscgXWQeHxMe1iCpDTnr-DnVSbJOOsIu0eKODNSO7xNEhVx3FBiSnb1J7C9sSR4xvVP2l0nei0uHLUNATiPeFiDwcLGg/s1600/IMG-20250123-WA0016.jpg" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" data-original-height="225" data-original-width="225" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh4ayVxwmDFysEL4gpwzTzCq2RGTbtzjtDvyDiOFoTy5oIZN8ZikmxFEdYt7vEcyIbF7rgKg_eysDR8Dj6JNfqhwVIZo7mYecpscgXWQeHxMe1iCpDTnr-DnVSbJOOsIu0eKODNSO7xNEhVx3FBiSnb1J7C9sSR4xvVP2l0nei0uHLUNATiPeFiDwcLGg/s1600/IMG-20250123-WA0016.jpg"/></a></div> <img alt="Screenshot 1" src="https://res.cloudinary.com/did8behwz/image/upload/v1737611562/anat_shrankhla_1_d3l2na.jpg" />
+                <img alt="Screenshot 2" src="https://res.cloudinary.com/did8behwz/image/upload/v1737611556/anant_shrankhla_2_rlm3zp.jpg" />
+                <img alt="Screenshot 3" src="https://res.cloudinary.com/did8behwz/image/upload/v1737611556/anant_shrankhla_3_fmwnl1.jpg" />
+            </div>
+            <div class="slider-buttons">
+                <button id="prev">❮</button>
+                <button id="next">❯</button>
+            </div>
+        </div>
+
+        <div class="system-requirements">
+            <h3>System Requirements</h3>
+            <ul>
+                <li>Requires a 64-bit processor and operating system</li>
+                <li><strong>OS:</strong> TBD</li>
+                <li><strong>Processor:</strong> TBD</li>
+                <li><strong>Memory:</strong> TBD GB RAM</li>
+                <li><strong>Graphics:</strong> TBD</li>
+                <li><strong>DirectX:</strong> Version 12</li>
+                <li><strong>Storage:</strong> TBD GB available space</li>
+                <li><strong>Sound Card:</strong> TBD</li>
+            </ul>
+        </div>
+
+        <div class="creator-info">
+            <p><strong>Creator:</strong> <a href="https://youtube.com/@asasinomanik?si=2CK3ugF3V34AboPo">AsasinoManik</a></p>
+            <p><strong>Platform:</strong> <a href="https://store.steampowered.com/app/2108080/Anant_Shrankhla/">Steam</a></p>
+        </div>
+        <div class="rating-container">
+            <h2 id="rating">Rate Your Experience on this Blog</h2>
+            <div class="stars" id="stars">
+                <span class="star" data-value="1">&#9733;</span>
+                <span class="star" data-value="2">&#9733;</span>
+                <span class="star" data-value="3">&#9733;</span>
+                <span class="star" data-value="4">&#9733;</span>
+                <span class="star" data-value="5">&#9733;</span>
+            </div>
+            <div class="rating-value" id="ratingValue">Rating: 0</div>
+            <button id="submitRating">Submit Rating</button>
+        </div>
+        
+        <!-- Thank You Modal -->
+        <div id="thankYouModal" class="modal">
+            <div class="modal-content">
+                <p>Thank you for sharing your feedback! You rated: <span id="userRating"></span> stars.</p>
+                <button id="closeModal">Close</button>
+            </div>
+        </div>
+    </article>
+</main>
+<script>
+    const slides = document.getElementById('slides');
+    const images = slides.getElementsByTagName('img');
+    const prev = document.getElementById('prev');
+    const next = document.getElementById('next');
+    let index = 0;
+
+    function showSlide(i) {
+        index = (i + images.length) % images.length;
+        slides.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    prev.addEventListener('click', () => showSlide(index - 1));
+    next.addEventListener('click', () => showSlide(index + 1));
+</script>
+<div class="progress-percentage" id="progress-percentage">0%</div>
+   <script>
+        const progressPercentage = document.getElementById("progress-percentage");
+
+        window.addEventListener("scroll", () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.body.scrollHeight - window.innerHeight;
+            const scrollPercent = Math.round((scrollTop / docHeight) * 100);
+
+            // Update the percentage text
+            progressPercentage.textContent = scrollPercent + "%";
+        });
+    </script>
+        <script>
+            const stars = document.querySelectorAll('.star');
+            const ratingValue = document.getElementById('ratingValue');
+            const submitRating = document.getElementById('submitRating');
+            const modal = document.getElementById('thankYouModal');
+            const userRating = document.getElementById('userRating');
+            const closeModal = document.getElementById('closeModal');
+            let selectedRating = 0;
+            let ratings = JSON.parse(localStorage.getItem('ratings')) || [];
+        
+            // Highlight stars
+            stars.forEach(star => {
+                star.addEventListener('mouseover', () => updateStars(star.dataset.value));
+                star.addEventListener('click', () => {
+                    selectedRating = parseInt(star.dataset.value);
+                    ratingValue.textContent = `Rating: ${selectedRating}`;
+                });
+            });
+        
+            // Update stars appearance
+            function updateStars(rating) {
+                stars.forEach(star => {
+                    star.classList.toggle('selected', star.dataset.value <= rating);
+                });
+            }
+        
+            // Submit rating
+            submitRating.addEventListener('click', () => {
+                if (selectedRating === 0) {
+                    alert('Please select a rating between 1 and 5.');
+                    return;
+                }
+                ratings.push(selectedRating);
+                localStorage.setItem('ratings', JSON.stringify(ratings));
+                showThankYouModal(selectedRating);
+            });
+        
+            // Show Thank You Modal
+            function showThankYouModal(rating) {
+                userRating.textContent = rating;
+                modal.style.display = 'flex';
+            }
+        
+            // Close Modal
+            closeModal.addEventListener('click', () => {
+                modal.style.display = 'none';
+            });
+        
+            // Close modal if clicked outside
+            window.addEventListener('click', (event) => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        </script>
+	</body>
+</html><div class="separator" style="clear: both; text-align: center;"><br /></div>

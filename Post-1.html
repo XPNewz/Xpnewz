@@ -1,0 +1,332 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    </meta>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    </meta>
+    <title>Nintendo has announced the Nintendo Switch 2, which brings many upgrades compared to the original model to
+        make better gaming experience. The main new features include:</title>
+    <style>
+        .progress-percentage {
+            position: fixed;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            background-color: #ffcc00;
+            color: #000;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 0 10px 10px 0;
+            font-size: 16px;
+            z-index: 1000;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            box-shadow: 0px 2px 15px springgreen;
+            box-shadow: 0px 2px 15px springgreen;
+        }
+
+        h1,
+        h2 {
+            color: #000000;
+        }
+
+        a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .creator-info {
+            margin: 20px 0;
+            font-style: italic;
+        }
+
+        footer {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        img {
+            border-radius: 5px;
+            border: 3px solid silver
+        }
+
+        .info {
+            background: #f0f0f0;
+            padding: 10px;
+            border-left: 4px solid cyan;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .rating-container {
+            display: flex;
+            align-items: flex-start;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            flex-direction: column;
+        }
+
+        .stars {
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+            margin: 0;
+        }
+
+        .star {
+            font-size: 40px;
+            color: #e0e0e0;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+        .star:hover,
+        .star.selected {
+            color: #ffc107;
+        }
+
+        .rating-value {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .average-rating,
+        .rating-stats {
+            font-size: 16px;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            background: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #45a049;
+        }
+
+        #rating {
+            margin-top: 0;
+        }
+
+        /* Modal Styling */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .modal-content button {
+            margin-top: 15px;
+            padding: 10px 15px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .modal-content button:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <main>
+        <article>
+            <p>Nintendo has announced the Nintendo Switch 2, which brings many upgrades compared to the original model
+                to make better gaming experience. The main new features include:</p>
+            <div class="separator" style="clear: both;"><a
+                    href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgvUPBDSHMb62GKlUga2hHqiLEcdx14dayDhyphenhyphenBnIrvVECbfeehv480Xz8dVef7NrLMKCYhVzl9PFMGsZbYjtrOaZrpixZLcfTRBGxUZeMy8L5bBfGR14b5Ej-yFBqt4IRk1z8iRD1WZ9kF1QqcZIC4VPU2Nj50D1KWFoi-QLtL940bbbwWn3IRQ7wbNeg/s1600/a-gaming-image-with-the-text-what-s-uniq_0fY7VL8iRsmgEoI16Z7FOA_TV8PnsVEQGWQGUfG3yyvSQ.jpeg"
+                    style="display: block; padding: 1em 0; text-align: center;"><img alt="" border="0"
+                        data-original-height="736" data-original-width="1312"
+                        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgvUPBDSHMb62GKlUga2hHqiLEcdx14dayDhyphenhyphenBnIrvVECbfeehv480Xz8dVef7NrLMKCYhVzl9PFMGsZbYjtrOaZrpixZLcfTRBGxUZeMy8L5bBfGR14b5Ej-yFBqt4IRk1z8iRD1WZ9kF1QqcZIC4VPU2Nj50D1KWFoi-QLtL940bbbwWn3IRQ7wbNeg/s1600/a-gaming-image-with-the-text-what-s-uniq_0fY7VL8iRsmgEoI16Z7FOA_TV8PnsVEQGWQGUfG3yyvSQ.jpeg" /></a>
+            </div>
+            <div class="system-requirements">
+                <h3>Bigger Screen and Better Design: </h3><br />
+                <p>Nintendo Switch 2 has an 8-inch display, which is larger than the 7-inch screen display on the first
+                    Switch. This gives players a more engaging visuals. The console still works as both a handheld
+                    device and a home console. The kickstand now has a 'U' shape, which helps it stand up more .</p>
+            </div>
+            <div>
+                <h3>Enhanced Connectivity:</h3><br />
+                <p>Nintendo Switch 2 has an 8-inch display, which is larger than the 7-inch screen display on the first
+                    Switch. This gives players a more engaging visuals. The console still works as both a handheld
+                    device and a home console. The kickstand now has a 'U' shape, which helps it stand up more .</p>
+            </div>
+            <div>
+                <h3>New Joy-Con Controllers:</h3><br />
+                <p>The Switch 2 comes with Joy-Con controllers you can take off. They stick on with magnets instead of
+                    sliding. This new way to connect them tries to make them more stable and easier to use.</p>
+            </div>
+            <div class="separator" style="clear: both;"><a
+                    href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgWaqGT6bnxN611Yvk2Xos0v4d3KCydb1oANWg8eUAxHpQFZoS7_eQGIxQA_jEdWmUwdHRoQzFNiJPsgjR1Akj_aXizcCGMJeFxLbV_Ru1Ue5eukV37XdQmGg13YmoZ3Y_HuEwl7mucyO2qGg7ZDsQiTpU1e2b8w3aBFw8P9UpvVO0MAxZuG5i2k4XU-A/s1600/a-gaming-photo-of-a-nintendo-switch-cons_qSKf0ur6QX6dE6OdvaH14Q_d47_O34RSXGS_P0lW_-w1w.jpeg"
+                    style="display: block; padding: 1em 0; text-align: center;"><img alt="" border="0"
+                        data-original-height="736" data-original-width="1312"
+                        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgWaqGT6bnxN611Yvk2Xos0v4d3KCydb1oANWg8eUAxHpQFZoS7_eQGIxQA_jEdWmUwdHRoQzFNiJPsgjR1Akj_aXizcCGMJeFxLbV_Ru1Ue5eukV37XdQmGg13YmoZ3Y_HuEwl7mucyO2qGg7ZDsQiTpU1e2b8w3aBFw8P9UpvVO0MAxZuG5i2k4XU-A/s1600/a-gaming-photo-of-a-nintendo-switch-cons_qSKf0ur6QX6dE6OdvaH14Q_d47_O34RSXGS_P0lW_-w1w.jpeg" /></a>
+            </div>
+            <div>
+                <h3>Playing Old Games:</h3><br />
+                <p>You can play your Nintendo Switch games on this new device. It works with games on cartridges and
+                    ones you download. But some games might not work on it.</p>
+            </div>
+            <div>
+                <h3>Upgraded Performance:</h3><br />
+                <p>Nintendo hasn't revealed the hardware specs yet, but word on the street is that the Switch 2 will
+                    pack an eight-core Cortex-A78AE processor, 10 streaming multiprocessors (SMs), and 8GB of RAM. This
+                    setup points to a big step up in power compared to the original Switch.</p>
+            </div>
+            <p><b>Nintendo has plans to give more information about the Switch 2 in a special Nintendo Direct event set
+                    for
+                    April 2, 2025.</b></p>
+                    <div class="separator" style="clear: both;"><a
+                        href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEickdlZnhE7Mtphyphenhyphenxtk2aswjOIA3So-Uv4DjHS5o652-Hj-ge8irHBVtS2stNo596EUCF7oONg7ud_KqQNe5IG03rT-3cZptEqUrVRvm2g44nJXdXFzGM5X1E1D4UOC_PEAL75yeWioDK5irGDfI8Fv_1ohlW5Ls0G71Pw8kGCGSc7OMxR076ITrCwaAw/s1600/a-photo-of-a-man-playing-a-game-on-a-nin_EuwmPwoeQty8iXhUYQYU-A_IJI1nE9QQFySbRaEM0_2NA.jpeg"
+                        style="display: block; padding: 1em 0; text-align: center;"><img alt="" border="0"
+                            data-original-height="736" data-original-width="1312"
+                            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEickdlZnhE7Mtphyphenhyphenxtk2aswjOIA3So-Uv4DjHS5o652-Hj-ge8irHBVtS2stNo596EUCF7oONg7ud_KqQNe5IG03rT-3cZptEqUrVRvm2g44nJXdXFzGM5X1E1D4UOC_PEAL75yeWioDK5irGDfI8Fv_1ohlW5Ls0G71Pw8kGCGSc7OMxR076ITrCwaAw/s1600/a-photo-of-a-man-playing-a-game-on-a-nin_EuwmPwoeQty8iXhUYQYU-A_IJI1nE9QQFySbRaEM0_2NA.jpeg" /></a>
+                </div>
+        
+            <div class="info">
+                <p><i>Written by: Elagon</i></p>
+            </div>
+            <div class="rating-container">
+                <h2 id="rating">Rate Your Experience on this Blog</h2>
+                <div class="stars" id="stars">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                </div>
+                <div class="rating-value" id="ratingValue">Rating: 0</div>
+                <button id="submitRating">Submit Rating</button>
+            </div>
+            <!-- Thank You Modal -->
+            <div id="thankYouModal" class="modal">
+                <div class="modal-content">
+                    <p>Thank you for sharing your feedback! You rated: <span id="userRating"></span> stars.</p>
+                    <button id="closeModal">Close</button>
+                </div>
+            </div>
+        </article>
+    </main>
+    <div class="progress-percentage" id="progress-percentage">0%</div>
+    <script>
+        const progressPercentage = document.getElementById("progress-percentage");
+    
+        window.addEventListener("scroll", () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.body.scrollHeight - window.innerHeight;
+            const scrollPercent = Math.round((scrollTop / docHeight) * 100);
+    
+            // Update the percentage text
+            progressPercentage.textContent = scrollPercent + "%";
+        });
+    
+        const stars = document.querySelectorAll('.star');
+        const ratingValue = document.getElementById('ratingValue');
+        const submitRating = document.getElementById('submitRating');
+        const modal = document.getElementById('thankYouModal');
+        const userRating = document.getElementById('userRating');
+        const closeModal = document.getElementById('closeModal');
+        let selectedRating = 0;
+        let ratings = JSON.parse(localStorage.getItem('ratings')) || [];
+    
+        // Highlight stars
+        stars.forEach(star => {
+            star.addEventListener('mouseover', () => updateStars(star.dataset.value));
+            star.addEventListener('click', () => {
+                selectedRating = parseInt(star.dataset.value);
+                updateStars(selectedRating); // Keep stars highlighted after click
+                ratingValue.textContent = `Rating: ${selectedRating}`;
+            });
+        });
+    
+        // Update stars appearance
+        function updateStars(rating) {
+            stars.forEach(star => {
+                star.classList.toggle('selected', star.dataset.value <= rating);
+            });
+        }
+    
+        // Submit rating
+        submitRating.addEventListener('click', () => {
+            if (selectedRating === 0) {
+                alert('Please select a rating between 1 and 5.');
+                return;
+            }
+            ratings.push(selectedRating);
+            localStorage.setItem('ratings', JSON.stringify(ratings));
+            showThankYouModal(selectedRating);
+        });
+    
+        // Show Thank You Modal
+        function showThankYouModal(rating) {
+            userRating.textContent = rating;
+            modal.style.display = 'flex';
+        }
+    
+        // Close Modal
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+    
+        // Close modal if clicked outside
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+    
+</body>
+
+</html>

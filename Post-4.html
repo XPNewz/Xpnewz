@@ -1,0 +1,306 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8"></meta>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"></meta>
+    <title>Anant Shrankhla is an indie game project developed by InstanityCrew, a team led by AsasinoManik. AsasinoManik is a video game designer and YouTuber with over 18.5k subscribers.</title>
+	<meta content="Anant Shrankhla is an indie game project developed by InstanityCrew, a team led by AsasinoManik. AsasinoManik is a video game designer and YouTuber with over 18.5k subscribers.." name="description"></meta>
+    <style>
+      .progress-percentage {
+            position: fixed;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            background-color: #ffcc00;
+            color: #000;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 0 10px 10px 0;
+            font-size: 16px;
+            z-index: 1000;
+        }
+    
+      .rating-container {
+            display: flex;
+            align-items: flex-start;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            flex-direction: column;
+        }
+
+        .stars {
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+            margin: 0;
+        }
+
+        .star {
+            font-size: 40px;
+            color: #e0e0e0;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+        .star:hover,
+        .star.selected {
+            color: #ffc107;
+        }
+
+        .rating-value {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .average-rating,
+        .rating-stats {
+            font-size: 16px;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            background: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #45a049;
+        }
+        #rating{
+            margin-top: 0;
+        }
+            /* Modal Styling */
+    .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .modal-content {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .modal-content button {
+        margin-top: 15px;
+        padding: 10px 15px;
+        background: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .modal-content button:hover {
+        background: #45a049;
+    }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+   			box-shadow: 0px 2px 15px #ff0707;
+    		box-shadow: 0px 2px 15px #ff1e00;
+
+        }
+        h1, h2 {
+            color: #000000;
+        }
+        a {
+            color:  #000000;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .system-requirements {
+            background: #f0f0f0;
+            padding: 10px;
+            border-left: 4px solid #4CAF50;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .creator-info {
+            margin: 20px 0;
+            font-style: italic;
+        }
+        footer {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 0.9em;
+            color: #666;
+        }
+        .slider {
+            position: relative;
+            max-width: 100%;
+            margin: 20px 0;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .slides img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 5px;
+            flex-shrink: 0;
+        }
+        .slider-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .slider-buttons button {
+            background: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        .slider-buttons button:hover {
+            background: rgba(0, 0, 0, 0.7);
+        }
+        .info {
+            background: #f0f0f0;
+            padding: 10px;
+            border-left: 4px solid cyan;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+      
+    </style>
+</head>
+<body>
+
+<main>
+    <article>
+        <div class="info">
+            <p><i>Written by: Elagon</i></p>
+        </div>
+        
+        <div class="rating-container">
+            <h2 id="rating">Rate Your Experience on this Blog</h2>
+            <div class="stars" id="stars">
+                <span class="star" data-value="1">&#9733;</span>
+                <span class="star" data-value="2">&#9733;</span>
+                <span class="star" data-value="3">&#9733;</span>
+                <span class="star" data-value="4">&#9733;</span>
+                <span class="star" data-value="5">&#9733;</span>
+            </div>
+            <div class="rating-value" id="ratingValue">Rating: 0</div>
+            <button id="submitRating">Submit Rating</button>
+        </div>
+        
+        <!-- Thank You Modal -->
+        <div id="thankYouModal" class="modal">
+            <div class="modal-content">
+                <p>Thank you for sharing your feedback! You rated: <span id="userRating"></span> stars.</p>
+                <button id="closeModal">Close</button>
+            </div>
+        </div>
+    </article>
+</main>
+<div class="progress-percentage" id="progress-percentage">0%</div>
+   <script>
+        const progressPercentage = document.getElementById("progress-percentage");
+
+        window.addEventListener("scroll", () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.body.scrollHeight - window.innerHeight;
+            const scrollPercent = Math.round((scrollTop / docHeight) * 100);
+
+            // Update the percentage text
+            progressPercentage.textContent = scrollPercent + "%";
+        });
+    </script>
+        <script>
+            const stars = document.querySelectorAll('.star');
+            const ratingValue = document.getElementById('ratingValue');
+            const submitRating = document.getElementById('submitRating');
+            const modal = document.getElementById('thankYouModal');
+            const userRating = document.getElementById('userRating');
+            const closeModal = document.getElementById('closeModal');
+            let selectedRating = 0;
+            let ratings = JSON.parse(localStorage.getItem('ratings')) || [];
+        
+            // Highlight stars
+            stars.forEach(star => {
+                star.addEventListener('mouseover', () => updateStars(star.dataset.value));
+                star.addEventListener('click', () => {
+                    selectedRating = parseInt(star.dataset.value);
+                    ratingValue.textContent = `Rating: ${selectedRating}`;
+                });
+            });
+        
+            // Update stars appearance
+            function updateStars(rating) {
+                stars.forEach(star => {
+                    star.classList.toggle('selected', star.dataset.value <= rating);
+                });
+            }
+        
+            // Submit rating
+            submitRating.addEventListener('click', () => {
+                if (selectedRating === 0) {
+                    alert('Please select a rating between 1 and 5.');
+                    return;
+                }
+                ratings.push(selectedRating);
+                localStorage.setItem('ratings', JSON.stringify(ratings));
+                showThankYouModal(selectedRating);
+            });
+        
+            // Show Thank You Modal
+            function showThankYouModal(rating) {
+                userRating.textContent = rating;
+                modal.style.display = 'flex';
+            }
+        
+            // Close Modal
+            closeModal.addEventListener('click', () => {
+                modal.style.display = 'none';
+            });
+        
+            // Close modal if clicked outside
+            window.addEventListener('click', (event) => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        </script>
+	</body>
+</html><div class="separator" style="clear: both; text-align: center;"><br /></div>
