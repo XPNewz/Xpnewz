@@ -119,8 +119,8 @@
             background: white;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             border-radius: 5px;
-            box-shadow: 0px 2px 15px #07f3ff;
-            box-shadow: 0px 2px 15px #07f3ff;
+            border: solid 1px greenyellow;
+            box-shadow: 0px 2px 15px skyblue;
 
         }
 
@@ -143,7 +143,7 @@
         }
 
         a {
-            color: #2980b9;
+            color: #000000;
             text-decoration: none;
         }
 
@@ -228,7 +228,7 @@
             font-size: 1.2em;
             color: #4CAF50;
         }
-
+        
         /* Responsive Design */
         @media (max-width: 768px) {
             main {
@@ -247,6 +247,49 @@
                 font-size: 0.95rem;
             }
         }
+.slider {
+            position: relative;
+            max-width: 100%;
+            margin: 20px 0;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .slides img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 5px;
+            flex-shrink: 0;
+        }
+
+        .slider-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .slider-buttons button {
+            background: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        .slider-buttons button:hover {
+            background: rgba(0, 0, 0, 0.7);
+        }
+        
     </style>
 </head>
 
@@ -260,10 +303,23 @@
 
             <h1>Top 4 Best Gaming Monitors</h1>
 
-            <p>With great advancement in the technology world of gaming, a proper monitor makes the difference. If you
-                are just a casual gamer or an enthusiast for esports, a quality gaming monitor is crucial for a totally
-                immersive experience. Here are some of the top gaming monitors of 2025 that offer excellent visuals,
-                ultra-fast refresh rates, and amazing performance.</p>
+            <p>With great advancement in the technology world of gaming, a proper monitor makes the difference. If you are just a casual gamer or an enthusiast for esports, a quality gaming monitor is crucial for a totally immersive experience. Here are some of the top gaming monitors of 2025 that offer excellent visuals, ultra-fast refresh rates, and amazing performance.</p>
+          <div class="slider">
+                <div class="slides" id="slides">
+                    <!--paste image here for both thumbnail and main image-->
+                  
+		
+			<!---->
+			<!--paste here other images-->
+                    <img alt="Screenshot 1" src="https://res.cloudinary.com/did8behwz/image/upload/v1737787689/DaRuFeRcSrKYkaf0J1FjoQ_zgxlrf.jpg" />
+                  <img alt="Screenshot 2" src="https://res.cloudinary.com/did8behwz/image/upload/v1737787854/huO8JzA0TeeCx8wmzJxtSQ_wb0pcd.jpg" />
+                <img alt="Screenshot 3" src="https://res.cloudinary.com/did8behwz/image/upload/v1737787683/dwlXHlVHRq2G8Ynd6pqrGw_vfmoe0.jpg" />
+                    <div class="slider-buttons">
+                        <button id="prev">❮</button>
+                        <button id="next">❯</button>
+                    </div>
+                </div>
+	      </div>	      
             <div class="point">
                 <h2>1. ASUS ROG Swift PG259QN – The Ultimate Performance Monitor</h2>
                 <p>The <strong>ASUS ROG Swift PG259QN</strong> is the ultimate choice for competitive gamers who demand
@@ -274,10 +330,9 @@
                     stay ahead of your competitors. The <strong>NVIDIA G-SYNC</strong> technology minimizes screen
                     tearing and stuttering, providing a seamless gaming experience.
                 </p>
-                <button class="toggleButton" data-target="table1">Show Table </button>
-
+                <button class="toggleButton" data-target="table1">View Specification</button>
+                <h1>ASUS ROG Swift PG259QN Specifications</h1>
                 <table id="table1" style="display: none;">
-                    <h1>ASUS ROG Swift PG259QN Specifications</h1>
                     <thead>
                         <tr>
                             <th>Specification</th>
@@ -351,7 +406,7 @@
                         time</strong>, it ensures smooth gameplay and reduces lag, making it perfect for <strong>AAA
                         titles</strong> and high-paced action games. The <strong>IPS panel</strong> provides excellent
                     color accuracy and wide viewing angles.</p>
-                <button class="toggleButton" data-target="table2">Show Table </button>
+                    <button class="toggleButton" data-target="table2">View Specification</button>
                 <h1>Dell Alienware AW3821DW Specifications</h1>
                 <table id="table2" style="display: none;">
                     <thead>
@@ -424,9 +479,8 @@
                     engaging experience. Its <strong>QLED display</strong> offers incredible contrast and vibrant
                     colors, while the <strong>240Hz refresh rate</strong> and <strong>1ms response time</strong> ensure
                     fast-paced action is always smooth and lag-free. Whether you're playing <strong>first-person
-                        shooters</strong> or <strong>RPGs</strong>, the Odyssey G7 provides the ultimate performance.
-                </p>
-                <button class="toggleButton" data-target="table3">Show Table </button>
+                        shooters</strong> or <strong>RPGs</strong>, the Odyssey G7 provides the ultimate performance.</p>
+                        <button class="toggleButton" data-target="table3">View Specification</button>
                 <h1>Samsung Odyssey G7 Specifications</h1>
                 <table id="table3" style="display: none;">
                     <thead>
@@ -507,7 +561,7 @@
                     and <strong>1ms response time</strong>, it also ensures a smooth gaming experience. Additionally,
                     <strong>NVIDIA G-SYNC compatibility</strong> ensures that your gameplay is always tear-free.
                 </p>
-                <button class="toggleButton" data-target="table4">Show Table</button>
+                <button class="toggleButton" data-target="table4">View Specification</button>
                 <h1>LG 27GN950-B Specifications</h1>
                 <table id="table4" style="display: none;">
                     <thead>
@@ -598,28 +652,28 @@
     </main>
 
     <div class="progress-percentage" id="progress-percentage">0%</div>
-
+  
     <script>// Get all toggle buttons
         const toggleButtons = document.querySelectorAll('.toggleButton');
-
+        
         // Add a click event listener to each button
         toggleButtons.forEach(button => {
-            button.addEventListener('click', function () {
-                // Get the associated table ID from the data-target attribute
-                const tableId = button.getAttribute('data-target');
-                const table = document.getElementById(tableId);
-
-                // Toggle the visibility of the table
-                if (table.style.display === 'none' || table.style.display === '') {
-                    table.style.display = 'table'; // Show the table
-                    button.textContent = `Hide Table `; // Update button text
-                } else {
-                    table.style.display = 'none'; // Hide the table
-                    button.textContent = `Show Table`; // Reset button text
-                }
-            });
+          button.addEventListener('click', function () {
+            // Get the associated table ID from the data-target attribute
+            const tableId = button.getAttribute('data-target');
+            const table = document.getElementById(tableId);
+        
+            // Toggle the visibility of the table
+            if (table.style.display === 'none' || table.style.display === '') {
+              table.style.display = 'table'; // Show the table
+              button.textContent = `Hide `; // Update button text
+            } else {
+              table.style.display = 'none'; // Hide the table
+              button.textContent = `View Specification`; // Reset button text
+            }
+          });
         });
-
+        
         const progressPercentage = document.getElementById("progress-percentage");
 
         window.addEventListener("scroll", () => {
