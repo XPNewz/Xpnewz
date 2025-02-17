@@ -1,11 +1,114 @@
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8"></meta>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"></meta>
-    <title>Anant Shrankhla is an indie game project developed by InstanityCrew, a team led by AsasinoManik. AsasinoManik is a video game designer and YouTuber with over 18.5k subscribers.</title>
-	<meta content="Anant Shrankhla is an indie game project developed by InstanityCrew, a team led by AsasinoManik. AsasinoManik is a video game designer and YouTuber with over 18.5k subscribers.." name="description"></meta>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>the story revolves around the Mysterious virus which has spread all over the world and turns people into violent creatures. Now the role of the protagonist is to find the answer to all this chaos in this dangerous world.</title>
+    <meta
+        content="the story revolves around the Mysterious virus which has spread all over the world and turns people into violent creatures. Now the role of the protagonist is to find the answer to all this chaos in this dangerous world."
+        name="description">
     <style>
-      .progress-percentage {
+        
+        body {
+            font-family: verdana;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            border: 1px solid greenyellow;
+            box-shadow: 0 2px 10px skyblue;
+
+
+        }
+
+        h1,
+        h2 {
+            color: #000000;
+        }
+
+        a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .system-requirements {
+            background: #f0f0f0;
+            padding: 10px;
+            border-left: 4px solid #4CAF50;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .creator-info {
+            margin: 20px 0;
+            font-style: italic;
+        }
+
+        footer {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .slider {
+            position: relative;
+            max-width: 100%;
+            margin: 20px 0;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .slides img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 5px;
+            flex-shrink: 0;
+        }
+
+        .slider-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .slider-buttons button {
+            background: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        .slider-buttons button:hover {
+            background: rgba(0, 0, 0, 0.7);
+        }
+	.progress-percentage {
             position: fixed;
             top: 50%;
             left: 0;
@@ -18,8 +121,8 @@
             font-size: 16px;
             z-index: 1000;
         }
-    
-      .rating-container {
+
+        .rating-container {
             display: flex;
             align-items: flex-start;
             background: #ffffff;
@@ -73,169 +176,232 @@
         button:hover {
             background: #45a049;
         }
-        #rating{
+
+        #rating {
             margin-top: 0;
         }
-            /* Modal Styling */
-    .modal {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        justify-content: center;
-        align-items: center;
-        z-index: 1000;
-    }
 
-    .modal-content {
-        background: white;
-        padding: 20px;
-        border-radius: 10px;
-        text-align: center;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    }
-
-    .modal-content button {
-        margin-top: 15px;
-        padding: 10px 15px;
-        background: #4CAF50;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-
-    .modal-content button:hover {
-        background: #45a049;
-    }
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
+        /* Modal Styling */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
         }
-        main {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
+
+        .modal-content {
             background: white;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-   			box-shadow: 0px 2px 15px #ff0707;
-    		box-shadow: 0px 2px 15px #ff1e00;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
 
+        .modal-content button {
+            margin-top: 15px;
+            padding: 10px 15px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
-        h1, h2 {
-            color: #000000;
+
+        .modal-content button:hover {
+            background: #45a049;
         }
-        a {
-            color:  #000000;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .system-requirements {
+	    .info {
             background: #f0f0f0;
             padding: 10px;
-            border-left: 4px solid #4CAF50;
+            border-left: 4px solid gold;
             margin: 20px 0;
             border-radius: 5px;
-        }
-        .creator-info {
-            margin: 20px 0;
-            font-style: italic;
-        }
-        footer {
-            text-align: center;
-            margin: 20px 0;
-            font-size: 0.9em;
-            color: #666;
-        }
-        .slider {
-            position: relative;
-            max-width: 100%;
-            margin: 20px 0;
-            overflow: hidden;
-            border-radius: 5px;
-        }
-        .slides {
-            display: flex;
-            transition: transform 0.5s ease;
-        }
-        .slides img {
+      }
+      table {
             width: 100%;
-            height: auto;
-            object-fit: cover;
-            border-radius: 5px;
-            flex-shrink: 0;
+            border-collapse: collapse;
+            margin-bottom: 20px;
         }
-        .slider-buttons {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            transform: translateY(-50%);
+        table, th, td {
+            border: 1px solid #ddd;
         }
-        .slider-buttons button {
-            background: rgba(0, 0, 0, 0.5);
-            border: none;
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .dropdown {
+            margin-bottom: 20px;
+        }
+        .dropdown-content {
+            display: none;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+        .dropdown-button {
+            background-color: #4CAF50;
             color: white;
             padding: 10px;
+            border: none;
             cursor: pointer;
-            border-radius: 50%;
         }
-        .slider-buttons button:hover {
-            background: rgba(0, 0, 0, 0.7);
+        .dropdown-button:hover {
+            background-color: #45a049;
         }
-        .info {
-            background: #f0f0f0;
-            padding: 10px;
-            border-left: 4px solid cyan;
-            margin: 20px 0;
-            border-radius: 5px;
+        .hell{
+            text-align: center;
+            color: rgb(39, 20, 20);
+            text-shadow: 0px 0px 2px #333;
+            font-family: kraken;
         }
-      
+    
     </style>
 </head>
 <body>
+    <main>
+        <article>
+            <!--Content start-->
+		    <h1 class="hell">Hell is Us</h1>
 
-<main>
-    <article>
-        <div class="info">
-            <p><i>Written by: Elagon</i></p>
+<h2>Introduction:</h2>
+<p>The Hell is Us Game is an action adventure Game which is developed by the Rogue factor. This Game is mainly focused over story based Action Gameplay where you have a multiple combat system to fight with enemies.</p>
+
+  <!--1st image slider-->
+	      <div class="slider">
+           <div class="slides" id="slides">     
+			<!---->
+			<!--paste here other images-->
+                    <img alt="Screenshot 2" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEin5ulzm87ClnS8YTf-fzIfYqK6iGfIYRuRy1CWyV0n7EGBtjy2elNLXecpw_iUcmN7I1LC0jZHdbqYLwi5u0XzzwGkIEGl37w7LMinVflCYcxEGfCPd0Mg0Dzl4-n_emciJQaT0kP7dfSaNEKbZBCVZi6wJEK1sm1KoEemwCabkrr8tfe8mD7NOG4VqQ/s1600/Gemini_Generated_Image_rdju5ordju5ordju.jpeg" />
+                <img alt="Screenshot 3" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiKAZ9jNdgg-ITk5dh-Iz6cIoz_26RSq5fj2eDMu30gXgT-UH08XBq-67RjmkbqO018Ycp9InM-jiW1N-OyZ89A27P4FoXdtv4IfMryFaYKjwQ3wDN_raEuFUsQJx2N4y8VmV-hhcBB6_pQvf5zK3q8I4yfN6koFMpp9uyKgEnxifJPTbibf9joUZhy5w/s1600/unnamed%20%282%29.png" />
+                    <div class="slider-buttons">
+                        <button id="prev">❮</button>
+                        <button id="next">❯</button>
+                    </div>
+                </div>
+	      </div>	      
+		    <!--Write other content here after 1st image slider-->
+		    <h2>Key Features</h2>
+
+<h3>1. Story-driven Gameplay:</h3>
+<p>The story revolves around the Mysterious virus which has spread all over the world and turns people into violent creatures. Now the role of the protagonist is to find the answer to all this chaos in this dangerous world.</p>
+
+<h3>2. Exploration:</h3>
+<p>This Game gives you open world exploration and allows the protagonist to reveal all the secrets, solve puzzles and interact with the environment. The tone of the Game is set to be as a war tone with a mix of natural and urban environment.</p>
+
+<h3>3. Combat System:</h3>
+<p>This combat system is mainly focused over the melee and player skill and strategy. Player will be going to face both human enemies and supernatural enemies. There are requirements to tackle different enemies.</p>
+
+<h3>4. Emotional Narrative:</h3>
+<p>The story gives you many kinds of emotional attachment while playing with loss, survival, and human condition in extreme circumstances.</p>
+
+<div class="dropdown">
+    <button class="dropdown-button" onclick="toggleDropdown()">Show System Requirements</button>
+    <div class="dropdown-content" id="dropdownContent">
+        <table>
+            <tr>
+                <th>Component</th>
+                <th>Minimum Requirements</th>
+                <th>Recommended Requirements</th>
+            </tr>
+            <tr>
+                <td>OS</td>
+                <td>Windows 10 (64-bit)</td>
+                <td>Windows 10/11 (64-bit)</td>
+            </tr>
+            <tr>
+                <td>Processor</td>
+                <td>Intel Core i5-8400 / AMD Ryzen 5 2600</td>
+                <td>Intel Core i7-9700K / AMD Ryzen 7 3700X</td>
+            </tr>
+            <tr>
+                <td>Memory (RAM)</td>
+                <td>8 GB</td>
+                <td>16 GB</td>
+            </tr>
+            <tr>
+                <td>Graphics Card</td>
+                <td>NVIDIA GTX 1060 (6GB) / AMD RX 580 (8GB)</td>
+                <td>NVIDIA RTX 2060 (6GB) / AMD RX 5700 XT (8GB)</td>
+            </tr>
+            <tr>
+                <td>DirectX</td>
+                <td>Version 12</td>
+                <td>Version 12</td>
+            </tr>
+            <tr>
+                <td>Storage</td>
+                <td>50 GB SSD</td>
+                <td>50 GB SSD</td>
+            </tr>
+            <tr>
+                <td>Additional Notes</td>
+                <td>Requires a 64-bit processor and operating system</td>
+                <td>SSD recommended for faster loading times</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<h2>Development:</h2>
+<p>Developed by Rogue factor. Published by Nacon.</p>
+
+<h2>Conclusion:</h2>
+<p>If you’re a fan of games like <em>The Last of Us</em>, <em>Hellblade: Senua’s Sacrifice</em>, or <em>Days Gone</em>, <em>Hell is Us</em> might be worth keeping an eye on!</p>
+               
+                
+	<!--Content end-->
+		<div class="info">
+                <p><i>Written by: Elagon</i></p>
+          </div>
+        </article>
+       
+    <div class="rating-container">
+        <h2 id="rating">Rate Your Experience on this Blog</h2>
+        <div class="stars" id="stars">
+            <span class="star" data-value="1">&#9733;</span>
+            <span class="star" data-value="2">&#9733;</span>
+            <span class="star" data-value="3">&#9733;</span>
+            <span class="star" data-value="4">&#9733;</span>
+            <span class="star" data-value="5">&#9733;</span>
         </div>
-        
-        <div class="rating-container">
-            <h2 id="rating">Rate Your Experience on this Blog</h2>
-            <div class="stars" id="stars">
-                <span class="star" data-value="1">&#9733;</span>
-                <span class="star" data-value="2">&#9733;</span>
-                <span class="star" data-value="3">&#9733;</span>
-                <span class="star" data-value="4">&#9733;</span>
-                <span class="star" data-value="5">&#9733;</span>
-            </div>
-            <div class="rating-value" id="ratingValue">Rating: 0</div>
-            <button id="submitRating">Submit Rating</button>
+        <div class="rating-value" id="ratingValue">Rating: 0</div>
+        <button id="submitRating">Submit Rating</button>
+    </div>
+
+    <!-- Thank You Modal -->
+    <div id="thankYouModal" class="modal">
+        <div class="modal-content">
+            <p>Thank you for sharing your feedback! You rated: <span id="userRating"></span> stars.</p>
+            <button id="closeModal">Close</button>
         </div>
-        
-        <!-- Thank You Modal -->
-        <div id="thankYouModal" class="modal">
-            <div class="modal-content">
-                <p>Thank you for sharing your feedback! You rated: <span id="userRating"></span> stars.</p>
-                <button id="closeModal">Close</button>
-            </div>
-        </div>
-    </article>
-</main>
-<div class="progress-percentage" id="progress-percentage">0%</div>
-   <script>
+    </div>
+
+    <script>
+        const slides = document.getElementById('slides');
+        const images = slides.getElementsByTagName('img');
+        const prev = document.getElementById('prev');
+        const next = document.getElementById('next');
+        let index = 0;
+
+        function showSlide(i) {
+            index = (i + images.length) % images.length;
+            slides.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        prev.addEventListener('click', () => showSlide(index - 1));
+        next.addEventListener('click', () => showSlide(index + 1));
+    </script>
+    <div class="progress-percentage" id="progress-percentage">0%</div>
+    <script>
         const progressPercentage = document.getElementById("progress-percentage");
 
         window.addEventListener("scroll", () => {
@@ -247,60 +413,73 @@
             progressPercentage.textContent = scrollPercent + "%";
         });
     </script>
-        <script>
-            const stars = document.querySelectorAll('.star');
-            const ratingValue = document.getElementById('ratingValue');
-            const submitRating = document.getElementById('submitRating');
-            const modal = document.getElementById('thankYouModal');
-            const userRating = document.getElementById('userRating');
-            const closeModal = document.getElementById('closeModal');
-            let selectedRating = 0;
-            let ratings = JSON.parse(localStorage.getItem('ratings')) || [];
-        
-            // Highlight stars
+    <script>
+        const stars = document.querySelectorAll('.star');
+        const ratingValue = document.getElementById('ratingValue');
+        const submitRating = document.getElementById('submitRating');
+        const modal = document.getElementById('thankYouModal');
+        const userRating = document.getElementById('userRating');
+        const closeModal = document.getElementById('closeModal');
+        let selectedRating = 0;
+        let ratings = JSON.parse(localStorage.getItem('ratings')) || [];
+
+        // Highlight stars
+        stars.forEach(star => {
+            star.addEventListener('mouseover', () => updateStars(star.dataset.value));
+            star.addEventListener('click', () => {
+                selectedRating = parseInt(star.dataset.value);
+                ratingValue.textContent = `Rating: ${selectedRating}`;
+            });
+        });
+
+        // Update stars appearance
+        function updateStars(rating) {
             stars.forEach(star => {
-                star.addEventListener('mouseover', () => updateStars(star.dataset.value));
-                star.addEventListener('click', () => {
-                    selectedRating = parseInt(star.dataset.value);
-                    ratingValue.textContent = `Rating: ${selectedRating}`;
-                });
+                star.classList.toggle('selected', star.dataset.value <= rating);
             });
-        
-            // Update stars appearance
-            function updateStars(rating) {
-                stars.forEach(star => {
-                    star.classList.toggle('selected', star.dataset.value <= rating);
-                });
+        }
+
+        // Submit rating
+        submitRating.addEventListener('click', () => {
+            if (selectedRating === 0) {
+                alert('Please select a rating between 1 and 5.');
+                return;
             }
-        
-            // Submit rating
-            submitRating.addEventListener('click', () => {
-                if (selectedRating === 0) {
-                    alert('Please select a rating between 1 and 5.');
-                    return;
-                }
-                ratings.push(selectedRating);
-                localStorage.setItem('ratings', JSON.stringify(ratings));
-                showThankYouModal(selectedRating);
-            });
-        
-            // Show Thank You Modal
-            function showThankYouModal(rating) {
-                userRating.textContent = rating;
-                modal.style.display = 'flex';
-            }
-        
-            // Close Modal
-            closeModal.addEventListener('click', () => {
+            ratings.push(selectedRating);
+            localStorage.setItem('ratings', JSON.stringify(ratings));
+            showThankYouModal(selectedRating);
+        });
+
+        // Show Thank You Modal
+        function showThankYouModal(rating) {
+            userRating.textContent = rating;
+            modal.style.display = 'flex';
+        }
+
+        // Close Modal
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        // Close modal if clicked outside
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
                 modal.style.display = 'none';
-            });
+            }
+        });
         
-            // Close modal if clicked outside
-            window.addEventListener('click', (event) => {
-                if (event.target === modal) {
-                    modal.style.display = 'none';
-                }
-            });
-        </script>
-	</body>
-</html><div class="separator" style="clear: both; text-align: center;"><br /></div>
+    function toggleDropdown() {
+        var content = document.getElementById("dropdownContent");
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            content.style.display = "block";
+        }
+    }
+
+    </script>
+   </main>	    
+</body>
+
+</html>
+<div class="separator" style="clear: both; text-align: center;"><br /></div>
