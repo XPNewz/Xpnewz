@@ -1,11 +1,115 @@
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8"></meta>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"></meta>
-    <title>Anant Shrankhla is an indie game project developed by InstanityCrew, a team led by AsasinoManik. AsasinoManik is a video game designer and YouTuber with over 18.5k subscribers.</title>
-	<meta content="Anant Shrankhla is an indie game project developed by InstanityCrew, a team led by AsasinoManik. AsasinoManik is a video game designer and YouTuber with over 18.5k subscribers.." name="description"></meta>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Prime Gaming is a gaming service which is a part of Amazon Prime which can be accessed by taking Prime membership. It offers a variety of games. Here’s a bunch of information:</title>
+    <meta
+        content="What is Prime Gaming?"
+        name="description">
     <style>
-      .progress-percentage {
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            text-align: justify;
+        }
+      
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            border: 1px solid greenyellow;
+            box-shadow: 0 2px 10px skyblue;
+
+
+        }
+
+        h1,
+        h2 {
+            color: #007bff;
+        }
+
+        a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .system-requirements {
+            background: #f0f0f0;
+            padding: 10px;
+            border-left: 4px solid #4CAF50;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .creator-info {
+            margin: 20px 0;
+            font-style: italic;
+        }
+
+        footer {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .slider {
+            position: relative;
+            max-width: 100%;
+            margin: 20px 0;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .slides img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 5px;
+            flex-shrink: 0;
+        }
+
+        .slider-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .slider-buttons button {
+            background: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        .slider-buttons button:hover {
+            background: rgba(0, 0, 0, 0.7);
+        }
+	.progress-percentage {
             position: fixed;
             top: 50%;
             left: 0;
@@ -18,8 +122,8 @@
             font-size: 16px;
             z-index: 1000;
         }
-    
-      .rating-container {
+
+        .rating-container {
             display: flex;
             align-items: flex-start;
             background: #ffffff;
@@ -73,169 +177,218 @@
         button:hover {
             background: #45a049;
         }
-        #rating{
+
+        #rating {
             margin-top: 0;
         }
-            /* Modal Styling */
-    .modal {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        justify-content: center;
-        align-items: center;
-        z-index: 1000;
-    }
 
-    .modal-content {
-        background: white;
-        padding: 20px;
-        border-radius: 10px;
-        text-align: center;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    }
-
-    .modal-content button {
-        margin-top: 15px;
-        padding: 10px 15px;
-        background: #4CAF50;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-
-    .modal-content button:hover {
-        background: #45a049;
-    }
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-        main {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background: white;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-   			box-shadow: 0px 2px 15px #ff0707;
-    		box-shadow: 0px 2px 15px #ff1e00;
-
-        }
-        h1, h2 {
-            color: #000000;
-        }
-        a {
-            color:  #000000;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .system-requirements {
-            background: #f0f0f0;
-            padding: 10px;
-            border-left: 4px solid #4CAF50;
-            margin: 20px 0;
-            border-radius: 5px;
-        }
-        .creator-info {
-            margin: 20px 0;
-            font-style: italic;
-        }
-        footer {
-            text-align: center;
-            margin: 20px 0;
-            font-size: 0.9em;
-            color: #666;
-        }
-        .slider {
-            position: relative;
-            max-width: 100%;
-            margin: 20px 0;
-            overflow: hidden;
-            border-radius: 5px;
-        }
-        .slides {
-            display: flex;
-            transition: transform 0.5s ease;
-        }
-        .slides img {
+        /* Modal Styling */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
-            height: auto;
-            object-fit: cover;
-            border-radius: 5px;
-            flex-shrink: 0;
-        }
-        .slider-buttons {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            transform: translateY(-50%);
-        }
-        .slider-buttons button {
+            height: 100%;
             background: rgba(0, 0, 0, 0.5);
-            border: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .modal-content button {
+            margin-top: 15px;
+            padding: 10px 15px;
+            background: #4CAF50;
             color: white;
-            padding: 10px;
+            border: none;
+            border-radius: 5px;
             cursor: pointer;
-            border-radius: 50%;
         }
-        .slider-buttons button:hover {
-            background: rgba(0, 0, 0, 0.7);
+
+        .modal-content button:hover {
+            background: #45a049;
         }
-        .info {
+	    .info {
             background: #f0f0f0;
             padding: 10px;
-            border-left: 4px solid cyan;
+            border-left: 4px solid gold;
             margin: 20px 0;
             border-radius: 5px;
-        }
+      }
       
+#games-list {
+  max-height: 150px;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
+
+#games-list.expanded {
+  max-height: 2000px; /* Adjust based on content */
+}
+
+#read-more-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#read-more-btn:hover {
+  background-color: #0056b3;
+}
+      
+    
     </style>
 </head>
 <body>
+    <main>
+        <article>
+            <!--Content start-->
+		    <div>
+                <h2>Amazon Prime Games</h2>
+                <p>Prime Gaming is a gaming service which is a part of Amazon Prime which can be accessed by taking Prime membership. It offers a variety of games. Here’s a bunch of information:</p>
+            
+                <h2>Key Features of Prime Gaming:</h2>
+                <ul>
+                  <li><strong>Free Games:</strong> A member can access games free of cost. Once you install the game, it will be accessible forever.</li>
+                  <li><strong>Game Trials:</strong> Early access for some selected games.</li>
+                  <li><strong>In-game Content:</strong> Get free in-game loot, such as characters, currency, skins, and other items for popular games like Apex Legends, Roblox, Valorant, and more.</li>
+                </ul>
+               <!--1st image slider-->
+	      <div class="slider">
+                <div class="slides" id="slides">
+                    <!--paste image here for both thumbnail and main image-->
+			
+			<!---->
+			<!--paste here other images-->
+                    <img alt="Screenshot 2" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi1hW5qf1K_BOXQIahQIKdAuPS3-AEffbct9dbf6uy5dBo7_fA_KdpYWAjktO3eWLmvHHF60M1lrO8-PxTY7K42b4PIZKifdNxLzRvgs0W6QORrWd7mCwBaiTYJBXaO0fe88W2PBNr3U_Sb5xWZB_UDVmONnt28ZfN0l1asJikis4NOMb_4B2KjZK4Neg/s1600/4AhkJ38LQQSIPjIbkQiTaw.jpeg" />
+                <img alt="Screenshot 3" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiPwPMb-HGEkIVSLEUITY6FmpHLUxyhKKkOtVHTTJ2iGKnJ1WWi9Z-NJfNkbc5G7mmZ0mvLCiWKJmMl-nnq5nZdUx-aFUIrHtmkFjPXdUgibsOgxBawI4ofLZP_4Adu9o7LETQYIc_xm_sLhCkp0GwpSy5DZoRPlDVQCDStlusiGi5xnQmSKGMn4CN4ug/s1600/SV438znHTE63sS633StBBA.jpeg" />
+                    <div class="slider-buttons">
+                        <button id="prev">❮</button>
+                        <button id="next">❯</button>
+                    </div>
+                </div>
+	      </div>	      
+		    <!--Write other content here after 1st image slider-->
+            <h2>Games Available on Prime Gaming (as of 16 Feb)</h2>
+            <ul id="games-list">
+              <li>The Talos Principle: Gold Edition</li>
+              <li>Stunt Kite Party</li>
+              <li>Sands of Aura</li>
+              <li>AK-xolotl: Together</li>
+              <li>Hardspace: Shipbreaker</li>
+              <li>Lysfanga: The Time Shift Warrior</li>
+              <li>Dark Sky</li>
+              <li>BioShock Infinite Complete Edition</li>
+              <li>The Smurfs 2 - The Prisoner of the Green Stone</li>
+              <li>Surf World Series</li>
+              <li>ENDER LILIES: Quietus of the Knights</li>
+              <li>Blood West</li>
+              <li>BioShock 2 Remastered</li>
+              <li>Super Meat Boy Forever</li>
+              <li>Deus Ex: Game of the Year Edition</li>
+              <li>Zombie Army 4: Dead War</li>
+              <li>Grip</li>
+              <li>SteamWorld Quest: Hand of Gilgamech</li>
+              <li>Are You Smarter than a 5th Grader</li>
+              <li>To The Rescue!</li>
+              <li>Star Stuff</li>
+              <li>Spittings</li>
+              <li>Eastern Exorcist</li>
+              <li>The Bridge</li>
+              <li>Skydrift Infinity</li>
+              <li>Jurassic World Evolution</li>
+              <li>The Town of Light</li>
+              <li>Jurassic World Revolution</li>
+              <li>The Town of Light</li>
+              <li>Aces of the Luftwaffe - Squadron Extended Edition</li>
+              <li>Simulakros</li>
+              <li>The Outer Worlds</li>
+              <li>Elite Dangerous</li>
+              <li>Mooncars</li>
+              <li>The Collage Atlas</li>
+            </ul>
+        
+            <button id="read-more-btn">Read More</button>  
+                <!--2nd image slider-->
+	        <div class="slider">
+                <div class="slides" id="slides">
+			<!--paste here other images-->
+                    <img alt="Screenshot 2" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEihXi0rZeCRcEAq5LhKtkOMOu9CX4aP8Fb6-MxdYGW1PO7-rKx8GIELiLqPKUALEbA5YHISEY-AlrihQLwMQE_JYtF7zUs9sevclWlDYMMsoTEq6TKsSqPqjzTKKpHHwnLgV4gqsMA092_VsHqiEqGhM_XM40s-ZwjxD5fmNMLsdPd5fS1VC3BAIbCeDw/s1600/vw5jqEICRteIJ6kvocD9tQ.jpeg" />
+                <img alt="Screenshot 3" src="" />
+                    <div class="slider-buttons">
+                        <button id="prev">❮</button>
+                        <button id="next">❯</button>
+                    </div>
+                </div>
+		</div>	
+		<!--Write other content here after 2nd image slider-->
+		<h2>Steps to Access Amazon Prime Gaming:</h2>
+    <ol>
+      <li><strong>Sign Up/Sign In on Amazon Prime:</strong> If you’re not a member, subscribe to Amazon Prime.</li>
+      <li><strong>Visit the Prime Gaming Website:</strong> Go to <a href="https://gaming.amazon.com">gaming.amazon.com</a>.</li>
+      <li><strong>Link Your Accounts:</strong> Connect your Amazon account to platforms like Twitch, Epic Games, or other game services to get rewards.</li>
+      <li><strong>Claim Your Perks:</strong> Browse the available games, in-game content, and other offers, and claim them.</li>
+    </ol><hr>
+	<h2>Is It Worth It or Not?</h2>
+    <p>If you're a gamer and already have an Amazon Prime membership, Prime Gaming adds significant value and gives many games free of cost whose prices are much higher. The free games, in-game loot, and Twitch benefits make it a great perk for gamers.</p>
+  </div>
+	<!--Content end-->
+		<div class="info">
+                <p><i>Written by: Elagon</i></p>
+          </div>
+        </article>
+       
+    <div class="rating-container">
+        <h2 id="rating">Rate Your Experience on this Blog</h2>
+        <div class="stars" id="stars">
+            <span class="star" data-value="1">&#9733;</span>
+            <span class="star" data-value="2">&#9733;</span>
+            <span class="star" data-value="3">&#9733;</span>
+            <span class="star" data-value="4">&#9733;</span>
+            <span class="star" data-value="5">&#9733;</span>
+        </div>
+        <div class="rating-value" id="ratingValue">Rating: 0</div>
+        <button id="submitRating">Submit Rating</button>
+    </div>
 
-<main>
-    <article>
-        <div class="info">
-            <p><i>Written by: Elagon</i></p>
+    <!-- Thank You Modal -->
+    <div id="thankYouModal" class="modal">
+        <div class="modal-content">
+            <p>Thank you for sharing your feedback! You rated: <span id="userRating"></span> stars.</p>
+            <button id="closeModal">Close</button>
         </div>
-        
-        <div class="rating-container">
-            <h2 id="rating">Rate Your Experience on this Blog</h2>
-            <div class="stars" id="stars">
-                <span class="star" data-value="1">&#9733;</span>
-                <span class="star" data-value="2">&#9733;</span>
-                <span class="star" data-value="3">&#9733;</span>
-                <span class="star" data-value="4">&#9733;</span>
-                <span class="star" data-value="5">&#9733;</span>
-            </div>
-            <div class="rating-value" id="ratingValue">Rating: 0</div>
-            <button id="submitRating">Submit Rating</button>
-        </div>
-        
-        <!-- Thank You Modal -->
-        <div id="thankYouModal" class="modal">
-            <div class="modal-content">
-                <p>Thank you for sharing your feedback! You rated: <span id="userRating"></span> stars.</p>
-                <button id="closeModal">Close</button>
-            </div>
-        </div>
-    </article>
-</main>
-<div class="progress-percentage" id="progress-percentage">0%</div>
-   <script>
+    </div>
+
+    <script>
+        const slides = document.getElementById('slides');
+        const images = slides.getElementsByTagName('img');
+        const prev = document.getElementById('prev');
+        const next = document.getElementById('next');
+        let index = 0;
+
+        function showSlide(i) {
+            index = (i + images.length) % images.length;
+            slides.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        prev.addEventListener('click', () => showSlide(index - 1));
+        next.addEventListener('click', () => showSlide(index + 1));
+    </script>
+    <div class="progress-percentage" id="progress-percentage">0%</div>
+    <script>
         const progressPercentage = document.getElementById("progress-percentage");
 
         window.addEventListener("scroll", () => {
@@ -247,60 +400,76 @@
             progressPercentage.textContent = scrollPercent + "%";
         });
     </script>
-        <script>
-            const stars = document.querySelectorAll('.star');
-            const ratingValue = document.getElementById('ratingValue');
-            const submitRating = document.getElementById('submitRating');
-            const modal = document.getElementById('thankYouModal');
-            const userRating = document.getElementById('userRating');
-            const closeModal = document.getElementById('closeModal');
-            let selectedRating = 0;
-            let ratings = JSON.parse(localStorage.getItem('ratings')) || [];
-        
-            // Highlight stars
+    <script>
+        const stars = document.querySelectorAll('.star');
+        const ratingValue = document.getElementById('ratingValue');
+        const submitRating = document.getElementById('submitRating');
+        const modal = document.getElementById('thankYouModal');
+        const userRating = document.getElementById('userRating');
+        const closeModal = document.getElementById('closeModal');
+        let selectedRating = 0;
+        let ratings = JSON.parse(localStorage.getItem('ratings')) || [];
+
+        // Highlight stars
+        stars.forEach(star => {
+            star.addEventListener('mouseover', () => updateStars(star.dataset.value));
+            star.addEventListener('click', () => {
+                selectedRating = parseInt(star.dataset.value);
+                ratingValue.textContent = `Rating: ${selectedRating}`;
+            });
+        });
+
+        // Update stars appearance
+        function updateStars(rating) {
             stars.forEach(star => {
-                star.addEventListener('mouseover', () => updateStars(star.dataset.value));
-                star.addEventListener('click', () => {
-                    selectedRating = parseInt(star.dataset.value);
-                    ratingValue.textContent = `Rating: ${selectedRating}`;
-                });
+                star.classList.toggle('selected', star.dataset.value <= rating);
             });
-        
-            // Update stars appearance
-            function updateStars(rating) {
-                stars.forEach(star => {
-                    star.classList.toggle('selected', star.dataset.value <= rating);
-                });
+        }
+
+        // Submit rating
+        submitRating.addEventListener('click', () => {
+            if (selectedRating === 0) {
+                alert('Please select a rating between 1 and 5.');
+                return;
             }
-        
-            // Submit rating
-            submitRating.addEventListener('click', () => {
-                if (selectedRating === 0) {
-                    alert('Please select a rating between 1 and 5.');
-                    return;
-                }
-                ratings.push(selectedRating);
-                localStorage.setItem('ratings', JSON.stringify(ratings));
-                showThankYouModal(selectedRating);
-            });
-        
-            // Show Thank You Modal
-            function showThankYouModal(rating) {
-                userRating.textContent = rating;
-                modal.style.display = 'flex';
-            }
-        
-            // Close Modal
-            closeModal.addEventListener('click', () => {
+            ratings.push(selectedRating);
+            localStorage.setItem('ratings', JSON.stringify(ratings));
+            showThankYouModal(selectedRating);
+        });
+
+        // Show Thank You Modal
+        function showThankYouModal(rating) {
+            userRating.textContent = rating;
+            modal.style.display = 'flex';
+        }
+
+        // Close Modal
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        // Close modal if clicked outside
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
                 modal.style.display = 'none';
-            });
-        
-            // Close modal if clicked outside
-            window.addEventListener('click', (event) => {
-                if (event.target === modal) {
-                    modal.style.display = 'none';
-                }
-            });
-        </script>
-	</body>
-</html><div class="separator" style="clear: both; text-align: center;"><br /></div>
+            }
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+  const gamesList = document.getElementById("games-list");
+  const readMoreBtn = document.getElementById("read-more-btn");
+
+  readMoreBtn.addEventListener("click", function () {
+    gamesList.classList.toggle("expanded");
+    if (gamesList.classList.contains("expanded")) {
+      readMoreBtn.textContent = "Read Less";
+    } else {
+      readMoreBtn.textContent = "Read More";
+    }
+  });
+});
+    </script>
+   </main>	    
+</body>
+
+</html>
+<div class="separator" style="clear: both; text-align: center;"><br /></div>
