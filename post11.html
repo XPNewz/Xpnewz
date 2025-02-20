@@ -1,0 +1,533 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Minecraft Earth SMP is a Minecraft multiplayer survival server that recreates the earth in 1:1000 scale in game. This
+          server shows earth geography, all nations, biomes and many man made structures and still evolving. Earth SMP
+          allows freedom to every player to create any structure wherever they want and can explore the whole world and
+          interact with the environment.</title>
+  <meta content="" name="Earth SMP is a Minecraft multiplayer survival server that recreates the earth in 1:1000 scale in game. This
+          server shows earth geography, all nations, biomes and many man made structures and still evolving. Earth SMP
+          allows freedom to every player to create any structure wherever they want and can explore the whole world and
+          interact with the environment.">
+
+  <style>
+    @import url('https://fonts.cdnfonts.com/css/minecraft-4');
+
+    .minecraft-text {
+      font-family: 'Minecraft', sans-serif;
+      font-size: 80px;
+      font-weight: bold;
+      color:  darkturquoise;
+      text-transform: uppercase;
+      position: relative;
+      display: inline-block;
+      text-shadow:5px 5px 5px black;
+      text-align: center;
+    }
+
+    .minecraft-text::before {
+      content: "MINECRAFT";
+      position: absolute;
+      text-align: center;
+      top: 5px;
+      color: #000;
+      z-index: -1;
+      text-shadow: 5px 5px 0px #000;
+    }
+
+    body {
+      font-family: verdana;
+      font-size: large;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+
+    }
+
+    main {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: white;
+      background-size: 100%;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      border: 1px solid greenyellow;
+      box-shadow: 0 2px 10px skyblue;
+      font-family: verdana, sans-serif;
+
+
+    }
+
+    article {
+      background-color: white;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    h1,
+    h2 {
+      color: #000000;
+    }
+
+    a {
+      color: #000000;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .system-requirements {
+      background: #f0f0f0;
+      padding: 10px;
+      border-left: 4px solid #4CAF50;
+      margin: 20px 0;
+      border-radius: 5px;
+    }
+
+    .creator-info {
+      margin: 20px 0;
+      font-style: italic;
+    }
+
+    footer {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 0.9em;
+      color: #666;
+    }
+
+    .slider {
+      position: relative;
+      max-width: 100%;
+      margin: 20px 0;
+      overflow: hidden;
+      border-radius: 5px;
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .slides img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 5px;
+      flex-shrink: 0;
+    }
+
+    .slider-buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    .slider-buttons button {
+      background: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: white;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+
+    .slider-buttons button:hover {
+      background: rgba(0, 0, 0, 0.7);
+    }
+
+    .progress-percentage {
+      position: fixed;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      background-color: #ffcc00;
+      color: #000;
+      font-weight: bold;
+      padding: 10px 15px;
+      border-radius: 0 10px 10px 0;
+      font-size: 16px;
+      z-index: 1000;
+    }
+
+    .rating-container {
+      display: flex;
+      align-items: flex-start;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      flex-direction: column;
+    }
+
+    .stars {
+      display: flex;
+      flex-direction: row;
+      gap: 5px;
+      margin: 0;
+    }
+
+    .star {
+      font-size: 40px;
+      color: #e0e0e0;
+      cursor: pointer;
+      transition: color 0.2s ease;
+    }
+
+    .star:hover,
+    .star.selected {
+      color: #ffc107;
+    }
+
+    .rating-value {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    .average-rating,
+    .rating-stats {
+      font-size: 16px;
+      color: #666;
+      margin-top: 10px;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 10px 15px;
+      background: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #45a049;
+    }
+
+    #rating {
+      margin-top: 0;
+    }
+
+    /* Modal Styling */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .modal-content {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .modal-content button {
+      margin-top: 15px;
+      padding: 10px 15px;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .modal-content button:hover {
+      background: #45a049;
+    }
+
+    .info {
+      background: #f0f0f0;
+      padding: 10px;
+      border-left: 4px solid gold;
+      margin: 20px 0;
+      border-radius: 5px;
+    }
+
+    
+    h1,
+    h2,
+    h3 {
+      color: darkturquoise;
+
+    }
+
+    .ol {
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <article>
+      <!--Content start-->
+      <!-- Header Section -->
+      <div class="header">
+        <h1 class="minecraft-text">Earth SMP</h1>
+        <p>Earth SMP is a Minecraft multiplayer survival server that recreates the earth in 1:1000 scale in game. This
+          server shows earth geography, all nations, biomes and many man made structures and still evolving. Earth SMP
+          allows freedom to every player to create any structure wherever they want and can explore the whole world and
+          interact with the environment.
+        </p>
+
+      </div>
+
+
+
+
+      <!--1st image slider-->
+      <div class="slider">
+        <div class="slides" id="slides">
+          <!--paste image here for both thumbnail and main image-->
+          
+          <!---->
+          <!--paste here other images-->
+          <img alt="Screenshot 2" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgSDRvv2N4z5RzRBR6MzIFJC-EsBArSfE0MUyIwMeZ-s3ZQbTZSVb989ad-4yUI6b-8ojMS0y7HP9xfZwDW8e_boAWHpEYvuPODqa_d2hMvrImZrGJnBHXxOfz6dj6mV3BfVvFs_OAaTg_PSuLZzWV9MF3R1MODHJYikzr5o0Kh4_1xkPOU0gLOyaVGFw/s1600/tm2fHNcYTiKFhMHNPWN4zA.jpeg" />
+          <img alt="Screenshot 3" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhnZlpZgNig6vEHjcQiZUowvDNgDuT7lemiQ5IvqHUMw7oTBy8aoCIIRjAHdmBzJRmRWJEzYXf98K8-U6UMVrG3aEtsWr7NVpdH9tmHFHBcCkTP1mlNjfGj8hUO5QATUCXpgS5LDXhZOekBdRGyQc08jgFUrRcC8iI-e4h5OOBy8vzVEZB7Q-_QtNNgiA/s1600/vN-ma3gKTO-FQsjCLncjIw.jpeg
+" />
+          <div class="slider-buttons">
+            <button id="prev">❮</button>
+            <button id="next">❯</button>
+          </div>
+        </div>
+      </div>
+      <!--Write other content here after 1st image slider-->
+      <!-- Main Content -->
+
+
+      <!-- How to Join Section -->
+
+      
+        <p> Know more information here:
+        </p>
+        <h2>How to Join Earth SMP server</h2>
+        <ol>
+          <li><b>Server IP Address:</b>
+            <ul>
+              <li>You can find the server IP address on the Earth SMP website or Discord server. It might change
+                depending on which version of the server you're playing.
+              </li>
+
+            </ul>
+          </li>
+          <li><b>Whitewashing</b>
+            <ul>Some Earth SMP servers ask players to be whitelisted before they can join. This helps create a grown-up
+              and committed group of players.</ul>
+          </li>
+          <li><b>Playable Version:</b>
+
+            <ul>Earth SMP works with the newest Minecraft Java Edition, but you should check what version the server
+              needs. Many servers are available for Bedrock also.</ul>
+          </li>
+          <li><b>Rules:</b>
+            <ul>Most Earth SMP servers have strict rules against destroying things, cheating, and being mean to keep
+              everyone happy.
+            </ul>
+
+          </li>
+        </ol>
+      
+
+      <!-- Features Section -->
+     
+        <h2>Main Features</h2>
+        <h3>Real-World Earth Map:</h3>
+        <ul>
+          <li>The server employs a created map that mirrors Earth's landscape such as mountains, rivers, oceans, and
+            deserts.</li>
+          <li>The ratio stands at 1:1000, with one Minecraft block equal to one kilometer in actual life.</li>
+          <li>The map draws from real-world geographic information to ensure the highest possible accuracy.</li>
+          <li>Earth SMP servers rely on unique world generation tools like Terra++ or Dynmap to build a Minecraft world
+            that copies Earth's geography.</li>
+        </ul>
+        <h3>Economy System</h3>
+        <ul>
+          <li>Many Earth SMPs boast in-game economies often using add-ons like EssentialsX, ShopGUI, or ChestShop.
+          </li>
+          <li>Players can purchase and sell land, exchange resources, and run businesses.
+          </li>
+          <li>Some servers have economies driven by players where supply and demand affect in-game costs.</li>
+        </ul>
+        <h3>Custom Features & Plugins
+        </h3>
+        <ul>
+          <li>Vehicles: A few servers add planes, cars, or boats through Movecraft or CustomVehicles.
+          </li>
+          <li>Geopolitical Systems: Players can stake out land, create nations, and take part in diplomacy or conflict.
+          </li>
+          <li>Teleportation & Travel: A few servers let you use /warp, /home, or /tpa, while others push you to use
+            boats and Elytras to explore.</li>
+
+        </ul>
+     
+
+
+      <!--2nd image slider-->
+      <div class="slider">
+        <div class="slides" id="slides">
+          <!--paste here other images-->
+          <img alt="Screenshot 2" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjpmyDilsz1Xm3uuLsySabtdEnxu-v0JhjvVnYyjvKiTLhRlDckdPb5U00f5jCPi1c2Q6x-BWHa8Tp4TIoWClPHOkI7GWkm4wyOR8r_OkyUt2crQfyHyOq8Ov3SQt3H4TQ2PcNl_Ujpjaaky_z6Kktmb_TAqo639WpESiwN_S7uLAcnJBji6pvsKXLzxg/s1600/EDfXD0mDTFuz7LGbT8cH9w.jpeg" />
+          <img alt="Screenshot 3" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj1e5MHi032QacGizpKOi_asrRN2Lhl7fjmnouirqkEVYEPtYtK8Jft_z9dhR_9GAxgK61utDcnfoqWBYs1-FpsxKfZZiYdX4pgOTZPfEDO1lvi443wNs3ZXHe3V2hC8zbPUxcSRpLc0QW1JAlNS_qDUY7YVuBPcD61KZM2ZMxI-xMpnchEBRIviByGCw/s1600/e7J2FccDTqafCOdlaRS04w.jpeg" />
+          <div class="slider-buttons">
+            <button id="prev">❮</button>
+            <button id="next">❯</button>
+          </div>
+        </div>
+      </div>
+      <!--Write other content here after 2nd image slider-->
+      <!-- Servers Section -->
+     
+        <h2>Popular Earth SMP Servers</h2>
+        <ol class="ol">
+          <li>EarthMC</li>
+          <li>Lords of Minecraft</li>
+          <li>Mox MC Earth SMP</li>
+          <li>Terra Nova</li>
+          <li>Lifesteal Earth SMP</li>
+          <li>EarthPol</li>
+        </ol>
+   <h3>Steps to Join server</h3>
+      <ol>
+        
+        <li>Open Minecraft</li>
+        <li>Go to Multiplayer option (Java), go to server option (Bedrock)</li>
+        <li>Click on Add server</li>
+        <li>Enter name of server</li>
+        <li>Enter IP address and port</li>
+        <li>and Join the server</li>
+      </ol>
+      <!--Content end-->
+      <div class="info">
+        <p><i>Written by: Elagon</i></p>
+      </div>
+    </article>
+
+    <div class="rating-container">
+      <h2 id="rating">Rate Your Experience on this Blog</h2>
+      <div class="stars" id="stars">
+        <span class="star" data-value="1">&#9733;</span>
+        <span class="star" data-value="2">&#9733;</span>
+        <span class="star" data-value="3">&#9733;</span>
+        <span class="star" data-value="4">&#9733;</span>
+        <span class="star" data-value="5">&#9733;</span>
+      </div>
+      <div class="rating-value" id="ratingValue">Rating: 0</div>
+      <button id="submitRating">Submit Rating</button>
+    </div>
+
+    <!-- Thank You Modal -->
+    <div id="thankYouModal" class="modal">
+      <div class="modal-content">
+        <p>Thank you for sharing your feedback! You rated: <span id="userRating"></span> stars.</p>
+        <button id="closeModal">Close</button>
+      </div>
+    </div>
+
+    <script>
+      const slides = document.getElementById('slides');
+      const images = slides.getElementsByTagName('img');
+      const prev = document.getElementById('prev');
+      const next = document.getElementById('next');
+      let index = 0;
+
+      function showSlide(i) {
+        index = (i + images.length) % images.length;
+        slides.style.transform = translateX(-${ index * 100} %);
+      }
+
+      prev.addEventListener('click', () => showSlide(index - 1));
+      next.addEventListener('click', () => showSlide(index + 1));
+    </script>
+    <div class="progress-percentage" id="progress-percentage">0%</div>
+    <script>
+      const progressPercentage = document.getElementById("progress-percentage");
+
+      window.addEventListener("scroll", () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.body.scrollHeight - window.innerHeight;
+        const scrollPercent = Math.round((scrollTop / docHeight) * 100);
+
+        // Update the percentage text
+        progressPercentage.textContent = scrollPercent + "%";
+      });
+    </script>
+    <script>
+      const stars = document.querySelectorAll('.star');
+      const ratingValue = document.getElementById('ratingValue');
+      const submitRating = document.getElementById('submitRating');
+      const modal = document.getElementById('thankYouModal');
+      const userRating = document.getElementById('userRating');
+      const closeModal = document.getElementById('closeModal');
+      let selectedRating = 0;
+      let ratings = JSON.parse(localStorage.getItem('ratings')) || [];
+
+      // Highlight stars
+      stars.forEach(star => {
+        star.addEventListener('mouseover', () => updateStars(star.dataset.value));
+        star.addEventListener('click', () => {
+          selectedRating = parseInt(star.dataset.value);
+          ratingValue.textContent = Rating: ${ selectedRating };
+        });
+      });
+
+      // Update stars appearance
+      function updateStars(rating) {
+        stars.forEach(star => {
+          star.classList.toggle('selected', star.dataset.value <= rating);
+        });
+      }
+
+      // Submit rating
+      submitRating.addEventListener('click', () => {
+        if (selectedRating === 0) {
+          alert('Please select a rating between 1 and 5.');
+          return;
+        }
+        ratings.push(selectedRating);
+        localStorage.setItem('ratings', JSON.stringify(ratings));
+        showThankYouModal(selectedRating);
+      });
+
+      // Show Thank You Modal
+      function showThankYouModal(rating) {
+        userRating.textContent = rating;
+        modal.style.display = 'flex';
+      }
+
+      // Close Modal
+      closeModal.addEventListener('click', () => {
+        modal.style.display = 'none';
+      });
+
+      // Close modal if clicked outside
+      window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+          modal.style.display = 'none';
+        }
+      });
+    </script>
+  </main>
+</body>
+
+</html>
+<div class="separator" style="clear: both; text-align: center;"><br /></div>
