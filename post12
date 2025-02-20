@@ -1,0 +1,442 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Play PC game on GameHub in Mobile</title>
+    <meta
+        content="GameHub is a user-friendly game emulator which emulates many retro gaming consoles on Android devices. It can enhance the experience for using GameSir devices, such as gamepads, controllers, and other gaming accessories. It acts as a hub for managing these devices, offering features like firmware updates, and emulation capabilities."
+        name="description">
+    <style>
+        
+        body {
+            font-family: verdana;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgb(24, 27, 36);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            border: 1px solid greenyellow;
+            box-shadow: 0 2px 10px skyblue;
+
+
+        }
+        article{
+            background-color: white;
+            border-radius: 5px;
+            padding: 10px;
+            margin: -6px;
+        }
+
+        h1,
+        h2 {
+            color: #000000;
+        }
+
+        a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .system-requirements {
+            background: #f0f0f0;
+            padding: 10px;
+            border-left: 4px solid #4CAF50;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .creator-info {
+            margin: 20px 0;
+            font-style: italic;
+        }
+
+        footer {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .slider {
+            position: relative;
+            max-width: 100%;
+            margin: 20px 0;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .slides img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 5px;
+            flex-shrink: 0;
+        }
+
+        .slider-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .slider-buttons button {
+            background: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        .slider-buttons button:hover {
+            background: rgba(0, 0, 0, 0.7);
+        }
+	.progress-percentage {
+            position: fixed;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            background-color: #ffcc00;
+            color: #000;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 0 10px 10px 0;
+            font-size: 16px;
+            z-index: 1000;
+        }
+
+        .rating-container {
+            display: flex;
+            align-items: flex-start;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            flex-direction: column;
+        }
+
+        .stars {
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+            margin: 0;
+        }
+
+        .star {
+            font-size: 40px;
+            color: #e0e0e0;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+        .star:hover,
+        .star.selected {
+            color: #ffc107;
+        }
+
+        .rating-value {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .average-rating,
+        .rating-stats {
+            font-size: 16px;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            background: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #45a049;
+        }
+
+        #rating {
+            margin-top: 0;
+        }
+
+        /* Modal Styling */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .modal-content button {
+            margin-top: 15px;
+            padding: 10px 15px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .modal-content button:hover {
+            background: #45a049;
+        }
+	    .info {
+            background: #f0f0f0;
+            padding: 10px;
+            border-left: 4px solid gold;
+            margin: 20px 0;
+            border-radius: 5px;
+      }
+        h1, h2 {
+            color: #333;
+        }
+        p {
+            line-height: 1.6;
+        }
+        a{
+         background-color: #f9f9f9;
+         border-radius: 10px;
+         padding: 5px;
+         color: #666;
+         font-size: smaller;
+         cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+        transition: color 0.3s ease-in-out;
+        transition: text-decoration 0.3s ease-in-out;
+        }
+        a:hover {
+            background-color: #000;
+            color: #fff;
+            text-decoration: none;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <main>
+        <article>
+            <!--Content start-->
+        
+            <h1>GameHub - an Emulator</h1>
+
+            <p>GameHub is a user-friendly game emulator which emulates many retro gaming consoles on Android devices. It can enhance the experience for using GameSir devices, such as gamepads, controllers, and other gaming accessories. It acts as a hub for managing these devices, offering features like firmware updates, and emulation capabilities.</p>
+            <p>Here's the detailed information of its usage, features, and functionality:</p>
+            
+            <!-- Add tutorial content here if needed -->
+            
+               <!--1st image slider-->
+	      <div class="slider">
+                <div class="slides" id="slides">
+
+			<!---->
+			<!--paste here other images-->
+                    <img alt="Screenshot 2" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiwfuXs2ggbTLpovCLhaZ3PXh0ZWElMWOgOhTQsUIkeQLgwUiWXaXwbqXNQul3UeKWt7fmI-b0UndyfVBtGq091-mjL9RGQw0VsPVJx3AoFsXqmGa2lMJJRzKlwjJpmCgD6BOOQO33DbCjsWf5IyyNQFP4C6I1Qd8nsj3kKZpmqJYnR4RZVFkitBxGJsw/s1600/Xwg3PCrFRaynbEB_AkMwNg.jpg" />
+                  <img alt="Screenshot 3" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiS8jj7fQvhBjF-TqvqyRiuuh6sUkgRp18pP6v0cX1J3m2t3LVycC2CxkwF-MITCE0BW7uMMmArwfP0JlD0mlGgsr0UHWoX6abIZJPlTnSnuIWyQT7EiomPFajjeR517ah2tqZZXLs4d1LTKNjFw37pLAnEVK7XMk-aUeASwSpzf0FnRlgmQLBBA8c8wA/s1600/9AFhw8bQSQyRFAcyD9Gy0A.jpg"/>
+                    <div class="slider-buttons">
+                      
+                        <button id="prev">❮</button>
+                        <button id="next">❯</button>
+                    </div>
+                </div>
+	      </div>	      
+		    <!--Write other content here after 1st image slider-->
+		    <h2>Highlighted Features</h2>
+            
+            <ul>
+                <li><strong>Cross Platform Feature:</strong> GameHub allows users to run windows games on mobile devices This allows flawless gameplay for games from platforms like Steam and Epic Games.
+                </li><a href="https://gamehub.xiaoji.com/">gamehub</a>
+                <li><strong>Use Controllers:</strong> Users can use controllers for controlling games on this application. It supports many controllers, including from Xbox, PlayStation, and GameSir itself which enhances the gaming experience.</li><a href="https://gamehub.xiaoji.com/">gamehub</a>
+                <li><strong>Cloud Gaming:</strong> Here you can also play streaming over local play. GameHub supports cloud gaming services. A stable internet connection is required for this feature.</li><a href="https://gamehub.xiaoji.com/">gamehub</a>
+                <li><strong>Recording:</strong> You can record your gameplay in 30 fps and can share clips anywhere you want.</li>
+                <li><strong>Social Feature:</strong> It allows voice chat and multiplayer gaming.</li>
+            </ul>
+            
+            <h2>Performance</h2>
+            <p>It is optimized for high-performance gaming, supporting fps to 60 FPS. It sets graphics settings based on the device's capabilities, ensuring smooth gameplay with minimal latency, especially when using local emulation.</p><a href="//winlator.com/gamehub-emulator-apk/">winlator</a>
+            
+            <h2>Device Compatibility</h2>
+            <p>It is compatible with many devices but it works best on Android devices with Snapdragon 800+ processors and in new iPhones.</p>
+              
+                <!--2nd image slider-->
+	        <div class="slider">
+                <div class="slides" id="slides">
+			<!--paste here other images-->
+                    <img alt="Screenshot 2" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh4n_yJXTnWopFgYhyphenhyphenxCDa_c6IlfYWswlL4DZyU__-fLrggy4klj0zmxqU0xQVeJNRa1zR9q7ycEaH3TjUUZw8x4G7QwQAAN8mDX07FGWzeAiFzGs3JsWJaZsv_D7KLQjn3qoSa1G6l4o53QiJItrI9xmdzATFyR1S3PSLqM1fbPXrCLxsx51uxGJTikw/s1600/9AFhw8bQSQyRFAcyD9Gy0A.jpg" />
+                <img alt="Screenshot 3" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhg9K_1JybXcTSHqM91KNVikMwCa0Lv9YxGC2JgiEY-Cp1XJ94K9L2quk0ILvccgSZDFAIKEiWjjWzzLwh1dbKkGSSfa6fPVXicvxJXR67hzRB-lsHdlfn_RgQE4gcqVkJJlaP2C-FBY3j-wWJswODpqKmYnm2WeEh_YIluu6v3C4kGUAUEKfaHUtDNSQ/s1600/MOEeZcluSuee3Uke6Syiqg.jpg" />
+                    <div class="slider-buttons">
+                        <button id="prev">❮</button>
+                        <button id="next">❯</button>
+                    </div>
+                </div>
+		</div>	
+		<!--Write other content here after 2nd image slider-->
+        <h2>Installation and Setup Process</h2>
+        <p>To play on GameHub:</p>
+        <ol>
+            <li><strong>Download APK:</strong> You can download the latest version of the GameHub APK from the official GameSir website or other trusted sources like GitHub.</li>
+            <li><strong>APK Installation:</strong> Install it on your device. If the installation process is blocked by security settings, enable "Install from Unknown Sources" in your device settings.</li>
+            <li><strong>Connect Controllers (Optional):</strong> You can add controllers for a better experience. Connect compatible controllers via Bluetooth.</li>
+            <li><strong>Add Games:</strong> Add Windows .EXE files and start playing.</li>
+        </ol>
+        
+          <p><strong>Related Video:-</strong>
+             </p>
+          <iframe width="640" height="360" src="https://www.youtube.com/embed/3VdvM0GtqRM?si=fNuUwtoudBJNnH6d" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+	<!--Content end-->
+		<div class="info">
+                <p><i>Written by: Elagon</i></p>
+          </div>
+        
+       
+    <div class="rating-container">
+        <h2 id="rating">Rate Your Experience on this Blog</h2>
+        <div class="stars" id="stars">
+            <span class="star" data-value="1">&#9733;</span>
+            <span class="star" data-value="2">&#9733;</span>
+            <span class="star" data-value="3">&#9733;</span>
+            <span class="star" data-value="4">&#9733;</span>
+            <span class="star" data-value="5">&#9733;</span>
+        </div>
+        <div class="rating-value" id="ratingValue">Rating: 0</div>
+        <button id="submitRating">Submit Rating</button>
+    </div>
+
+    <!-- Thank You Modal -->
+    <div id="thankYouModal" class="modal">
+        <div class="modal-content">
+            <p>Thank you for sharing your feedback! You rated: <span id="userRating"></span> stars.</p>
+            <button id="closeModal">Close</button>
+        </div>
+    </div>
+</article>
+    <script>
+        const slides = document.getElementById('slides');
+        const images = slides.getElementsByTagName('img');
+        const prev = document.getElementById('prev');
+        const next = document.getElementById('next');
+        let index = 0;
+
+        function showSlide(i) {
+            index = (i + images.length) % images.length;
+            slides.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        prev.addEventListener('click', () => showSlide(index - 1));
+        next.addEventListener('click', () => showSlide(index + 1));
+    </script>
+    <div class="progress-percentage" id="progress-percentage">0%</div>
+    <script>
+        const progressPercentage = document.getElementById("progress-percentage");
+
+        window.addEventListener("scroll", () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.body.scrollHeight - window.innerHeight;
+            const scrollPercent = Math.round((scrollTop / docHeight) * 100);
+
+            // Update the percentage text
+            progressPercentage.textContent = scrollPercent + "%";
+        });
+    </script>
+    <script>
+        const stars = document.querySelectorAll('.star');
+        const ratingValue = document.getElementById('ratingValue');
+        const submitRating = document.getElementById('submitRating');
+        const modal = document.getElementById('thankYouModal');
+        const userRating = document.getElementById('userRating');
+        const closeModal = document.getElementById('closeModal');
+        let selectedRating = 0;
+        let ratings = JSON.parse(localStorage.getItem('ratings')) || [];
+
+        // Highlight stars
+        stars.forEach(star => {
+            star.addEventListener('mouseover', () => updateStars(star.dataset.value));
+            star.addEventListener('click', () => {
+                selectedRating = parseInt(star.dataset.value);
+                ratingValue.textContent = `Rating: ${selectedRating}`;
+            });
+        });
+
+        // Update stars appearance
+        function updateStars(rating) {
+            stars.forEach(star => {
+                star.classList.toggle('selected', star.dataset.value <= rating);
+            });
+        }
+
+        // Submit rating
+        submitRating.addEventListener('click', () => {
+            if (selectedRating === 0) {
+                alert('Please select a rating between 1 and 5.');
+                return;
+            }
+            ratings.push(selectedRating);
+            localStorage.setItem('ratings', JSON.stringify(ratings));
+            showThankYouModal(selectedRating);
+        });
+
+        // Show Thank You Modal
+        function showThankYouModal(rating) {
+            userRating.textContent = rating;
+            modal.style.display = 'flex';
+        }
+
+        // Close Modal
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        // Close modal if clicked outside
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+   </main>	    
+</body>
+
+</html>
+<div class="separator" style="clear: both; text-align: center;"><br /></div>
