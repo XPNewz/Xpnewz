@@ -1,0 +1,689 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Find Your Favorite Indian Game</title>
+    <meta
+        content=" gaming industry in India which gave us many notable games. Indian developers also developed games on local cultures, themes, and stories."
+        name="description">
+    <style>
+        
+        body {
+            font-family: verdana;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            
+
+        }
+
+        main {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            border: 1px solid greenyellow;
+            box-shadow: 0 2px 10px skyblue;
+
+
+        }
+
+         article 
+         h1,
+        h2 {
+            color: #000000;
+        }
+
+        a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .system-requirements {
+            background: #f0f0f0;
+            padding: 10px;
+            border-left: 4px solid #4CAF50;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .creator-info {
+            margin: 20px 0;
+            font-style: italic;
+        }
+
+        footer {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .slider {
+            position: relative;
+            max-width: 100%;
+            margin: 20px 0;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .slides img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 5px;
+            flex-shrink: 0;
+        }
+
+        .slider-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .slider-buttons button {
+            background: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        .slider-buttons button:hover {
+            background: rgba(0, 0, 0, 0.7);
+        }
+	.progress-percentage {
+            position: fixed;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            background-color: #ffcc00;
+            color: #000;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 0 10px 10px 0;
+            font-size: 16px;
+            z-index: 1000;
+        }
+
+        .rating-container {
+            display: flex;
+            align-items: flex-start;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            flex-direction: column;
+        }
+
+        .stars {
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+            margin: 0;
+        }
+
+        .star {
+            font-size: 40px;
+            color: #e0e0e0;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+        .star:hover,
+        .star.selected {
+            color: #ffc107;
+        }
+
+        .rating-value {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .average-rating,
+        .rating-stats {
+            font-size: 16px;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            background: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #45a049;
+        }
+
+        #rating {
+            margin-top: 0;
+        }
+
+        /* Modal Styling */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .modal-content button {
+            margin-top: 15px;
+            padding: 10px 15px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .modal-content button:hover {
+            background: #45a049;
+        }
+	    .info {
+            background: #f0f0f0;
+            padding: 10px;
+            border-left: 4px solid gold;
+            margin: 20px 0;
+            border-radius: 5px;
+      }
+      body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+           font-size: 35px;
+            
+        }
+        h2 {
+            color: #555;
+            border-top: 2px solid #555;
+            padding-bottom: 5px;
+        }
+        .game {
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .game h3 {
+            color: #333;
+        }
+        .game p {
+            color: #666;
+        }
+        .requirements {
+            margin-top: 10px;
+        }
+        .requirements summary {
+            font-weight: bold;
+            cursor: pointer;
+            color: #007BFF;
+            background-color: honeydew;
+            max-width: fit-content;
+            padding: 10px;
+            border: 1px solid dodgerblue;
+            border-radius: 15px;
+        }
+        .requirements table {
+            width: 100%;
+            margin-top: 10px;
+            border-collapse: collapse;
+            background-color: #f2f2f2;
+            
+        }
+        .requirements table, .requirements th, .requirements td {
+            border: 1px solid #ddd;
+            
+        }
+        .requirements th, .requirements td {
+            padding: 8px;
+            text-align: left;
+        }
+        .requirements th {
+            background-color: #ddd;
+        }
+        .rajj-theme {
+            background-color:rgba(255, 186, 36, 0.322);
+        }
+        .kamla-theme {
+            background-color: #29222223;
+        }
+        .indus-theme {
+            background-color: #e3f2fd;
+        }
+        .cricket-theme {
+            background-color: #55ff0623;
+        }
+        .asura-theme {
+            background-color: #f3e5f5;
+        }
+        .oddballers-theme {
+            background-color: #fff8e1;
+        }
+      .div{
+        background-color: antiquewhite;
+        max-width: fit-content;
+        padding: 10px;
+        border-radius: 10px; 
+      }
+      </style>
+</head>
+<body>
+    <main>
+        <article>
+
+          <div class="div"><h1>Find Your Favorite Indian Gamey</h1></div>
+    <p>We have seen a significant growth of the gaming industry in India which gave us many notable games. Indian developers also developed games on local cultures, themes, and stories. Many games came in the last few years, some are notable whereas some games flopped. Here we showcase some of those games you can play.</p>
+
+    <h2>Platforms</h2>
+    <ul>
+        <a href="#a"><li><strong>Mobile</strong></li></a>
+        <a href="#b"><li><strong>PC or Consoles</strong></li></a>
+    </ul>
+<!--1st image slider-->
+	      <div class="slider">
+                <div class="slides" id="slides">
+                    <!--paste image here for both thumbnail and main image-->
+			
+			<!---->
+			<!--paste here other images-->
+                    <img alt="Screenshot 2" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjhxAEwivT-AM4un2Ptiadc5KRInsi2mCRSi2JwKz3gZMQd9xICsd3fAKpcgTUorrkq1lnucwMF6_9F7KUQzIzrB50aDbf5koCsHoWbTv3h6mR1jC6B6rXE_9B6kBqD7jpmiR_pdduAHIsH6PQEQ7cp_qfBHZxH5_F5dYRxF5l4xbJ8cw7nxk51XiUzzw/s1600/Bs-82nkuQOymBFJOAP7ZrQ.jpeg" />
+                <img alt="Screenshot 3" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgSl4YNdRuHRl45ESlh5fT7pCbQp-D9l4CT5MioxBu5HjBYr0PQKMbKtl6tX5XFM638Wddmg4cnZfLxUkPKLTyxO6ylO_MRIji8BfZF-0sfyxI27KkKdJ-hI8SzpKUW4J0sMHPparwHey3AcYwLh-u5wawybi61QIZrEhs9I8fooYt6JLs53h6aXZlBFA/s1600/Q6Pd4hEXQFOZ7cltfTFoyg.jpeg" />
+                    <div class="slider-buttons">
+                        <button id="prev">❮</button>
+                        <button id="next">❯</button>
+                    </div>
+                </div>
+	      </div>	      
+		    <!--Write other content here after 1st image slider-->
+    <h2 id="a">Mobile Games</h2>
+
+    <div class="game rajj-theme">
+        <h3>1. Raji: An Ancient Epic</h3>
+        <p>It is an action-adventure game released in 2020 which is set in ancient India. It was released on mobile (Android/iOS) in 2024. Rajj is developed by Nodding Heads Games and released by super.com.</p>
+        <div class="requirements">
+            <details>
+            <summary>System Requirements</summary>
+            <table>
+                <tr>
+                    <th>Platform</th>
+                    <th>Minimum Requirements</th>
+                </tr>
+                <tr>
+                    <td>Android</td>
+                    <td>Android 8.0, 4GB RAM</td>
+                </tr>
+                <tr>
+                    <td>iOS</td>
+                    <td>iOS 12, 2GB RAM</td>
+                </tr>
+            </table>
+        </div>
+        </details>
+    </div>
+
+    <div class="game kamla-theme">
+        <h3>2. Kamla Mobile</h3>
+        <p>It is a horror game developed by Mad-Mantra Games. Kamla is set in 1980s India in which you play the role of Tantarik Priest who has a task to save a newlywed woman, Kamla who is possessed by a demon. It was first released on PC in 2024 then on mobile in 2025.</p>
+        <div class="requirements">
+            <details>
+            <summary>System Requirements</summary>
+            <table>
+                <tr>
+                    <th>Platform</th>
+                    <th>Minimum Requirements</th>
+                </tr>
+                <tr>
+                    <td>Android</td>
+                    <td>Android 9.0, 4GB RAM</td>
+                </tr>
+                <tr>
+                    <td>iOS</td>
+                    <td>iOS 13, 3GB RAM</td>
+                </tr>
+            </table>
+        </div>
+        </details>
+    </div>
+
+    <div class="game indus-theme">
+        <h3>3. Indus Battle Royale</h3>
+        <p>Indus Battle Royale is a battle royale game developed by Super Gaming. It was released on October 16, 2024, for Android and iOS devices, worldwide.</p>
+        <div class="requirements">
+            <details>
+            <summary>System Requirements</summary>
+            <table>
+                <tr>
+                    <th>Platform</th>
+                    <th>Minimum Requirements</th>
+                </tr>
+                <tr>
+                    <td>Android</td>
+                    <td>Android 10, 6GB RAM</td>
+                </tr>
+                <tr>
+                    <td>iOS</td>
+                    <td>iOS 14, 4GB RAM</td>
+                </tr>
+            </table>
+        </div>
+        </details>
+    </div>
+
+    <div class="game cricket-theme">
+        <h3>4. World Cricket Championship</h3>
+        <p>WCC is a game series developed by Netwave Multimedia and Nazara Games. Games of this series provide a different vibe of cricket. It has career mode, almost every ICC tournament and leagues after the release of games, team selection option which makes it more engaging gameplay with lots of animation.</p>
+        <div class="requirements">
+            <details>
+            <summary>System Requirements</summary>
+            <table>
+                <tr>
+                    <th>Platform</th>
+                    <th>Minimum Requirements</th>
+                </tr>
+                <tr>
+                    <td>Android</td>
+                    <td>Android 7.0, 2GB RAM</td>
+                </tr>
+                <tr>
+                    <td>iOS</td>
+                    <td>iOS 11, 2GB RAM</td>
+                </tr>
+            </table>
+        </div>
+        </details>
+    </div>
+
+    <div class="game cricket-theme">
+        <h3>5. Real Cricket</h3>
+        <p>RC series provides hardcore cricket gameplay which makes it feel real. It has had every ICC tournament from 1975 to today and also has many leagues with very high graphics and good mechanics.</p>
+        <div class="requirements">
+            <details>
+            <summary>System Requirements</summary>
+            <table>
+                <tr>
+                    <th>Platform</th>
+                    <th>Minimum Requirements</th>
+                </tr>
+                <tr>
+                    <td>Android</td>
+                    <td>Android 8.0, 3GB RAM</td>
+                </tr>
+                <tr>
+                    <td>iOS</td>
+                    <td>iOS 12, 3GB RAM</td>
+                </tr>
+            </table>
+        </div>
+        </details>
+    </div>
+<!--2nd image slider-->
+	        <div class="slider">
+                <div class="slides" id="slides">
+			<!--paste here other images-->
+                    <img alt="Screenshot 2" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiJxTGpQe6h8Q7RO3kGkoNstFsZsQiMw4YJs2chyphenhyphenGFlPHHbLeCfCAkb_jXe7yQAms4F4vz9AK7rjm4WwNuJAWAclro62oe7bTQOHdb3EBw5AV2maubAFoAJ7Vh4j9VoEoSzU8ZEbAJaHGbH6DC8lEUmr9V0QBWuYwJd_F2htlH8Uj8CI5uHVaGwJXMISA/s1600/s8k8PVR8SMejLiizWQG5TA.jpeg" />
+                <img alt="Screenshot 3" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg7qBwQIPDzOZC6BofsUqSo11d4R8WsbFrRdKNd85lxo5xVNeXJc3Hja9Z7GoBBoGAEuDch8zIifPzG0FRaYdRr5twxJfVbZ2iIXuX36Sk4OV_ydfEI1YU5j_zgyKaW-08mvMeRJb0Xv5A4Pjklnjre4_FvY8tSUEGKlKIXw_DCwn4CnviYeOWqdZf-Bw/s1600/beqBss-8QJiygCdJjqi9xA.jpeg" />
+                    <div class="slider-buttons">
+                        <button id="prev">❮</button>
+                        <button id="next">❯</button>
+                    </div>
+                </div>
+		</div>	
+		<!--Write other content here after 2nd image slider-->
+    <h2 id="b">PC/Console Games</h2>
+
+    <div class="game asura-theme">
+        <h3>1. Asura</h3>
+        <p>This game was released in 2017 set in a fantasy world inspired by Indian myths.</p>
+        <div class="requirements">
+            <details>
+            <summary>System Requirements</summary>
+            <table>
+                <tr>
+                    <th>Platform</th>
+                    <th>Minimum Requirements</th>
+                </tr>
+                <tr>
+                    <td>PC</td>
+                    <td>Windows 10, 8GB RAM, GTX 1050</td>
+                </tr>
+                <tr>
+                    <td>Console</td>
+                    <td>PS4, Xbox One</td>
+                </tr>
+            </table>
+        </div>
+        </details>
+    </div>
+
+    <div class="game rajj-theme">
+        <h3>2. Raji: An Ancient Epic</h3>
+        <p>It is an action-adventure game released in 2020 which is set in ancient India. It was released on mobile (Android/iOS) in 2024. Rajj is developed by Nodding Heads Games and released by super.com.</p>
+        <div class="requirements">
+            <details>
+            <summary>System Requirements</summary>
+            <table>
+                <tr>
+                    <th>Platform</th>
+                    <th>Minimum Requirements</th>
+                </tr>
+                <tr>
+                    <td>PC</td>
+                    <td>Windows 10, 8GB RAM, GTX 1060</td>
+                </tr>
+                <tr>
+                    <td>Console</td>
+                    <td>PS5, Xbox Series X</td>
+                </tr>
+            </table>
+        </div></details>
+    </div>
+
+    <div class="game kamla-theme">
+        <h3>3. Kamla</h3>
+        <p>It is a horror game developed by Mad-Mantra Games. Kamla is set in 1980s India in which you play the role of Tantarik Priest who has a task to save a newlywed woman, Kamla who is possessed by a demon. It was first released on PC in 2024 then on mobile in 2025.</p>
+        <div class="requirements"><details>
+            <summary>System Requirements</summary>
+            <table>
+                <tr>
+                    <th>Platform</th>
+                    <th>Minimum Requirements</th>
+                </tr>
+                <tr>
+                    <td>PC</td>
+                    <td>Windows 10, 16GB RAM, GTX 1070</td>
+                </tr>
+                <tr>
+                    <td>Console</td>
+                    <td>PS5, Xbox Series X</td>
+                </tr>
+            </table>
+        </div></details>
+    </div>
+
+    <div class="game oddballers-theme">
+        <h3>4. Oddballers</h3>
+        <p>It is a fun multiplayer party game where you and friends engage in hilarious dodgeball matches.</p>
+        <div class="requirements"><details>
+            <summary>System Requirements</summary>
+            <table>
+                <tr>
+                    <th>Platform</th>
+                    <th>Minimum Requirements</th>
+                </tr>
+                <tr>
+                    <td>PC</td>
+                    <td>Windows 10, 8GB RAM, GTX 1050</td>
+                </tr>
+                <tr>
+                    <td>Console</td>
+                    <td>PS4, Xbox One</td>
+                </tr>
+            </table>
+        </div></details>
+    </div>
+
+               
+		    
+    
+    
+                
+			
+	<!--Content end-->
+		<div class="info">
+                <p><i>Written by: Elagon</i></p>
+          </div>
+        </article>
+       
+    <div class="rating-container">
+        <h2 id="rating">Rate Your Experience on this Blog</h2>
+        <div class="stars" id="stars">
+            <span class="star" data-value="1">&#9733;</span>
+            <span class="star" data-value="2">&#9733;</span>
+            <span class="star" data-value="3">&#9733;</span>
+            <span class="star" data-value="4">&#9733;</span>
+            <span class="star" data-value="5">&#9733;</span>
+        </div>
+        <div class="rating-value" id="ratingValue">Rating: 0</div>
+        <button id="submitRating">Submit Rating</button>
+    </div>
+
+    <!-- Thank You Modal -->
+    <div id="thankYouModal" class="modal">
+        <div class="modal-content">
+            <p>Thank you for sharing your feedback! You rated: <span id="userRating"></span> stars.</p>
+            <button id="closeModal">Close</button>
+        </div>
+    </div>
+
+    <script>
+        const slides = document.getElementById('slides');
+        const images = slides.getElementsByTagName('img');
+        const prev = document.getElementById('prev');
+        const next = document.getElementById('next');
+        let index = 0;
+
+        function showSlide(i) {
+            index = (i + images.length) % images.length;
+            slides.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        prev.addEventListener('click', () => showSlide(index - 1));
+        next.addEventListener('click', () => showSlide(index + 1));
+    </script>
+    <div class="progress-percentage" id="progress-percentage">0%</div>
+    <script>
+        const progressPercentage = document.getElementById("progress-percentage");
+
+        window.addEventListener("scroll", () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.body.scrollHeight - window.innerHeight;
+            const scrollPercent = Math.round((scrollTop / docHeight) * 100);
+
+            // Update the percentage text
+            progressPercentage.textContent = scrollPercent + "%";
+        });
+    </script>
+    <script>
+        const stars = document.querySelectorAll('.star');
+        const ratingValue = document.getElementById('ratingValue');
+        const submitRating = document.getElementById('submitRating');
+        const modal = document.getElementById('thankYouModal');
+        const userRating = document.getElementById('userRating');
+        const closeModal = document.getElementById('closeModal');
+        let selectedRating = 0;
+        let ratings = JSON.parse(localStorage.getItem('ratings')) || [];
+
+        // Highlight stars
+        stars.forEach(star => {
+            star.addEventListener('mouseover', () => updateStars(star.dataset.value));
+            star.addEventListener('click', () => {
+                selectedRating = parseInt(star.dataset.value);
+                ratingValue.textContent = `Rating: ${selectedRating}`;
+            });
+        });
+
+        // Update stars appearance
+        function updateStars(rating) {
+            stars.forEach(star => {
+                star.classList.toggle('selected', star.dataset.value <= rating);
+            });
+        }
+
+        // Submit rating
+        submitRating.addEventListener('click', () => {
+            if (selectedRating === 0) {
+                alert('Please select a rating between 1 and 5.');
+                return;
+            }
+            ratings.push(selectedRating);
+            localStorage.setItem('ratings', JSON.stringify(ratings));
+            showThankYouModal(selectedRating);
+        });
+
+        // Show Thank You Modal
+        function showThankYouModal(rating) {
+            userRating.textContent = rating;
+            modal.style.display = 'flex';
+        }
+
+        // Close Modal
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        // Close modal if clicked outside
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+   </main>	    
+</body>
+
+</html>
+<div class="separator" style="clear: both; text-align: center;"><br /></div>
