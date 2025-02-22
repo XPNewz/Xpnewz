@@ -1,0 +1,653 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Best Open World Games for Low-end PC</title>
+    <meta
+        content="There are bundles of open-world games that can run well on low-end PCs. Here’s the list of some Open World Games:"
+        name="description">
+    <style>
+        
+        body {
+            font-family: verdana;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            
+
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            border: 1px solid greenyellow;
+            box-shadow: 0 2px 10px skyblue;
+
+
+        }
+        article h1,h2{
+            color: #000;
+        }
+        
+       
+
+        .system-requirements {
+            background: #f0f0f0;
+            padding: 10px;
+            border-left: 4px solid #4CAF50;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .creator-info {
+            margin: 20px 0;
+            font-style: italic;
+        }
+
+        footer {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .slider {
+            position: relative;
+            max-width: 100%;
+            margin: 20px 0;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .slides img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 5px;
+            flex-shrink: 0;
+        }
+
+        .slider-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .slider-buttons button {
+            background: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        .slider-buttons button:hover {
+            background: rgba(0, 0, 0, 0.7);
+        }
+	.progress-percentage {
+            position: fixed;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            background-color: #ffcc00;
+            color: #000;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 0 10px 10px 0;
+            font-size: 16px;
+            z-index: 1000;
+        }
+
+        .rating-container {
+            display: flex;
+            align-items: flex-start;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            flex-direction: column;
+        }
+
+        .stars {
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+            margin: 0;
+        }
+
+        .star {
+            font-size: 40px;
+            color: #e0e0e0;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+        .star:hover,
+        .star.selected {
+            color: #ffc107;
+        }
+
+        .rating-value {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .average-rating,
+        .rating-stats {
+            font-size: 16px;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            background: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #45a049;
+        }
+
+        #rating {
+            margin-top: 0;
+        }
+
+        /* Modal Styling */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .modal-content button {
+            margin-top: 15px;
+            padding: 10px 15px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .modal-content button:hover {
+            background: #45a049;
+        }
+	    .info {
+            background: #f0f0f0;
+            padding: 10px;
+            border-left: 4px solid gold;
+            margin: 20px 0;
+            border-radius: 5px;
+      }
+       article h1 {
+            text-align: center;
+            background: linear-gradient(90deg, dodgerblue 40%, lime 70%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+        font-size: 35px;
+      }
+            
+        .game {
+            margin-bottom: 20px;
+        }
+        .game h2 {
+            margin-bottom: 10px;
+        }
+        .requirements {
+            margin-top: 10px;
+        }
+        .requirements summary {
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .requirements table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        .requirements table, .requirements th, .requirements td {
+            border: 1px solid #a264db;
+        }
+        .requirements th, .requirements td {
+            padding: 8px;
+            text-align: left;
+        }
+        .requirements th {
+            background-color: #f4f4f4;
+        }
+        summary{
+            
+            background: rgba(0, 174, 255, 0.116);
+            transition: all ease-out;
+            color: #006eff;
+            border-radius: 15px;
+            max-width: fit-content;
+            padding: 10px;
+            
+            
+        }
+        .img{
+            position:absolute;
+            right: auto;
+        }
+        a{
+            color: #000;
+            text-decoration: none;
+            
+        }
+        a:hover{
+            cursor: pointer;
+            color: deepskyblue;
+            transition: all ease-in-out;
+            text-decoration: none;
+        }
+        h1:hover{}
+        
+    
+    </style>
+</head>
+<body>
+    <main>
+        <article>
+            <!--Content start-->
+            <h1>Best Open World Games for Low-end PC</h1>
+            <p>There are bundles of open-world games that can run well on low-end PCs. Here’s the list of some Open World Games:</p>
+               <!--1st image slider-->
+	      <div class="slider">
+                <div class="slides" id="slides">
+                    <!--paste image here for both thumbnail and main image-->
+			
+			<!---->
+			<!--paste here other images-->
+                    <img alt="Screenshot 2" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiVy3Eiv56FHbaQlM2V8cEd1mdVFKZOXLsViE4gvsbiUlQRNhs8cc5tPtCeTN31imc67L9Ryz-S4CKTjo-0PFy834vyinIreBB4SUEehbJnPWkzCSZEnWuwRgs2rH2kV3L08prK8qvUjjkmFCBiTxlJUO0JU2-5XTCVd6cQ1kWgSuusDx5HDlZmCoCi5Q/s1600/mYe29CTST3m6XWgAnsSsEQjpg.webp" />
+                <img alt="Screenshot 3" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjR5YnE4NtMuXQ9RRvrsiJD-KcAai63hj2virQzAxQKfdkkllhcr2Dd2ls5dqwXyNTvCx2JyYmXtMEvPTp2LfMNufLP12qSQ-tvKMkozkytW8FsaNgAZcS43EAOJusIn9QybOoRrq6MPjQt8Xku4CFIaTsdRBtPnUzO1dTb3hXXA7xZR7Q-K-w4VFrEeA/s1600/BW3FOCBBRuqXF1fxwSWqTg.jpeg" />
+                    <div class="slider-buttons">
+                        <button id="prev">❮</button>
+                        <button id="next">❯</button>
+                    </div>
+                </div>
+	      </div>	      
+		    <!--Write other content here after 1st image slider-->
+		    <!DOCTYPE html>
+    
+    <div class="game">
+      <a href="https://store.steampowered.com/app/8190/Just_Cause_2/"><h2>1. Just Cause 2</h2></a>
+        <p>It is an action-adventure game which is set in a fictional island nation of panau which is  located in Maritime Southeast Asia. This game shows a field operative of the Agency, who is sent to Panau to overthrow the dictator Pandak "Baby" Panay. Just Cause 2 is developed by  Avalanche Studios and published by Square Enix which is a sequel of the Just Cause 2006 game.
+        </p><img class="img"src=""/>
+        
+        <div class="requirements">
+            <details>
+                <summary>Game Requirements</summary>
+                <table>
+                    <tr>
+                        <th>Component</th>
+                        <th>Minimum</th>
+                        <th>Recommended</th>
+                    </tr>
+                    <tr>
+                        <td>OS</td>
+                        <td>Windows XP/Vista/7</td>
+                        <td>Windows 7</td>
+                    </tr>
+                    <tr>
+                        <td>Processor</td>
+                        <td>Dual-core CPU</td>
+                        <td>Quad-core CPU</td>
+                    </tr>
+                    <tr>
+                        <td>Memory</td>
+                        <td>2 GB RAM</td>
+                        <td>4 GB RAM</td>
+                    </tr>
+                    <tr>
+                        <td>Graphics</td>
+                        <td>NVIDIA 8600 / ATI 3870</td>
+                        <td>NVIDIA 9800 GT / ATI 4870</td>
+                    </tr>
+                    <tr>
+                        <td>Storage</td>
+                        <td>10 GB available space</td>
+                        <td>10 GB available space</td>
+                    </tr>
+                </table>
+            </details>
+        </div>
+    </div>
+
+    <div class="game">
+        <h2>2. Saints Row 2 and/or 3</h2>
+        <p>Both games are Open World action games of the franchise “Saint Row" which are known for their action, humor, customization features. Saint Row 2 takes place in the fictional city of Stilwater whereas Saint Row 3 is set in the new city of Steelport.</p>
+        <img class="img"src="  "/>
+        <div class="requirements">
+            <details>
+                <summary>Game Requirements</summary>
+                <table>
+                    <tr>
+                        <th>Component</th>
+                        <th>Minimum</th>
+                        <th>Recommended</th>
+                    </tr>
+                    <tr>
+                        <td>OS</td>
+                        <td>Windows XP/Vista</td>
+                        <td>Windows 7</td>
+                    </tr>
+                    <tr>
+                        <td>Processor</td>
+                        <td>Intel Core 2 Duo / AMD Athlon X2</td>
+                        <td>Intel Core 2 Quad / AMD Phenom X4</td>
+                    </tr>
+                    <tr>
+                        <td>Memory</td>
+                        <td>2 GB RAM</td>
+                        <td>4 GB RAM</td>
+                    </tr>
+                    <tr>
+                        <td>Graphics</td>
+                        <td>NVIDIA 8800 / ATI 3850</td>
+                        <td>NVIDIA 9800 GT / ATI 4870</td>
+                    </tr>
+                    <tr>
+                        <td>Storage</td>
+                        <td>15 GB available space</td>
+                        <td>15 GB available space</td>
+                    </tr>
+                </table>
+            </details>
+        </div>
+    </div>
+
+    <div class="game">
+        <h2>3. Mafia 2</h2>
+        <p> Mafia II is an action-adventure game developed by 2K Czech in 2010 which takes place during the 1950s. Game shows the fictional city of Empire Bay.
+        </p>
+        <img class="img"src="  "/>
+        <div class="requirements">
+            <details>
+                <summary>Game Requirements</summary>
+                <table>
+                    <tr>
+                        <th>Component</th>
+                        <th>Minimum</th>
+                        <th>Recommended</th>
+                    </tr>
+                    <tr>
+                        <td>OS</td>
+                        <td>Windows XP/Vista/7</td>
+                        <td>Windows 7</td>
+                    </tr>
+                    <tr>
+                        <td>Processor</td>
+                        <td>Intel Pentium D 3.0 GHz / AMD Athlon 64 X2 3600+</td>
+                        <td>Intel Core 2 Duo / AMD Athlon 64 X2 5600+</td>
+                    </tr>
+                    <tr>
+                        <td>Memory</td>
+                        <td>1.5 GB RAM</td>
+                        <td>2 GB RAM</td>
+                    </tr>
+                    <tr>
+                        <td>Graphics</td>
+                        <td>NVIDIA 8600 / ATI HD 2600</td>
+                        <td>NVIDIA 9800 GT / ATI HD 4870</td>
+                    </tr>
+                    <tr>
+                        <td>Storage</td>
+                        <td>8 GB available space</td>
+                        <td>8 GB available space</td>
+                    </tr>
+                </table>
+            </details>
+        </div>
+    </div>
+
+    <div class="game">
+        <h2>4. GTA 4</h2>
+        <p> It is the game of one of the most famous series “Grand Theft Auto" and was released in 2008 by Rockstar Games. GTA 4 shows a city named Liberty City which is inspired by New York City.</p>
+        <img class="img"src="  "/>
+        <div class="requirements">
+            <details>
+                <summary>Game Requirements</summary>
+                <table>
+                    <tr>
+                        <th>Component</th>
+                        <th>Minimum</th>
+                        <th>Recommended</th>
+                    </tr>
+                    <tr>
+                        <td>OS</td>
+                        <td>Windows XP/Vista</td>
+                        <td>Windows 7</td>
+                    </tr>
+                    <tr>
+                        <td>Processor</td>
+                        <td>Intel Core 2 Duo 1.8 GHz / AMD Athlon X2 64 2.4 GHz</td>
+                        <td>Intel Core 2 Quad 2.4 GHz / AMD Phenom X3 2.1 GHz</td>
+                    </tr>
+                    <tr>
+                        <td>Memory</td>
+                        <td>1.5 GB RAM</td>
+                        <td>2.5 GB RAM</td>
+                    </tr>
+                    <tr>
+                        <td>Graphics</td>
+                        <td>NVIDIA 7900 / ATI X1900</td>
+                        <td>NVIDIA 8600 / ATI 3870</td>
+                    </tr>
+                    <tr>
+                        <td>Storage</td>
+                        <td>16 GB available space</td>
+                        <td>16 GB available space</td>
+                    </tr>
+                </table>
+            </details>
+        </div>
+    </div>
+
+    <div class="game">
+        <h2>5. Far Cry 3</h2>
+        <p>Far Cry 3 is an open-world action-adventure game released in 2012 and developed by Ubisoft Montreal. It's considered as a landmark title in the open-world genre.</p>
+        <img class="img"src="  "/>
+        <div class="requirements">
+            <details>
+                <summary>Game Requirements</summary>
+                <table>
+                    <tr>
+                        <th>Component</th>
+                        <th>Minimum</th>
+                        <th>Recommended</th>
+                    </tr>
+                    <tr>
+                        <td>OS</td>
+                        <td>Windows XP/Vista/7</td>
+                        <td>Windows 7</td>
+                    </tr>
+                    <tr>
+                        <td>Processor</td>
+                        <td>Intel Core 2 Duo E6700 / AMD Athlon 64 X2 6000+</td>
+                        <td>Intel Core i3-530 / AMD Phenom II X2 565</td>
+                    </tr>
+                    <tr>
+                        <td>Memory</td>
+                        <td>2 GB RAM</td>
+                        <td>4 GB RAM</td>
+                    </tr>
+                    <tr>
+                        <td>Graphics</td>
+                        <td>NVIDIA 8800 GTX / ATI HD 2900</td>
+                        <td>NVIDIA GTX 480 / ATI HD 5770</td>
+                    </tr>
+                    <tr>
+                        <td>Storage</td>
+                        <td>15 GB available space</td>
+                        <td>15 GB available space</td>
+                    </tr>
+                </table>
+            </details>
+        </div>
+    </div> 
+                <!--2nd image slider-->
+	        <div class="slider">
+                <div class="slides" id="slides">
+			<!--paste here other images-->
+                    <img alt="Screenshot 2" src="" />
+                <img alt="Screenshot 3" src="" />
+                    <div class="slider-buttons">
+                        <button id="prev">❮</button>
+                        <button id="next">❯</button>
+                    </div>
+                </div>
+		</div>	
+		<!--Write other content here after 2nd image slider-->
+			
+	<!--Content end-->
+		<div class="info">
+                <p><i>Written by: Elagon</i></p>
+          </div>
+        </article>
+       
+    <div class="rating-container">
+        <h2 id="rating">Rate Your Experience on this Blog</h2>
+        <div class="stars" id="stars">
+            <span class="star" data-value="1">&#9733;</span>
+            <span class="star" data-value="2">&#9733;</span>
+            <span class="star" data-value="3">&#9733;</span>
+            <span class="star" data-value="4">&#9733;</span>
+            <span class="star" data-value="5">&#9733;</span>
+        </div>
+        <div class="rating-value" id="ratingValue">Rating: 0</div>
+        <button id="submitRating">Submit Rating</button>
+    </div>
+
+    <!-- Thank You Modal -->
+    <div id="thankYouModal" class="modal">
+        <div class="modal-content">
+            <p>Thank you for sharing your feedback! You rated: <span id="userRating"></span> stars.</p>
+            <button id="closeModal">Close</button>
+        </div>
+    </div>
+
+    <script>
+        const slides = document.getElementById('slides');
+        const images = slides.getElementsByTagName('img');
+        const prev = document.getElementById('prev');
+        const next = document.getElementById('next');
+        let index = 0;
+
+        function showSlide(i) {
+            index = (i + images.length) % images.length;
+            slides.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        prev.addEventListener('click', () => showSlide(index - 1));
+        next.addEventListener('click', () => showSlide(index + 1));
+    </script>
+    <div class="progress-percentage" id="progress-percentage">0%</div>
+    <script>
+        const progressPercentage = document.getElementById("progress-percentage");
+
+        window.addEventListener("scroll", () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.body.scrollHeight - window.innerHeight;
+            const scrollPercent = Math.round((scrollTop / docHeight) * 100);
+
+            // Update the percentage text
+            progressPercentage.textContent = scrollPercent + "%";
+        });
+    </script>
+    <script>
+        const stars = document.querySelectorAll('.star');
+        const ratingValue = document.getElementById('ratingValue');
+        const submitRating = document.getElementById('submitRating');
+        const modal = document.getElementById('thankYouModal');
+        const userRating = document.getElementById('userRating');
+        const closeModal = document.getElementById('closeModal');
+        let selectedRating = 0;
+        let ratings = JSON.parse(localStorage.getItem('ratings')) || [];
+
+        // Highlight stars
+        stars.forEach(star => {
+            star.addEventListener('mouseover', () => updateStars(star.dataset.value));
+            star.addEventListener('click', () => {
+                selectedRating = parseInt(star.dataset.value);
+                ratingValue.textContent = `Rating: ${selectedRating}`;
+            });
+        });
+
+        // Update stars appearance
+        function updateStars(rating) {
+            stars.forEach(star => {
+                star.classList.toggle('selected', star.dataset.value <= rating);
+            });
+        }
+
+        // Submit rating
+        submitRating.addEventListener('click', () => {
+            if (selectedRating === 0) {
+                alert('Please select a rating between 1 and 5.');
+                return;
+            }
+            ratings.push(selectedRating);
+            localStorage.setItem('ratings', JSON.stringify(ratings));
+            showThankYouModal(selectedRating);
+        });
+
+        // Show Thank You Modal
+        function showThankYouModal(rating) {
+            userRating.textContent = rating;
+            modal.style.display = 'flex';
+        }
+
+        // Close Modal
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        // Close modal if clicked outside
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+   </main>	    
+</body>
+
+</html>
+<div class="separator" style="clear: both; text-align: center;"><br /></div>
