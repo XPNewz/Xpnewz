@@ -1,1 +1,100 @@
 
+1
+<?xml version="1.0" encoding="UTF-8" ?>
+2
+<!DOCTYPE html>
+3
+<html lang='en' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+4
+  <head>
+5
+    <meta charset='UTF-8'/>
+6
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'/>
+7
+    <link href='https://xpnewz.blogspot.com/' rel='canonical'/>
+8
+    <b:if cond='data:blog.pageType in {&quot;index&quot;} and data:blog.pageName == &quot;&quot; and data:blog.homepageUrl != data:blog.url'>
+9
+      <title>All Posts - 
+10
+        <data:blog.title/>
+11
+      </title>
+12
+    </b:if>
+13
+    <b:if cond='data:blog.homepageUrl == data:blog.url'>
+14
+      <title>
+15
+        <data:blog.pageTitle/>
+16
+      </title>
+17
+      <b:else/>
+18
+      <b:if cond='data:blog.pageType in {&quot;item&quot;,&quot;static_page&quot;}'>
+19
+        <title>
+20
+          <data:blog.pageName/> - 
+21
+          <data:blog.title/>
+22
+        </title>
+23
+        <b:else/>
+24
+        <b:if cond='data:view.isLabelSearch'>
+25
+          <title>Posts Tagged: 
+26
+            <data:blog.searchLabel/> - 
+27
+            <data:blog.title/>
+28
+          </title>
+29
+          <b:else/>
+30
+          <b:if cond='data:view.isSearch'>
+31
+            <title>Search Results for: 
+32
+              <data:blog.searchQuery/> - 
+33
+              <data:blog.title/>
+34
+            </title>
+35
+            <b:else/>
+36
+            <b:if cond='data:blog.pageType in {&quot;error_page&quot;}'>
+37
+              <title>Page Not Found - 
+38
+                <data:blog.title/>
+39
+              </title>
+40
+            </b:if>
+41
+          </b:if>
+42
+        </b:if>
+43
+      </b:if>
+44
+    </b:if>
+45
+    <b:skin><![CDATA[
+46
+      
+47
+​
+48
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+49
+​
+Template: Edit template
