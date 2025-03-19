@@ -1,0 +1,479 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Death Stranding 2: On the Beach is a forthcoming sequel to Death Stranding by Hideo Kojima</title>
+    <meta
+        content="Death Stranding 2: On the Beach is a forthcoming sequel to Death Stranding by Hideo Kojima"
+        name="description">
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            
+            
+
+        }
+
+        main {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            border: 1px solid greenyellow;
+            box-shadow: 0 2px 10px skyblue;
+            border-top: 4px solid #2a2a2a;
+            
+
+
+        }
+
+        article 
+	h1,
+        h2 {
+            color: #000000;
+        }
+
+        a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .system-requirements {
+            background: #f0f0f0;
+            padding: 10px;
+            border-left: 4px solid #4CAF50;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .creator-info {
+            margin: 20px 0;
+            font-style: italic;
+        }
+
+        footer {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .slider {
+            position: relative;
+            max-width: 100%;
+            margin: 20px 0;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .slides img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 5px;
+            flex-shrink: 0;
+        }
+
+        .slider-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .slider-buttons button {
+            background: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        .slider-buttons button:hover {
+            background: rgba(0, 0, 0, 0.7);
+        }
+	.progress-percentage {
+            position: fixed;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            background-color: #ffcc00;
+            color: #000;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 0 10px 10px 0;
+            font-size: 16px;
+            z-index: 1000;
+        }
+
+        .rating-container {
+            display: flex;
+            align-items: flex-start;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            flex-direction: column;
+        }
+
+        .stars {
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+            margin: 0;
+        }
+
+        .star {
+            font-size: 40px;
+            color: #e0e0e0;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+        .star:hover,
+        .star.selected {
+            color: #ffc107;
+        }
+
+        .rating-value {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .average-rating,
+        .rating-stats {
+            font-size: 16px;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            background: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #45a049;
+        }
+
+        #rating {
+            margin-top: 0;
+        }
+
+        /* Modal Styling */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .modal-content button {
+            margin-top: 15px;
+            padding: 10px 15px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .modal-content button:hover {
+            background: #45a049;
+        }
+	    .info {
+            background: #f0f0f0;
+            padding: 10px;
+            border-left: 4px solid gold;
+            margin: 20px 0;
+            border-radius: 5px;
+      }
+        article 
+      h1,h2,h3 {
+            color: #ff6f61;
+      
+        }
+        .dea {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 20px;
+          color:black;
+        }
+        h2 {
+            font-size: 2em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        h3 {
+            font-size: 1.5em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .edition {
+            margin-top: 20px;
+        }
+        .edition h3 {
+            color: black;
+        }
+        .edition p {
+            margin-bottom: 10px;
+        }
+        .bonus {
+            margin-top: 30px;
+            padding: 15px;
+            background-color:#2a2a2a;
+            border-radius: 10px;
+            color: whitesmoke;
+        }
+        .bonus h2 {
+            color: #ff6f61;
+        }
+       article a{
+         background-color: black;
+         border-radius: 10px;
+         padding: 5px;
+         color: white;
+         font-size: smaller;
+         cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+        transition: color 0.3s ease-in-out;
+        transition: text-decoration 0.3s ease-in-out;
+        }
+        a:hover {
+            background-color: #000;
+            color: #fff;
+            text-decoration: none;
+            
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <article>
+            <!--Content start-->
+    <h1 class="dea">DEATH STRANDING 2: ON THE BEACH</h1>
+    <p><strong>Death Stranding 2: On the Beach</strong> is a forthcoming sequel to <em>Death Stranding</em> by Hideo Kojima, scheduled to release on <strong>June 26, 2025</strong>, with pre-orders starting from <strong>March 17, 2025</strong>. It will be available exclusively on <strong>PlayStation 5</strong>.</p>
+
+    <p>In this game, players will again step into the shoes of <strong>Sam Bridges</strong>, portrayed by <strong>Norman Reedus</strong>. His mission is to save humanity from extinction. Like its predecessor, this game will be based on <strong>connection</strong> and <strong>survival</strong>, but this time, it will be deeper and more emotional.</p>
+
+    
+    
+               <!--1st image slider-->
+	      <div class="slider">
+                <div class="slides" id="slides">
+            
+			<!---->
+			<!--paste here other images-->
+                    <img alt="Screenshot 2" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh1_W6NxdJTWiOcHjsIcPjL0_gG32-4tigvtrQVAL0c1eM22IUQllacH3HFK4IGNsza4sUaFeualABpgP34xI54VKlhFQkNQXLB-rssU6ouPkwkHlIFiRJ3MuZhWmc3YUdYfhdXL9xNbRO9-_dam3pRAMg19Ta8G_DWsxfHHcy7JRUSSl-WFaHErMqLrQ/s1600/fsfTZyIJQKWvhgeoyGMXFQ.jpg" />
+                <img alt="Screenshot 3" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhISHZmjA_Mk_cKdlnYRt88J7oeohwwU9XZvtcHn4KJI3mybroVcOXrxK6rJniCImFp3k5LAaJFuXr3acAimsWhF4XeVoeDwpdnL7e-k53yoj5k2jTpgLnCFg0bS19X2Agy_qehG1mjTJ_ooUBad9167n4mtHJi-gD5KTBC8ledge8xVit8QYBxvcJ4zQ/s1600/zKrBaOwoQFGgmWgCupEnBQ.jpg" />
+			</div>
+                    <div class="slider-buttons">
+                        <button id="prev">❮</button>
+                        <button id="next">❯</button>
+                </div>
+	      </div>	      
+		    <!--Write other content here after 1st image slider-->
+		    <h2>Gameplay & Features</h2>
+    <ul>
+        <li><strong>Too Much Realism Feel:</strong> The environment will be more dynamic.</li>
+        <li><strong>Exploration:</strong> New improvements and challenges await.</li>
+        <li><strong>Open World Experience:</strong> More interactive encounters will enhance your gameplay experience.</li>
+    </ul>
+
+    <h2>Game Editions and Prices</h2>
+    <div class="edition">
+        <h3>Standard Edition – $69.99</h3>
+        <p>Includes the base game + cosmetics.</p>
+    </div>
+    <div class="edition">
+        <h3>Digital Deluxe Edition – $79.99</h3>
+        <p>Includes extra items + 2 days early access.</p>
+    </div>
+    <div class="edition">
+        <h3>Collector’s Edition – $229.99</h3>
+        <p>Includes a special statue, figurine, and an autographed letter from Kojima.</p>
+    </div>
+
+    <p>If you loved the first part, then this sequel is going to be even more interesting. Are you excited?</p>
+  
+                <!--2nd image slider-->
+	        <div class="slider">
+                <div class="slides" id="slides">
+			<!--paste here other images-->
+                    <img alt="Screenshot 2" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhHjqJT16_tRjA7SRtQbiKDjlZd0U06wD1dQJvIwYG1E-qaZtMSXlaOHR5EXI6895966PVvNoD5Y9_t2M7TH60fsryCeeiuBTJUFbK7P7nuY6rB75gqqsb8o1bMHzmPk3Ofsa_LAD2oAZB41OBCmk8svslo3DAr-Lo74ekucUKQ89hzKk3F-vsRlACocA/s1600/a-cinematic-shot-of-the-game-death-stran_u-Lq_R29Rj24FWErvdWKeQ_AIFxAebWSneztz1Q5QpUig.jpeg" />
+                <img alt="Screenshot 3" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhEXhKGzk5L0yINJptodU9xPk-lSrsO3PzHAmHORD33J3OVzREpqvTI3EtA28szWkpNoalo-IIzYG4FbzVbcV5Zw6BqBRClhewYJNNY9JrVBShzzpWTWocoKmmkfmiE0-db0g31oCxRsl99_an-g1oahrwBjSkYGTt7n-sDJ2SdcDJUgXeZ47yxHlNckA/s1600/a-cinematic-shot-of-the-death-stranding-_AhJPB0ZlQ_WzH-ceeqLh8g_AIFxAebWSneztz1Q5QpUig.jpeg" />
+                    <div class="slider-buttons">
+                        <button id="prev">❮</button>
+                        <button id="next">❯</button>
+                    </div>
+                </div>
+		</div>	
+		<!--Write other content here after 2nd image slider-->
+        <div class="bonus">
+            <h2>Bonus</h2>
+            <h3>Story Hint:</h3>
+            <p>The follow-up digs deeper into the secrets of the Death Stranding, exploring themes of connection, isolation, and the cyclical nature of life and death. Kojima calls the game a <em>"reintroduction"</em> to this world, hinting that it will build on the backstory while introducing new gameplay mechanics and unexpected story twists.</p>
+        </div>
+          <h2>Reference -</h2>
+          <a href="https://www.kojimaproductions.jp/en/death-stranding-2">Kojima</a>
+          <a href="https://en.wikipedia.org/wiki/Death_Stranding">Wikipedia</a>
+          <a href="https://store.steampowered.com/app/1850570/DEATH_STRANDING_DIRECTORS_CUT/">STEAM</a>
+          
+	<!--Content end-->
+		<div class="info">
+                <p><i>Written by: Elagon</i></p>
+          </div>
+        </article>
+       
+    <div class="rating-container">
+        <h2 id="rating">Rate Your Experience on this Blog</h2>
+        <div class="stars" id="stars">
+            <span class="star" data-value="1">&#9733;</span>
+            <span class="star" data-value="2">&#9733;</span>
+            <span class="star" data-value="3">&#9733;</span>
+            <span class="star" data-value="4">&#9733;</span>
+            <span class="star" data-value="5">&#9733;</span>
+        </div>
+        <div class="rating-value" id="ratingValue">Rating: 0</div>
+        <button id="submitRating">Submit Rating</button>
+    </div>
+
+    <!-- Thank You Modal -->
+    <div id="thankYouModal" class="modal">
+        <div class="modal-content">
+            <p>Thank you for sharing your feedback! You rated: <span id="userRating"></span> stars.</p>
+            <button id="closeModal">Close</button>
+        </div>
+    </div>
+
+    <script>
+        const slides = document.getElementById('slides');
+        const images = slides.getElementsByTagName('img');
+        const prev = document.getElementById('prev');
+        const next = document.getElementById('next');
+        let index = 0;
+
+        function showSlide(i) {
+            index = (i + images.length) % images.length;
+            slides.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        prev.addEventListener('click', () => showSlide(index - 1));
+        next.addEventListener('click', () => showSlide(index + 1));
+    </script>
+    <div class="progress-percentage" id="progress-percentage">0%</div>
+    <script>
+        const progressPercentage = document.getElementById("progress-percentage");
+
+        window.addEventListener("scroll", () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.body.scrollHeight - window.innerHeight;
+            const scrollPercent = Math.round((scrollTop / docHeight) * 100);
+
+            // Update the percentage text
+            progressPercentage.textContent = scrollPercent + "%";
+        });
+    </script>
+    <script>
+        const stars = document.querySelectorAll('.star');
+        const ratingValue = document.getElementById('ratingValue');
+        const submitRating = document.getElementById('submitRating');
+        const modal = document.getElementById('thankYouModal');
+        const userRating = document.getElementById('userRating');
+        const closeModal = document.getElementById('closeModal');
+        let selectedRating = 0;
+        let ratings = JSON.parse(localStorage.getItem('ratings')) || [];
+
+        // Highlight stars
+        stars.forEach(star => {
+            star.addEventListener('mouseover', () => updateStars(star.dataset.value));
+            star.addEventListener('click', () => {
+                selectedRating = parseInt(star.dataset.value);
+                ratingValue.textContent = `Rating: ${selectedRating}`;
+            });
+        });
+
+        // Update stars appearance
+        function updateStars(rating) {
+            stars.forEach(star => {
+                star.classList.toggle('selected', star.dataset.value <= rating);
+            });
+        }
+
+        // Submit rating
+        submitRating.addEventListener('click', () => {
+            if (selectedRating === 0) {
+                alert('Please select a rating between 1 and 5.');
+                return;
+            }
+            ratings.push(selectedRating);
+            localStorage.setItem('ratings', JSON.stringify(ratings));
+            showThankYouModal(selectedRating);
+        });
+
+        // Show Thank You Modal
+        function showThankYouModal(rating) {
+            userRating.textContent = rating;
+            modal.style.display = 'flex';
+        }
+
+        // Close Modal
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        // Close modal if clicked outside
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+   </main>	    
+</body>
+<div class="separator" style="clear: both; text-align: center;"><br /></div>
+</html>
