@@ -1251,6 +1251,7 @@ aside .download-btn {
             display: flex;
             align-items: center;
             gap: 8px;
+            z-index: 1; 
         }
         .share-btn img {
             width: 20px;
@@ -1319,6 +1320,17 @@ aside .download-btn {
             cursor: pointer;
             border-radius: 5px;
         }
+      .floatads{
+            position: fixed;
+            right: 10%;
+            bottom: 10%;
+            z-index: 1;
+       }
+      @media (max-width: 800px) {
+         .floatads{
+             display: none;
+}
+      }
 
     ]]></b:skin>
   </head>
@@ -2051,6 +2063,7 @@ aside .download-btn {
                   </b:if>
                 </b:includable>
                 <b:includable id='threaded-comment-form' var='post'>
+                 
   <div class='comment-form'>
     <a name='comment-form'/>
     <b:if cond='data:mobile'>
@@ -2326,12 +2339,19 @@ aside .download-btn {
     sidebar.style.display = &quot;none&quot;;
   }
 }  
-            </script></aside>
-        </div>
-        
-      </div>
-      </b:if>
-   
+            </script>
+          <script async='async' crossorigin='anonymous' src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4944256940534542'/>
+<!-- total -->
+<ins class='adsbygoogle' data-ad-client='ca-pub-4944256940534542' data-ad-format='auto' data-ad-slot='4674452619' data-full-width-responsive='true' style='display:block'/>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></aside></div></div></b:if>
+  <script async='async' crossorigin='anonymous' src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4944256940534542'/>
+<!-- bottom -->
+<ins class='adsbygoogle' data-ad-client='ca-pub-4944256940534542' data-ad-format='auto' data-ad-slot='6402762405' data-full-width-responsive='true' style='display:block'/>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
     <footer>
       <div class='container'>
         <div class='top'>
