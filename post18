@@ -1,0 +1,597 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Masala Game’s, an independent game development studio, has announced the release date of the upcoming game: Detective Dotson (April 3, 2025 on Steam). A mysterious adventure game which is set to release on the Steam platform.</title>
+    <meta
+        content="Masala Game’s, an independent game development studio, has announced the release date of the upcoming game: Detective Dotson (April 3, 2025 on Steam). A mysterious adventure game which is set to release on the Steam platform."
+        name="description">
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            
+
+        }
+
+        main {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            border: 1px solid greenyellow;
+            box-shadow: 0 2px 10px skyblue;
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            color: #333;
+            border-top: 4px solid midnightblue;
+        }
+
+        article 
+	h1,
+        h2 {
+            color: #000000;
+        }
+
+        a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .system-requirements {
+            background: #f0f0f0;
+            padding: 10px;
+            border-left: 4px solid #4CAF50;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .creator-info {
+            margin: 20px 0;
+            font-style: italic;
+        }
+
+        footer {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .slider {
+            position: relative;
+            max-width: 100%;
+            margin: 20px 0;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .slides img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 5px;
+            flex-shrink: 0;
+        }
+
+        .slider-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .slider-buttons button {
+            background: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        .slider-buttons button:hover {
+            background: rgba(0, 0, 0, 0.7);
+        }
+	.progress-percentage {
+            position: fixed;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            background-color: #ffcc00;
+            color: #000;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 0 10px 10px 0;
+            font-size: 16px;
+            z-index: 1000;
+        }
+
+        .rating-container {
+            display: flex;
+            align-items: flex-start;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            flex-direction: column;
+        }
+
+        .stars {
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+            margin: 0;
+        }
+
+        .star {
+            font-size: 40px;
+            color: #e0e0e0;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+        .star:hover,
+        .star.selected {
+            color: #ffc107;
+        }
+
+        .rating-value {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .average-rating,
+        .rating-stats {
+            font-size: 16px;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            background: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #45a049;
+        }
+
+        #rating {
+            margin-top: 0;
+        }
+
+        /* Modal Styling */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .modal-content button {
+            margin-top: 15px;
+            padding: 10px 15px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .modal-content button:hover {
+            background: #45a049;
+        }
+	    .info {
+            background: #f0f0f0;
+            padding: 10px;
+            border-left: 4px solid gold;
+            margin: 20px 0;
+            border-radius: 5px;
+      }
+      article h1 {
+            color: midnightblue; /* Dark blue */
+            text-shadow: -1.5px -1.5px 0 #FFD700, 1.5px -1.5px 0 #FFD700, -1.5px 1.5px 0 #FFD700, 1.5px 1.5px 0 #FFD700; /* Golden outline */
+            font-size: 50px;
+            text-align: center;
+            transition: 0.5s;
+            position: relative;
+        }
+        h2 {
+            color: rgb(46, 28, 3);
+            font-size: 1.8em;
+            margin-top: 20px;
+            
+        }
+
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        .gameplay-features, .unique-selling-points, .conclusion, .bonus {
+            margin-top: 20px;
+        }
+
+        .gameplay-features h3, .unique-selling-points h3, .conclusion h3, .bonus h3 {
+            color: #003366;
+            font-size: 1.5em;
+        }
+
+        .specification-requirements {
+            margin-top: 20px;
+            
+            
+        }
+
+        .specification-requirements summary {
+            font-weight: bold;
+            color: burlywood;
+            cursor: pointer;
+            background-color: rgb(27, 16, 7);
+            width: fit-content;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: larger;
+        }
+
+        .specification-requirements table {
+            margin-top: 10px;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .specification-requirements th, .specification-requirements td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+            
+        }
+
+        .specification-requirements th {
+            background-color: #110030;
+            color: gold;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .feedback {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: green;
+        }
+      article strong{
+            color: gold;
+        }
+      article a{
+         background-color: black;
+         border-radius: 10px;
+         padding: 5px;
+         color: white;
+         font-size: smaller;
+         cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+        transition: color 0.3s ease-in-out;
+        transition: text-decoration 0.3s ease-in-out;
+        }
+        a:hover {
+            background-color: #000;
+            color: #fff;
+            text-decoration: none;
+            
+        }
+    
+    </style>
+</head>
+<body>
+    <main>
+        <article>
+            <!--Content start-->
+		    <h1>DETECTIVE DOTSON</h1>
+
+    <p><strong>Masala Game’s</strong>, an independent game development studio, has announced the release date of the upcoming game: <strong>Detective Dotson</strong> (April 3, 2025 on Steam). A mysterious adventure game which is set to release on the Steam platform.</p>
+               <!--1st image slider-->
+	      <div class="slider">
+                <div class="slides" id="slides">
+                    <!--paste image here for both thumbnail and main image-->
+			<!---->
+			<!--paste here other images-->
+                    <img alt="Screenshot 2" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi9gqztExjHP8p_ua4gkwupNM7M8raz7_tQbCTp2kufeiCnO3PbjsrS2MFpLZkbHdLnhqRKDG28PJqyjiuhL1XnoUPZdp_zYhS8_H5lq6-XzcgrsaotNAe4zI4QelAuFwcZGM1Wahw1sCVgyMGTTkAvCy_JhOBJvxG94POPH8izKXHzy9XbkJ-EWHK7VQ/s1600/a-3d-pixel-graphics-of-a-game-titled-det_1aUIPRIESqiU6CFlrv2EaQ_2HCfb_saSPCpOZYsbHHFuQ.jpeg" />
+                <img alt="Screenshot 3" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEii0tgbDxxehMMkhy1VUW3fB4TedcrFyMyd4GrEd232jOEAZpdcO8v75ieV4UC8GSUjOQnQfPPZGQvIq8jBEOUlQs-M92k872iPxR5klXZ1ihYPfF19QEW16WnyXC_h3LEPq0J2m2LkPRPhlTwP1thrBllTj9O5ea3dgxoPwpE0yj0BmWlcaxxAnZdvCg/s1600/PvOKetmrTFmXV-dTgFLH9w.jpg" />
+			</div>
+                    <div class="slider-buttons">
+                        <button id="prev">❮</button>
+                        <button id="next">❯</button>
+                </div>
+	      </div>	      
+		    <!--Write other content here after 1st image slider-->
+		    <h2>Story of the Game</h2>
+    <p>This game is based on an aspiring Bollywood actor who becomes a detective. The player assumes the role of Dotson and solves many mysteries with his unexpected investigative skills by exploring the Indian landscape in a mixture of 2D and 3D worlds and interacts with different characters.</p>
+          <a href="https://masalagames.mmm.page/dotson">Masala games</a>
+          <a href="https://store.steampowered.com/app/2450840/Detective_Dotson/" style="background: darkblue;">STEAM</a>
+    <div class="gameplay-features">
+        <h2>Gameplay Features</h2>
+        <ul>
+            <li>Side-scrolling adventure where players can move left and right to move the character backward and forward respectively.</li>
+            <li>By moving forward in the story, you will interact and interrogate with different kinds of characters to complete your evidence board.</li>
+        </ul>
+    </div>
+
+    <div class="unique-selling-points">
+        <h2>Unique Selling Points</h2>
+        <p>Unlike other Western detective games, this game gives you the freedom of enjoying the landscape of Indian culture in a mixture of 2D and 3D worlds, like the legendary game <em>Contra</em>, which gives you a groundbreaking feature (combination of 2D and 3D).</p><a href="https://youtu.be/bReR_9Dhc3U" style="background: red;">Youtube</a>
+    </div>
+
+    <div class="specification-requirements">
+        <details>
+            <summary>Specification Requirements</summary>
+            <table>
+                <tr>
+                    <th>Specification</th>
+                    <th>Minimum Requirements</th>
+                </tr>
+                <tr>
+                    <td>OS</td>
+                    <td>Windows 10+, macOS 10.12+, Ubuntu 20.04+</td>
+                </tr>
+                <tr>
+                    <td>Processor</td>
+                    <td>Intel Core i3-3240 (2 * 3400) or AMD FX-4300 (4 * 3800)</td>
+                </tr>
+                <tr>
+                    <td>Memory (RAM)</td>
+                    <td>8 GB</td>
+                </tr>
+                <tr>
+                    <td>Graphics</td>
+                    <td>Nvidia GeForce GT 640 (2GB VRAM) or AMD Radeon HD 7750 (1GB VRAM)</td>
+                </tr>
+                <tr>
+                    <td>DirectX</td>
+                    <td>Version 12 (Windows only)</td>
+                </tr>
+                <tr>
+                    <td>Storage</td>
+                    <td>1 GB available space</td>
+                </tr>
+            </table>
+        </details>
+    </div>  
+                <!--2nd image slider-->
+	        <div class="slider">
+                <div class="slides" id="slides">
+			<!--paste here other images-->
+                    <img alt="Screenshot 2" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjUuztAVfMJYmnZz8HzM0FxrCPlh6IRlfoJf6VYR_vbAupGrcm3CCyxnKc3vVJlWw9IfWA3lv7JuKi0eSQFNGzK5LhOIAKC7Qx_nLwGh1q3KfUo6TjEm4v_WGGLrcxPVhVI8ChUDVzCl44h_psBtszcb0UFj1ty3JBTVjx6gKZOdUKe-9Ufak5OSHZTgQ/s1600/a-3d-pixel-graphics-render-of-a-game-sce_v6Ez5hxeSKq6G9vRLhIaZg_2HCfb_saSPCpOZYsbHHFuQ.jpeg" />
+                    <img alt="Screenshot 2" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi9gqztExjHP8p_ua4gkwupNM7M8raz7_tQbCTp2kufeiCnO3PbjsrS2MFpLZkbHdLnhqRKDG28PJqyjiuhL1XnoUPZdp_zYhS8_H5lq6-XzcgrsaotNAe4zI4QelAuFwcZGM1Wahw1sCVgyMGTTkAvCy_JhOBJvxG94POPH8izKXHzy9XbkJ-EWHK7VQ/s1600/a-3d-pixel-graphics-of-a-game-titled-det_1aUIPRIESqiU6CFlrv2EaQ_2HCfb_saSPCpOZYsbHHFuQ.jpeg" />
+                <img alt="Screenshot 3" src="" />
+                    <div class="slider-buttons">
+                        <button id="prev">❮</button>
+                        <button id="next">❯</button>
+                    </div>
+                </div>
+		</div>	
+		<!--Write other content here after 2nd image slider-->
+	<div class="conclusion">
+        <h2>Conclusion</h2>
+        <p>There is already a demo for <strong>Detective Dotson</strong> available on Steam, offering gamers a sneak peek at the game’s mechanics and narrative presentation. The actual release is expected to be met with excitement because of its great storytelling, intriguing setting, and innovative gameplay mechanics.</p>
+    </div>
+
+    <div class="bonus">
+        <h2>Bonus Part</h2>
+        <p><strong>Detective Dotson</strong> is created by Masala Games, with developers who have worked at Pixar and EA, providing excellent storytelling and design. The game provides a true Indian experience with real Indian locations, traditional Indian music, and cultural influences. It also features dynamic gameplay mechanics, including day-night cycles, weather conditions, and time-of-day sensitive clues which affect investigations. With more than one ending, the player’s choices determine the outcome, which adds replay value. Also, Masala Games regularly interacts with the community through Discord and Steam, promising to continue developing and adding more future updates and additional cases, so it’s a growing detective adventure.</p>
+    </div>		
+	<!--Content end-->
+		<div class="info">
+                <p><i>Written by: Elagon</i></p>
+          </div>
+          <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detective Riddle Game</title>
+    <h2 style="text-align: center; color: midnightblue; ">Here's a Challenge for you, A Detective Riddle 😊</h2>
+    <p><b>Riddle:</b><br>
+        A famous art gallery hosts an exclusive exhibition featuring a rare painting. During the event, the painting mysteriously disappears. The gallery’s security system was active, and no one entered or exited the room during the time of the theft. The only people in the room were:
+<ol>
+    <li><b>The janitor</b>, who was cleaning the floors.
+
+    <li><b>The curator</b>, who was giving a lecture about the painting.
+
+        <li><b>The artist</b>, who was signing autographs.
+
+            <li><b>The security guard</b>, who was monitoring the room.</ol>
+
+                The detective arrives and notices one small but crucial detail:<b> the painting’s frame is still hanging on the wall, but the canvas is gone.</b>After questioning everyone, the detective immediately knows who stole the painting.<b>Who is the thief, and how did they do it?</b><br>
+
+<b>Hint:</b> Think about the roles of the suspects and what the missing canvas implies. Consider how the thief could have taken the painting without being detected by the security system.
+</p>
+
+    <input type="text" id="userAnswer" placeholder="Type your answer here...">
+    <button onclick="checkAnswer()">Submit</button>
+
+    <div id="feedback" class="feedback"></div>
+
+    <script>
+        function checkAnswer() {
+            const correctAnswer = "fire";
+            const userAnswer = document.getElementById("userAnswer").value.toLowerCase().trim();
+            const feedbackDiv = document.getElementById("feedback");
+
+            if (userAnswer === correctAnswer) {
+                feedbackDiv.textContent = "Good Job! You solved the riddle!";
+                feedbackDiv.style.color = "green";
+            } else {
+                feedbackDiv.textContent = "Oops! Try again!";
+                feedbackDiv.style.color = "red";
+            }
+        }
+    </script>
+        </article>
+             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4944256940534542"
+     crossorigin="anonymous"></script>
+<!-- square Ad -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4944256940534542"
+     data-ad-slot="3208482842"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    <div class="rating-container">
+        <h2 id="rating">Rate Your Experience on this Blog</h2>
+        <div class="stars" id="stars">
+            <span class="star" data-value="1">&#9733;</span>
+            <span class="star" data-value="2">&#9733;</span>
+            <span class="star" data-value="3">&#9733;</span>
+            <span class="star" data-value="4">&#9733;</span>
+            <span class="star" data-value="5">&#9733;</span>
+        </div>
+        <div class="rating-value" id="ratingValue">Rating: 0</div>
+        <button id="submitRating">Submit Rating</button>
+    </div>
+
+    <!-- Thank You Modal -->
+    <div id="thankYouModal" class="modal">
+        <div class="modal-content">
+            <p>Thank you for sharing your feedback! You rated: <span id="userRating"></span> stars.</p>
+            <button id="closeModal">Close</button>
+        </div>
+    </div>
+
+    <script>
+        const slides = document.getElementById('slides');
+        const images = slides.getElementsByTagName('img');
+        const prev = document.getElementById('prev');
+        const next = document.getElementById('next');
+        let index = 0;
+
+        function showSlide(i) {
+            index = (i + images.length) % images.length;
+            slides.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        prev.addEventListener('click', () => showSlide(index - 1));
+        next.addEventListener('click', () => showSlide(index + 1));
+    </script>
+    <div class="progress-percentage" id="progress-percentage">0%</div>
+    <script>
+        const progressPercentage = document.getElementById("progress-percentage");
+
+        window.addEventListener("scroll", () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.body.scrollHeight - window.innerHeight;
+            const scrollPercent = Math.round((scrollTop / docHeight) * 100);
+
+            // Update the percentage text
+            progressPercentage.textContent = scrollPercent + "%";
+        });
+    </script>
+    <script>
+        const stars = document.querySelectorAll('.star');
+        const ratingValue = document.getElementById('ratingValue');
+        const submitRating = document.getElementById('submitRating');
+        const modal = document.getElementById('thankYouModal');
+        const userRating = document.getElementById('userRating');
+        const closeModal = document.getElementById('closeModal');
+        let selectedRating = 0;
+        let ratings = JSON.parse(localStorage.getItem('ratings')) || [];
+
+        // Highlight stars
+        stars.forEach(star => {
+            star.addEventListener('mouseover', () => updateStars(star.dataset.value));
+            star.addEventListener('click', () => {
+                selectedRating = parseInt(star.dataset.value);
+                ratingValue.textContent = `Rating: ${selectedRating}`;
+            });
+        });
+
+        // Update stars appearance
+        function updateStars(rating) {
+            stars.forEach(star => {
+                star.classList.toggle('selected', star.dataset.value <= rating);
+            });
+        }
+
+        // Submit rating
+        submitRating.addEventListener('click', () => {
+            if (selectedRating === 0) {
+                alert('Please select a rating between 1 and 5.');
+                return;
+            }
+            ratings.push(selectedRating);
+            localStorage.setItem('ratings', JSON.stringify(ratings));
+            showThankYouModal(selectedRating);
+        });
+
+        // Show Thank You Modal
+        function showThankYouModal(rating) {
+            userRating.textContent = rating;
+            modal.style.display = 'flex';
+        }
+
+        // Close Modal
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        // Close modal if clicked outside
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+   </main>	    
+</body>
+
+</html>
+<div class="separator" style="clear: both; text-align: center;"><br /></div>
