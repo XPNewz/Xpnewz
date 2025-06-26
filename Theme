@@ -322,13 +322,14 @@ section .heading-container {
 .services-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 40px;
+  gap: 30px;
 }
 
 .services-container .service {
   box-shadow: 0 6px 40px rgba(0, 0, 0, 0.1);
   transition: all 300ms ease;
-  border-radius:50px;
+  border-radius:10px;
+  max-width: 350px;
 }
 
 .services-container .content {
@@ -734,11 +735,12 @@ footer .copyright {
 /* Sidebar */
 
 aside {
-  width: 300px;
+  width: 350px;
   min-width: 300px;
   display: flex;
   flex-direction: column;
   gap: 5px;
+  
 }
 
 aside h3 {
@@ -1402,6 +1404,7 @@ aside .download-btn {
       	  <a href='https://xpnewz.blogspot.com/p/about-us.html'>About Us</a>
 		  <a href='#blog'>Latest Post</a>
       	  <a href='https://xpnewz.blogspot.com/p/free-games-for-now.html'>Free games</a>
+          <a href='https://xpnewz.blogspot.com/p/game.html'>IRON MAN</a>
          <div class='menu'>
             <button>Post</button>
             <div class='dropdown'>
@@ -1433,6 +1436,7 @@ aside .download-btn {
           <a href='https://xpnewz.blogspot.com/p/about-us.html'>About Us</a>
           <a href='#blog'>Latest Post</a>
           <a href='https://xpnewz.blogspot.com/p/free-games-for-now.html'>Free games</a>
+          <a href='https://xpnewz.blogspot.com/p/game.html'>IRON MAN</a>
           <div class='menu'>
             <button>Post</button>
             <div class='dropdown'>
@@ -2309,10 +2313,7 @@ aside .download-btn {
             </b:section>
           </div>
           <aside id='sidebar'><b:section id='popular-posts-container'/>
-            <img src='https://res.cloudinary.com/did8behwz/image/upload/v1739540924/unnamed-Photoroom_1_wjettu.png' style='height: 200px;'/>
-             <h2 class='cookieCard' id='search-bar'>Search more Content</h2>
-         <div class='gcse-search'/><script async='async' src='https://cse.google.com/cse.js?cx=920eee43425024df4'>
-            </script>  
+            <img src='https://res.cloudinary.com/did8behwz/image/upload/v1739540924/unnamed-Photoroom_1_wjettu.png' style='height: 200px;'/>  
             <h2 class='cookieCard'>Enjoy Jokes 😂</h2>
             <img src='https://res.cloudinary.com/did8behwz/image/upload/v1739626835/df5b252e-cab0-4c05-899f-d4fca6125ca2_wb1m4v.jpg' style=' border: 1px solid grey;'/>
             <img src='https://res.cloudinary.com/did8behwz/image/upload/v1739535397/ej_Pgl98TEeTnjhom3PDnA_ndgcih.jpg' style=', border: 1px solid grey;'/>
@@ -2334,6 +2335,12 @@ aside .download-btn {
   }
 }
              if (window.location.href.indexOf(&quot;https://xpnewz.blogspot.com/p/free-games-for-now.html#gsc.tab=0&quot;) &gt; -1) {
+  let sidebar = document.querySelector(&quot;#sidebar&quot;); // Replace with your sidebar selector
+  if (sidebar) {
+    sidebar.style.display = &quot;none&quot;;
+  }
+}  
+              if (window.location.href.indexOf(&quot;https://xpnewz.blogspot.com/p/game.html&quot;) &gt; -1) {
   let sidebar = document.querySelector(&quot;#sidebar&quot;); // Replace with your sidebar selector
   if (sidebar) {
     sidebar.style.display = &quot;none&quot;;
@@ -2480,7 +2487,7 @@ document.addEventListener(&quot;click&quot;, (e) =&gt; {
       
     
       </script>
-      <script src='/feeds/posts/summary?alt=json-in-script&amp;max-results=3&amp;callback=populateLatestPosts'/>
+      <script src='/feeds/posts/summary?alt=json-in-script&amp;max-results=4&amp;callback=populateLatestPosts'/>
     </b:if>
     <b:if cond='data:view.isSingleItem'>
       <script>
