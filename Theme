@@ -4,7 +4,17 @@
   <head>
     <meta charset='UTF-8'/>
     <meta content='width=device-width, initial-scale=1.0' name='viewport'/>
+    <script src='https://cdn.tailwindcss.com'/>
     <link href='https://xpnewz.blogspot.com/' rel='canonical'/>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css' rel='stylesheet'/>
+    <script src='https://cdn.tailwindcss.com'/>
+    <!-- Google Fonts: Orbitron for headings, Poppins for body -->
+    <style>
+@import url(&#39;https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&amp;family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap&#39;);
+</style>
+    <style>
+@import url(&#39;https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&amp;family=Orbitron:wght@400..900&amp;family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap&#39;);
+</style>
     <b:if cond='data:blog.pageType in {&quot;index&quot;} and data:blog.pageName == &quot;&quot; and data:blog.homepageUrl != data:blog.url'>
       <title>All Posts - 
         <data:blog.title/>
@@ -51,34 +61,28 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
-:root {
-  --dark-color: #1a1423;
-  --light-color: #fdfffc;
-  --accent-color: dodgerblue;
-}
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
-  color: var(--dark-color);
+   font-family: 'Poppins', sans-serif;
+            background-color: #F9FAFB; /* Off-white background */
+            color: #1F2937; /* Dark Gray text */
+       
 }
-
+.container{
+   max-width: 100%;
+}
 a {
   color: var(--dark-color);
   text-decoration: none;
 }
 
-.container {
-  max-width: 1450px;
-  margin-inline: auto;
-  padding: 0 32px;
-}
 
 .btn {
   background: var(--accent-color);
@@ -97,8 +101,10 @@ a {
 }
 
 .btn.outlined {
-  color: var(--accent-color);
-  background: var(--light-color);
+  color: #0c3f67;
+  background: white;
+  border-radius: 5px;
+  border-color: #0c3f67;
 }
 
 .btn.outlined:hover {
@@ -109,12 +115,12 @@ a {
 .btn.light {
   background: var(--light-color);
   color: var(--dark-color);
-  border: 2px solid var(--light-color);
+  border: 2px solid #0c3f67;
 }
 
 .btn.light:hover {
   background: var(--accent-color);
-  color: var(--light-color);
+  color: #0c3f67;
 }
 
 img {
@@ -124,30 +130,27 @@ img {
 }
 
 h1 {
-  font-size: 60px;
+  font-family: 'Orbitron', sans-serif;
+  font: 60px;
   line-height: 100%;
   font-weight: 800;
   letter-spacing: -1px;
   margin: 16px 0;
-  background: linear-gradient(90deg, dodgerblue 20%, midnightblue 60%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
+  
 }
 
 h2 {
-  font-size: 36px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 36;
   line-height: 120%;
   font-weight: 800;
   letter-spacing: -1px;
   margin: 8px 0;
-  background: linear-gradient(90deg, dodgerblue 8%, midnightblue 60%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
+
 }
 
 h3 {
+  font-family: 'Orbitron', sans-serif;
   font-size: 24px;
   line-height: 130%;
   letter-spacing: -1px;
@@ -157,63 +160,18 @@ h3 {
 p {
   font-size: 16px;
   line-height: 160%;
+  font-family; "Lato", sans-serif;
 }
 
 section {
   padding: 120px 0;
 }
 
-/* Navbar */
 
-nav {
-  position: fixed;
-  top: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  left: 0;
-  right: 0;
-  max-width: 1450px;
-  margin-inline: auto;
-  z-index: 5;
-  padding: 16px 32px;
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
-  --webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 8px 42px rgba(0, 0, 0, 0.1);
-}
 
-nav .menu-items {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  font-weight: 500;
-}
-
-nav .menu-items a:hover {
-  color: var(--accent-color);
-}
-
-nav .menu-items .btn:hover {
-  color: var(--light-color);
-}
-
-.logo {
-  font-weight: 700;
-  font-size: 18px;
-}
 
 /* Hero Section */
 
-header {
-  display: flex;
-  height: 100vh;
-  align-items: center;
-  padding-top: 70px;
-  min-height: 600px;
-  max-height: 800px;
-  position: relative;
-}
 
 .buttons {
   display: flex;
@@ -221,76 +179,6 @@ header {
   margin-top: 32px;
 }
 
-header .left {
-  max-width: 50%;
-}
-
-header .right {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-
-header .right img {
-  height: 600px;
-  object-fit: cover;
-}
-
-header .bg-color {
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  background: royalblue;
-  right: 0;
-  top: 120px;
-  z-index: -1;
-  border-radius: 50%;
-  filter: blur(115px);
-}
-
-/* Featured Section */
-
-.featured {
-  z-index: 2;
-  position: relative;
-}
-
-.featured img {
-  width: auto;
-  height: 32px;
-}
-
-.featured .logos {
-  display: flex;
-  gap: 60px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.featured .container {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  align-items: center;
-  padding: 40px 32px;
-  box-shadow: 0 0 42px -20px rgba(0, 0, 0, 0.2);
-  border-radius: 30px;
-  background: var(--light-color);
-}
-
-/* About section */
-
-#about {
-  background: #f5f5f5;
-  margin-top: -60px;
-  padding-top: 180px;
-}
-
-#about .container {
-  display: flex;
-  align-items: center;
-  gap: 80px;
-}
 
 section .icon {
   width: 30px;
@@ -308,51 +196,8 @@ section .icon {
 
 section .btn {
   margin-top: 28px;
+  
 }
-
-/* Services section */
-
-section .heading-container {
-  max-width: 500px;
-  text-align: center;
-  margin-bottom: 60px;
-  margin-inline: auto;
-}
-
-.services-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
-}
-
-.services-container .service {
-  box-shadow: 0 6px 40px rgba(0, 0, 0, 0.1);
-  transition: all 300ms ease;
-  border-radius:10px;
-  max-width: 350px;
-}
-
-.services-container .content {
-  padding: 16px;
-}
-
-.services-container .service:hover {
-  transform: scale(1.04);
-  box-shadow: 0 3px 80px rgba(0, 0, 0, 0.1);
-}
-
-.services-container img {
-  height: 164px;
-}
-
-.snippet {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
 /* Why Section */
 
 #why .container {
@@ -377,6 +222,64 @@ section .heading-container {
   filter: brightness(0) invert(1);
 }
 
+
+/* Services section */
+
+
+.services-container {
+  
+  display: grid;
+  
+  gap: 15px;
+}
+
+.services-container .service {
+  display: flex;
+  
+  background-color: white;
+  box-shadow: 0 0 25px #d3d3d3;
+  border-radius:10px;
+  max-width:  900px;
+}
+.services-container .service h3{
+                   font-size: x-large;
+                   font-weight: bolder;
+}
+.services-container .service .labels{
+                position: relative;
+                left: 1px;
+                background-color: #40d4f4;
+                max-width: fit-content;
+                color: white;
+                padding: 0;
+                margin: 0;
+                border-radius: 5px;
+                text-align: center;
+                font-weight: bold;
+}
+.services-container .content {
+  padding: 16px;
+}
+
+.services-container .service:hover {
+  transform: scale(1.04);
+  box-shadow: 0 3px 80px rgba(0, 0, 0, 0.1);
+}
+
+.services-container img {
+  min-width: 150px;
+  height: 180px;
+}
+
+.snippet {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
 /* Blog section */
 
 .labels a {
@@ -396,58 +299,6 @@ section .heading-container {
   border-radius: 4px;
 }
 
-/* Contact Form */
-
-#contact {
-  background: #f5f5f5;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-form .group {
-  display: flex;
-  gap: 16px;
-}
-
-form input,
-form textarea {
-  width: 100%;
-  padding: 10px 24px;
-  background: #fff;
-  border: none;
-  font-size: 16px;
-}
-
-form textarea {
-  height: 100px;
-  resize: none;
-}
-
-form input[type="button"] {
-  font-size: 16px;
-  width: fit-content;
-  margin-top: 0;
-background: var(--accent-color);
-  color: var(--light-color);
-  padding: 8px 32px;
-  border: 2px solid var(--accent-color);
-  display: inline-block;
-  font-weight: 500;
-  cursor: pointer;
-  line-height: unset;
-  height: unset;
-  transition: all 300ms ease;
-}
-
-
-form input[type="button"]:hover {
-  background: #5947de;
-  border: 2px solid #5947de;
-}
 
 /* Footer */
 
@@ -488,7 +339,6 @@ footer .logo {
 footer .copyright {
   color: rgba(255, 255, 255, 0.5);
 }
-
 /* Hidden elements */
 
 .menu-icon,
@@ -497,7 +347,7 @@ footer .copyright {
   display: none;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 800px) {
   h1 {
     font-size: 48px;
   }
@@ -505,9 +355,13 @@ footer .copyright {
   header .right img {
     width: 280px;
   }
+ 
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
+    body{
+     max-width: fit-content;
+}
 	  .blog-list .card {
     flex-direction: column;
     align-items: flex-start;
@@ -535,7 +389,10 @@ footer .copyright {
   
   .services-container .service {
     margin-bottom: 16px;
+    width: fit-content;
+   
   }
+ 
   
   .service h3 {
     font-size: 18px;
@@ -544,7 +401,8 @@ footer .copyright {
   .snippet {
     -webkit-line-clamp: 3;
   }
-  .mobile-menu-items {
+  
+.mobile-menu-items {
     display: flex;
     height: 100vh;
     width: 100%;
@@ -583,7 +441,7 @@ footer .copyright {
     padding: 2px;
   width: 32px;
   }
-
+  
   h1 {
     font-size: 36px;
     line-height: 120%;
@@ -682,14 +540,15 @@ footer .copyright {
 /* Blog List page */
 
 .post-container .container {
-  margin-top: 100px;
+  margin-top: 50px;
   padding: 40px 32px;
   margin-bottom: 60px;
-  box-shadow: 0 8px 42px rgba(0, 0, 0, 0.1);
+  
   padding-bottom: 60px;
   display: flex;
   gap: 40px;
   padding-right: 0;
+  min-width: 100%;
 }
 
 .post-container h2 {
@@ -767,18 +626,37 @@ aside .popular-posts {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 0 25px #f1f1f1;
   
 }
 
 aside .popular-posts .card {
+  
   display: flex;
+  background-color: snowwhite;
   align-items: center;
   gap: 16px;
+  max-height: 75px;
+  margin: 10px;
+  border-radius: 5px;
+  border-bottom: 3px solid #40d4f4;
+  border-top: 3px solid #40d4f4;
+  color: grey;
+  
+  
 }
 
 aside .popular-posts img {
-  width: 60px;
-  height: 60px;
+  min-width: 75px;
+  max-height: 75px;
+  border-radius:5px 0 0 5px ;
+}
+aside .popular-posts h3 {
+  font-size: 24;
+  font-weight: bold;
+  color: #04c397;
 }
 
 aside .categories-list .widget-content {
@@ -848,13 +726,19 @@ aside .download-btn {
 
 .post-heading {
   font-size: 40px;
+  font-weight: bolder;
+  font-family: "Poppins", sans-serif;
   line-height: 120%;
+  padding-left: 25px;
+
+  
 }
 
 .post-meta {
   display: flex;
   flex-direction: column;
   gap: 8px;
+ padding-left: 30px;
 }
 
 .post-container .thumbnail {
@@ -865,7 +749,28 @@ aside .download-btn {
   margin-bottom: 60px;
   padding-bottom: 60px;
   border-bottom: 1px solid #dbdbdb;
+  font-family: "Poppins", sans-serif;
 }
+
+.post-body h1{
+  font-family: "Lato", sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+}
+.post-body h2{
+font-family: "Lato", sans-serif;
+   font-weight: bold;
+  font-size: 24px;
+}
+.post-body h3{
+font-family: "Lato", sans-serif;
+   font-weight: medium;
+  font-size: 19px;
+}
+.post-body p{
+  font-size: 1em;
+}
+
 
 .post-container .recent-posts-container h3 {
   font-size: 20px;
@@ -1333,214 +1238,496 @@ aside .download-btn {
              display: none;
 }
       }
+ h4, h5, h6, .font-orbitron {
+            font-family: 'Orbitron', sans-serif; /* Techy font for headings */
+        }
+ 
+       .text-accent {
+            color: #4cd4f4; /* Vibrant Cyan */
+        }
+        .bg-accent {
+            background-color: #0c3f67;
+        }
+        .bg2{
+      background-color: #40acec;
+}
+        .hover-bg-accent:hover {
+            background-color: #40acec;
+        }
+        .border-accent {
+            border-color: #40acec;
+        }
+        /* Glow effect for accents */
+        .glow-accent {
+            text-shadow: 0 0 8px #4cd4f4;
+        }
+        .card-glow-hover:hover {
+            box-shadow: 0 0 25px rgba(8, 145, 178, 0.2);
+        }
+        header {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        
+        /* Custom scrollbar for horizontal reviews section */
+        .horizontal-scroll {
+            scrollbar-width: thin;
+            scrollbar-color: #0891B2 #F9FAFB;
+        }
+        .horizontal-scroll::-webkit-scrollbar {
+            height: 6px;
+        }
+        .horizontal-scroll::-webkit-scrollbar-track {
+            background: #E5E7EB;
+            border-radius: 10px;
+        }
+        .horizontal-scroll::-webkit-scrollbar-thumb {
+            background-color: #0891B2;
+            border-radius: 10px;
+        }
+        /* Modal Styles */
+        .modal {
+            transition: opacity 0.25s ease;
+        }
+        .modal-active {
+            display: flex;
+        }
+        /* Spinner for loading states */
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #0891B2;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
 
+   .AA{
+       color: grey;
+       text-align: center;
+}
+    .color2{
+           color: #0c3f67;
+           
+           font-weight: bold;
+           padding: 5px;
+}
+.gaming-card-light {
+            background-color: #ffffff; /* White card background */
+            border: 2px solid #0c3f67; /* Light purple border */
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1), 0 0 0 5px rgba(167, 139, 250, 0.2); /* Soft shadow with a subtle purple glow */
+        }
+
+        /* Social icon specific glows and animations for light theme */
+        .social-icon-wrapper-light {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem;
+            border-radius: 0.75rem; /* rounded-xl */
+            transition: all 0.3s ease-in-out;
+            background-color: #f0f4ff; /* Very light blue background for icons */
+            border: 1px solid #d1d5db; /* Light gray border */
+        }
+
+        .social-icon-wrapper-light:hover {
+            transform: translateY(-8px) scale(1.05);
+            background-color: #e0e7ff; /* Lighter blue on hover */
+            border-color: #40d4f4; /* Vibrant purple border on hover */
+            box-shadow: 0 0 10px #40d4f4, 0 0 20px #40d4f4);
+        }
+
+        .social-icon-wrapper-light .fab {
+            color: #4b5563; /* Default icon color (dark gray) */
+            transition: color 0.3s ease-in-out;
+        }
+
+        .social-icon-wrapper-light:hover .fab {
+            color: #8b5cf6; /* Vibrant purple on hover */
+            text-shadow: 0 0 5px rgba(139, 92, 246, 0.6);
+        }
+
+        .social-icon-wrapper-light span {
+            color: #374151; /* Default text color (darker gray) */
+            transition: color 0.3s ease-in-out;
+        }
+
+        .social-icon-wrapper-light:hover span {
+            color: #8b5cf6; /* Vibrant purple on hover */
+        }
+
+        /* Specific icon colors on hover for a subtle touch */
+        .social-icon-wrapper-light.twitter:hover .fab { color: #38bdf8; } /* sky-400 */
+        .social-icon-wrapper-light.discord:hover .fab { color: #7c3aed; } /* violet-600 */
+        .social-icon-wrapper-light.instagram:hover .fab { color: #f472b6; } /* pink-400 */
+
+
+        /* Button styling for a "game button" feel - light theme */
+        .game-button-light {
+            background-image: linear-gradient(to right, #0c3f67, #0c3f67); /* Lighter purple to purple */
+            border: 2px solid #c4b5fd; /* Even lighter border */
+            box-shadow: 0 5px 15px rgba(139, 92, 246, 0.4); /* Soft purple shadow */
+            transition: all 0.3s ease-in-out;
+            position: relative;
+            overflow: hidden;
+            color: white; /* Ensure text is white for contrast */
+        }
+
+        .game-button-light:hover {
+            transform: scale(1.05) translateY(-3px);
+            box-shadow: 0 8px 20px rgba(139, 92, 246, 0.6), 0 0 0 5px rgba(139, 92, 246, 0.2);
+            border-color: #d8b4fe; /* Lighter border on hover */
+        }
+
+        .game-button-light::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.4); /* Lighter shine effect */
+            transform: skewX(-20deg);
+            transition: all 0.5s ease;
+        }
+
+        .game-button-light:hover::before {
+            left: 100%;
+        }
+
+/* Container for the carousel */
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            max-width: 1200px; /* Max width for larger screens */
+            height: 60vh; /* Maintain aspect ratio */
+            border-radius: 1rem; /* Rounded corners */
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* Shadow effect */
+            background-color: #333; /* Fallback background */
+            margin: 2rem auto; /* Add margin to center it and give some space */
+        }
+
+        /* Individual carousel item */
+        .carousel-item {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0; /* Start hidden */
+            visibility: hidden; /* Hide from screen readers and pointer events */
+            transition: opacity 1s ease-in-out, visibility 1s ease-in-out; /* Smooth fade transition */
+        }
+
+        .carousel-item.active {
+            opacity: 1; /* Fade in */
+            visibility: visible; /* Make visible */
+            display: block; /* Ensure it takes up space */
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Cover the container */
+        }
+
+        /* Overlay gradient for text readability */
+        .carousel-overlay {
+            position: absolute;
+            inset: 0;
+            background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3), transparent);
+        }
+
+        /* Text content within carousel item */
+        .carousel-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 2rem; /* p-8 */
+            color: #FFFFFF;
+        }
+
+        .carousel-tag {
+            background-color: #0891B2; /* Accent color */
+            color: #FFFFFF;
+            font-size: 0.75rem; /* text-xs */
+            font-weight: 700; /* font-bold */
+            text-transform: uppercase;
+            padding: 0.25rem 0.75rem; /* px-3 py-1 */
+            border-radius: 9999px; /* rounded-full */
+            display: inline-block; /* Ensure padding works */
+        }
+        .carousel-tag.new-release { background-color: #0891B2; } /* Vibrant Cyan */
+        .carousel-tag.in-depth-guide { background-color: #F59E0B; } /* Amber */
+        .carousel-tag.esports { background-color: #DB2777; } /* Pink */
+
+
+        .carousel-title {
+            font-family: 'Orbitron', sans-serif; /* Techy font for headings from Aether theme */
+            font-size: 1.875rem; /* text-3xl */
+            line-height: 2.25rem;
+            font-weight: 900; /* font-black */
+            margin-top: 1rem; /* mt-4 */
+            max-width: 48rem; /* max-w-3xl */
+        }
+
+        .carousel-description {
+            margin-top: 0.5rem; /* mt-2 */
+            font-size: 1.125rem; /* text-lg */
+            line-height: 1.75rem;
+            color: #D1D5DB; /* text-gray-300 */
+            max-width: 42rem; /* max-w-2xl */
+        }
+
+        /* Carousel controls */
+        .carousel-controls {
+            position: absolute;
+            bottom: 2rem; /* bottom-8 */
+            right: 2rem; /* right-8 */
+            display: flex;
+            gap: 0.75rem; /* space-x-3 */
+        }
+
+        .carousel-control-btn {
+            background-color: rgba(255, 255, 255, 0.2); /* bg-white/20 */
+            color: #FFFFFF;
+            padding: 0.75rem; /* p-3 */
+            border-radius: 9999px; /* rounded-full */
+            border: none;
+            cursor: pointer;
+            transition: background-color 300ms ease-in-out;
+            backdrop-filter: blur(4px); /* backdrop-blur-sm */
+            -webkit-backdrop-filter: blur(4px); /* for Safari */
+        }
+
+        .carousel-control-btn:hover {
+            background-color: rgba(255, 255, 255, 0.4); /* hover:bg-white/40 */
+        }
+
+        .carousel-control-btn svg {
+            width: 1.5rem; /* w-6 */
+            height: 1.5rem; /* h-6 */
+        }
+
+        /* Responsive adjustments */
+        @media (min-width: 768px) { /* md breakpoint */
+            .carousel-content {
+                padding: 3rem; /* md:p-12 */
+            }
+            .carousel-title {
+                font-size: 3rem; /* md:text-5xl */
+                line-height: 1;
+            }
+            .carousel-description {
+                display: block; /* md:block, default is hidden on small screens */
+            }
+        }
+        @media (max-width: 767px) { /* hide description on small screens */
+            .carousel-description {
+                display: none;
+            }
+        }
     ]]></b:skin>
   </head>
   <body>
-    <!-- Share Button --><div id='remove'>
-    <button class='share-btn' onclick='openPopup()'>
-        <img alt='Share Icon' src='https://img.icons8.com/ios-filled/50/ffffff/share.png'/>
-        Share It
-    </button>
-
-    <!-- Share Popup -->
-    <div class='popup' id='sharePopup'>
-        <span class='close' onclick='closePopup()'>&#215;</span>
-        <h3>Share</h3>
-        <div class='share-links'>
-            <button onclick='share(&apos;whatsapp&apos;)'><img alt='WhatsApp' src='https://img.icons8.com/color/48/whatsapp.png'/></button>
-            <button onclick='share(&apos;facebook&apos;)'><img alt='Facebook' src='https://img.icons8.com/color/48/facebook.png'/></button>
-            <button onclick='share(&apos;twitter&apos;)'><img alt='Twitter' src='https://img.icons8.com/color/48/twitter.png'/></button>
-            <button onclick='share(&apos;email&apos;)'><img alt='Email' src='https://img.icons8.com/color/48/gmail.png'/></button>
-        </div>
-        <div class='copy-box'>
-          <input id='shareLink' type='text'/>
-            <button onclick='copyLink()'>Copy</button>
-        </div>
-    </div>
-    <script>
-        function openPopup() {
-            document.getElementById(&quot;sharePopup&quot;).style.display = &quot;block&quot;;
-            document.getElementById(&quot;shareLink&quot;).value = window.location.href;
-        }
-        function closePopup() {
-            document.getElementById(&quot;sharePopup&quot;).style.display = &quot;none&quot;;
-        }
-        function share(platform) {
-            let url = window.location.href;
-            let shareUrl = &quot;&quot;;
-            
-            if (platform === &#39;whatsapp&#39;) {
-                shareUrl = `https://wa.me/?text=${encodeURIComponent(url)}`;
-            } else if (platform === &#39;facebook&#39;) {
-                shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
-            } else if (platform === &#39;twitter&#39;) {
-                shareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}`;
-            } else if (platform === &#39;email&#39;) {
-                shareUrl = `mailto:?subject=Check this out=${encodeURIComponent(url)}`;
-            }
-            window.open(shareUrl, &#39;_blank&#39;);
-        }
-        function copyLink() {
-            let copyText = document.getElementById(&quot;shareLink&quot;);
-            copyText.select();
-            copyText.setSelectionRange(0, 99999);
-            document.execCommand(&quot;copy&quot;);
-            alert(&quot;Link copied to clipboard!&quot;);
-        }
-      if (window.location.pathname === &#39;/&#39;) { 
-  const elementToRemove = document.getElementById(&#39;remove&#39;); // Replace &#39;elementId&#39; with the actual ID of the element you want to remove
-  if (elementToRemove) {
-    elementToRemove.remove(); 
-  }
-}
-    </script></div>
-  <div class='container' style='position: fixed; left: 0; right: 0; top: 90px; z-index: 800'>
-      <div id='google_translate_element'/></div>
-    <div class='mobile-menu-items'>
-      <div class='close-icon'>
-        <img alt='' src=''/>
-      </div>
-      	  <a href='https://xpnewz.blogspot.com/p/about-us.html'>About Us</a>
-		  <a href='#blog'>Latest Post</a>
-      	  <a href='https://xpnewz.blogspot.com/p/free-games-for-now.html'>Free games</a>
-          <a href='https://xpnewz.blogspot.com/p/game.html'>IRON MAN</a>
-         <div class='menu'>
-            <button>Post</button>
-            <div class='dropdown'>
-                <a href='https://xpnewz.blogspot.com/search/label/Gaming%20Article#gsc.tab=0'>Article</a>
-                <a href='https://xpnewz.blogspot.com/search/label/Gaming%20newz#gsc.tab=0'>newz</a>
-            </div>
-        </div>
-          <a href='https://xpnewz.blogspot.com/p/contact-us_22.html?'>Contact Us</a>
-    </div>
-    <div class='search-container'>
-      <form action='/search' method='GET'>
-        <div class='search-input-container'>
-          <input name='q' placeholder='Searching blog....' type='search'/>
-          <div class='icon'>
-            <svg class='size-6' fill='none' stroke='currentColor' stroke-width='1.5' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-              <path d='m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z' stroke-linecap='round' stroke-linejoin='round'/>
-            </svg>
-          </div>
-        </div>
-        <button class='search-btn' type='submit'>Search</button>
-      </form>
-    </div>
-    <div class='container'>
-      <nav>
-        <div class='logo'>
-          XPNewz
-        </div>
-        <div class='menu-items'>
-          <a href='https://xpnewz.blogspot.com/p/about-us.html'>About Us</a>
-          <a href='#blog'>Latest Post</a>
-          <a href='https://xpnewz.blogspot.com/p/free-games-for-now.html'>Free games</a>
-          <a href='https://xpnewz.blogspot.com/p/game.html'>IRON MAN</a>
-          <div class='menu'>
-            <button>Post</button>
-            <div class='dropdown'>
-                <a href='https://xpnewz.blogspot.com/search/label/Gaming%20Article#gsc.tab=0'>Article</a>
-                <a href='https://xpnewz.blogspot.com/search/label/Gaming%20newz#gsc.tab=0'>newz</a>
-            </div>
-        </div>
-          <a href='https://xpnewz.blogspot.com/p/contact-us_22.html?'>Contact Us</a>
-          
-          <div class='search-icon'>
-            <svg class='size-6' fill='none' stroke='currentColor' stroke-width='1.5' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-              <path d='m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z' stroke-linecap='round' stroke-linejoin='round'/>
-            </svg>
-          </div>
-        </div>
-        <div class='mobile-icons-container'>
-          <div class='menu-icon'>
-            <img alt='' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgAXAR_FV0WI3OhLVPLlYezAvvxSQC7VFLnkoP37pOeAJv7uHQ8RGd7KFHKCiNtOkN-Jk7mN6_J8sGcO_l1MosrbZZa-hHzHyj4SE5swWWYQQTOEPpA8cnsgGhuDOIIXIa0XEag3c0LOdKmVcCCfHpChcpfLDzE62m8ol_QIepRrKz1yyW7OtPv3GiXjDq1/s1600/menu-icon.webp'/>
-          </div>
-          <div class='search-icon'>
-            <svg class='size-6' fill='none' stroke='currentColor' stroke-width='1.5' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-              <path d='m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z' stroke-linecap='round' stroke-linejoin='round'/>
-            </svg>
-          </div>
-        </div>
-      </nav>
-    </div>
-    <!-- End of navbar -->
-    <b:if cond='data:view.isHomepage'>
-      <div class='container'>
-        <header>
-          <div class='left'>
-            <h1>Welcome to XPNewz &#8211; Your Ultimate Source for Gaming Updates!</h1>
-            <p class='sub-heading'>
-            Dive into the world of gaming with XPNewz, where we bring you the latest news, reviews, and updates from the gaming universe. From blockbuster titles to indie gems, we&#8217;ve got you covered.
-          </p>
-            <div class='buttons'>
-              <a class='btn' href='https://xpnewz.blogspot.com/search?max-results=20'>Read News</a>
-              <a class='btn outlined' href='#contact'>Contact Us</a>
-            </div>
-          </div>
-          <div class='right'>
-            <img alt='' src='https://res.cloudinary.com/did8behwz/image/upload/v1737534350/5N9eJLG8R9-rKgrRTxlPgw-Photoroom-min_rqxjbu.png'/>
-          </div>
-          <div class='bg-color'/>
-        </header>
-      </div>
-      <!-- End of hero section -->
-      <div class='featured'>
-        <div class='container'>
-          <h2>We Research the Content from </h2>
-          <div class='logos'>
-            <a href='https://chatgpt.com/'> <img alt='' src='https://res.cloudinary.com/did8behwz/image/upload/v1737474721/ChatGpt-logo-With-colour-Background-and-features-ChatGPT-Name-1024x301-removebg-preview_n9ojcf.png'/></a>
-            <a href='https://x.com/XPNewz'><img alt='' src='https://res.cloudinary.com/did8behwz/image/upload/v1737387141/icons8-x-48_atygea.png'/></a>
-            <a href='https://www.google.com/'><img alt='' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh4IhiWZhRYAWjUELhhJuLYm-Z4adzUrXQVb50n-xA5hOIhrk4Lez5gcYvQPFTyUIpnVlgHtxGOyC1ykyLFmnKDQ8ZFi3c9uNobpq1oQrHJMItAXNSk9C4jHfxipks3xh-HhSEVQHucZ-AY5AunXtCHJNbYARz00x23Uo76mMWqWdkZOiXKHLCrxOZudfbm/s320/google-logo.webp'/></a>
-            <a href='https://www.quora.com/'><img alt='' src='https://res.cloudinary.com/did8behwz/image/upload/v1737474916/images-removebg-preview_opv2lh.png'/></a>
-          </div>
-        </div>
-      </div>
-      <!-- End of featured section -->
-      
-      <!-- End of about section  -->
-
-      <!-- End of services section -->
-    
-      <!-- End of why choose us section -->
-      <div class='container'>
-        <section id='blog'>
-          <div class='heading-container'>
-            <h2>Our Latest Post</h2>
-            <p>Discover the Latest Insights, Trends, and Updates from Our Team</p>
-          </div>
-          <div class='services-container'/>
-          <a class='btn outlined' expr:href='data:blog.homepageUrl + &quot;search?max-results=20&quot;'>View All Posts</a>
-        </section>
-      </div>
-      <!-- End of Blog section -->
-      <section id='contact'>
-        <div class='container'>
-          <b:section id='contact-form-container'>
-            <b:widget id='ContactForm1' locked='false' title='Contact Form' type='ContactForm' version='1'>
-              <b:includable id='main'>
-                <div class='heading-container'>
-                  <h2>Contact Us</h2>
-                  <p>Contact us for more information or assistance.</p>
+  <!-- Header -->
+    <header class='sticky top-0 z-50 transition-all duration-300' id='header'>
+      <div class='.header-blur'>
+        <div class='container mx-auto px-4 sm:px-6 lg:px-8'>
+            <div class='flex items-center justify-between h-24'>
+                <!-- Logo -->
+                <div class='flex-shrink-0'>
+                    <a class='text-4xl font-black text-gray-800 font-orbitron' href='#'>
+                        X<span class='text-accent glow-accent'>P</span>Newz
+                    </a>
                 </div>
-                <form name='contact-form'>
-                  <div class='group'>
-                    <input expr:id='data:widget.instanceId + &quot;_contact-form-name&quot;' name='name' placeholder='Full Name' size='30' type='text' value=''/>
-                    <input expr:id='data:widget.instanceId + &quot;_contact-form-email&quot;' name='email' placeholder='Email' size='30' type='text' value=''/>
-                  </div>
-                  <textarea cols='25' expr:id='data:widget.instanceId + &quot;_contact-form-email-message&quot;' name='email-message' placeholder='Your Message' rows='5'/>
-                  <input class='contact-form-button contact-form-button-submit' expr:id='data:widget.instanceId + &quot;_contact-form-submit&quot;' type='button' value='Send Message'/>
-                  <div style='text-align: left;'>
-                    <p expr:id='data:widget.instanceId + &quot;_contact-form-error-message&quot;' style='font-size: 14px; color: red; display: flex; align-items: center; gap: 16px; border: none; background: transparent; box-shadow: unset;'/>
-                    <p expr:id='data:widget.instanceId + &quot;_contact-form-success-message&quot;' style='font-size: 14px; color: green; display: flex; align-items: center; gap: 16px; border: none; background: transparent; box-shadow: unset;'/>
-                  </div>
-                </form>
-              </b:includable>
-            </b:widget>
-          </b:section>
+                
+                <!-- Desktop Navigation -->
+                <nav class='hidden lg:flex lg:space-x-10'>
+                    <a class='font-semibold text-gray-700 hover:text-accent transition duration-300' href='https://xpnewz.blogspot.com/'>Home</a>
+                    <a class='font-semibold text-gray-700 hover:text-accent transition duration-300' href='https://xpnewz.blogspot.com/p/free-games-for-now.html'>Free Games</a>
+                    <a class='font-semibold text-gray-700 hover:text-accent transition duration-300' href='https://xpnewz.blogspot.com/p/game.html'>IRON MAN</a>
+                    <a class='font-semibold text-gray-700 hover:text-accent transition duration-300' expr:href='data:blog.homepageUrl + &quot;search?max-results=15&quot;'>BLOG</a>
+                    <a class='font-semibold text-gray-700 hover:text-accent transition duration-300' href='#'/>
+                </nav>
+
+                <!-- Call to Action -->
+                 <div class='hidden lg:flex items-center'>
+                    <a class='bg-accent text-white font-bold py-3 px-6 rounded-lg hover-bg-accent transition-all duration-300 transform hover:scale-105' href='#'>
+                        SUBSCRIBE
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class='lg:hidden'>
+                    <button class='text-gray-800 hover:text-accent focus:outline-none' id='mobile-menu-button'>
+                        <svg class='h-8 w-8' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path d='M4 6h16M4 12h16m-7 6h7' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/></svg>
+                    </button>
+                </div>
+            </div>
         </div>
-      </section>
-      <!-- End of contact form -->
+        <!-- Mobile Menu -->
+        <div class='lg:hidden hidden bg-white shadow-xl' id='mobile-menu'>
+            <a class='block py-3 px-6 text-base font-semibold text-gray-700 hover:bg-gray-50 hover:text-accent' href='https://xpnewz.blogspot.com/'>Home</a>
+            <a class='block py-3 px-6 text-base font-semibold text-gray-700 hover:bg-gray-50 hover:text-accent' href='https://xpnewz.blogspot.com/p/free-games-for-now.html'>Free Games</a>
+            <a class='block py-3 px-6 text-base font-semibold text-gray-700 hover:bg-gray-50 hover:text-accent' href='https://xpnewz.blogspot.com/p/game.html'>IRON MAN</a>
+            <a class='block py-3 px-6 text-base font-semibold text-gray-700 hover:bg-gray-50 hover:text-accent' expr:href='data:blog.homepageUrl + &quot;search?max-results=15&quot;'>Blog</a>
+            <a class='block py-3 px-6 text-base font-semibold text-gray-700 hover:bg-gray-50 hover:text-accent' href='#'/>
+            <div class='p-4'>
+                 <a class='block text-center w-full bg-accent text-white font-bold py-3 px-6 rounded-lg hover-bg-accent transition-all duration-300' href='#' style='background-color: #040acec;'>SUBSCRIBE</a>
+            </div>
+        </div>
+      </div>
+    </header>
+    <b:if cond='data:view.isHomepage'>
+    <!-- Main Content -->
+    <main class='container mx-auto px-4 sm:px-6 lg:px-8 mt-8'>
+
+        <section class='carousel-container' id='hero-carousel'>
+        <!-- Carousel Items -->
+        <div class='carousel-item active'>
+            <img alt='Carousel Image 1' src='https://placehold.co/1600x900/0E7490/F0F9FF?text=NEON+REVOLUTION'/>
+            <div class='carousel-overlay'/>
+            <div class='carousel-content'>
+                <span class='carousel-tag new-release'>New Release</span>
+                <h1 class='carousel-title'>FEEL IRON MAN IN YOURSELF (GAME)</h1>
+                <p class='carousel-description'>A new era of 2D games has dawned. Explore our Iron Man game.</p>
+            </div>
+        </div>
+        <div class='carousel-item'>
+            <img alt='Carousel Image 2' src='https://placehold.co/1600x900/F59E0B/FFFFFF?text=FANTASY+REALMS'/>
+            <div class='carousel-overlay'/>
+             <div class='carousel-content'>
+                <span class='carousel-tag in-depth-guide'>In-Depth Artices</span>
+                <h1 class='carousel-title'>MASTERING THE GAME FANTASY REALMS</h1>
+                <p class='carousel-description'>Your ultimate blog to the games, secrets, and lore of this year&#39;s biggest fantasy hit.</p>
+            </div>
+        </div>
+        <div class='carousel-item'>
+            <img alt='Carousel Image 3' src='https://placehold.co/1600x900/BE185D/FFFFFF?text=ESPORTS+FINALS'/>
+            <div class='carousel-overlay'/>
+            <div class='carousel-content'>
+                <span class='carousel-tag esports'>Free Games</span>
+                <h1 class='carousel-title'>THE THRILLING FREE GAMES WEEKLY</h1>
+                <p class='carousel-description'>Relive every free games of the week.</p>
+            </div>
+        </div>
+        <!-- Carousel controls -->
+        <div class='carousel-controls'>
+            <button class='carousel-control-btn' id='prevBtn'><svg fill='none' stroke='currentColor' viewBox='0 0 24 24'><path d='M15 19l-7-7 7-7' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/></svg></button>
+            <button class='carousel-control-btn' id='nextBtn'><svg fill='none' stroke='currentColor' viewBox='0 0 24 24'><path d='M9 5l7 7-7 7' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/></svg></button>
+        </div>
+    </section>
+
+        <!-- Latest Posts & Sidebar -->
+        <div class='grid grid-cols-1 lg:grid-cols-3 gap-12'>
+            <!-- Main content feed -->
+            <div class='lg:col-span-2'>
+                <h2 class='text-3xl font-bold mb-6 pb-2 border-b-4 border-accent'>Latest Articles</h2>
+                <div class='space-y-10'>
+                    <!-- Post Card 1 -->
+                     
+                        <section id='blog'>
+          
+          <div class='services-container'/>
+          <a class='btn outlined' expr:href='data:blog.homepageUrl + &quot;search?max-results=15&quot;'>View All Posts</a>
+        </section>
+                    
+                     
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class='lg:col-span-1 space-y-10'>
+                <!-- AI Game Suggester Widget -->
+                <div class='bg-white p-6 rounded-xl shadow-lg'>
+                    <h3 class=''>&#10024; Find Your Next Game</h3>
+                    <p class='text-sm text-gray-600 mb-4'>Describe what you want to play, and our AI will suggest some games for you!</p>
+                    <textarea class='w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-accent focus:outline-none' id='game-prompt' placeholder='e.g., a relaxing farming sim with magic' rows='3'/>
+                    <button class='w-full mt-3 bg-accent text-white font-bold py-2 px-4 rounded-lg hover-bg-accent transition-colors' id='generate-games-btn'>Generate Suggestions</button>
+                    <div class='mt-4' id='game-suggestions'/>
+                </div>
+
+                <div class='bg-white p-6 rounded-xl shadow-lg'>
+                    <h3 class='text-xl font-bold mb-4 pb-2 border-b-2 border-gray-100'>Top Releases</h3>
+                    <div class='grid grid-cols-2 gap-4'>
+                        <a class='flex items-center space-x-3 p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition' href='#'><img class='w-8 h-8 rounded-full' src='https://placehold.co/40x40/3b82f6/ffffff?text=FG'/> <span class='font-semibold'>Free Games</span></a>
+                        <a class='flex items-center space-x-3 p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition' href='#'><img class='w-8 h-8 rounded-full' src='https://placehold.co/40x40/10b981/ffffff?text=IR'/> <span class='font-semibold'>Iron Man Game</span></a>
+
+                    </div>
+                </div>
+                 <div class='bg-white p-6 rounded-xl shadow-lg'>
+                    <h3 class='text-xl font-bold mb-4 pb-2 border-b-2 border-gray-100'>Trending Posts</h3>
+                    <ul class='space-y-4'>
+                        <li class='flex items-start space-x-4'><span class='font-orbitron font-bold text-2xl text-accent'>1</span><div><a class='font-semibold hover:underline' href='#'>Complete Guide to Summer Game Fest 2025</a><p class='text-xs text-gray-400'>All the announcements</p></div></li>
+                        <li class='flex items-start space-x-4'><span class='font-orbitron font-bold text-2xl text-accent'>2</span><div><a class='font-semibold hover:underline' href='#'>Why &#39;Silent Hill 2&#39; Remake is a Big Deal</a><p class='text-xs text-gray-400'>A look back at the classic</p></div></li>
+                        <li class='flex items-start space-x-4'><span class='font-orbitron font-bold text-2xl text-accent'>3</span><div><a class='font-semibold hover:underline' href='#'>Top 10 Co-op Games to Play Now</a><p class='text-xs text-gray-400'>Grab a friend</p></div></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+
+       <div class='gaming-card-light rounded-2xl p-8 md:p-12 max-w-7xl w-full text-center'>
+        <!-- Section Title -->
+        <h2 class='text-4xl md:text-6xl font-extrabold text-gray-900 mb-6 leading-tight'>
+            
+            UNITE WITH US
+           
+        </h2>
+        <!-- Section Description -->
+        <p class='text-lg md:text-xl text-gray-700 mb-10 max-w-3xl mx-auto'>
+            Ready to level up? Connect with our community, get exclusive intel, and never miss a quest. Follow us across the digital realms!
+        </p>
+
+        <!-- Social Media Icons Container -->
+        <div class='grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8 mb-12 justify-items-center'>
+            <!-- Twitter (X) -->
+            <a class='social-icon-wrapper-light twitter' href='https://twitter.com/yourhandle' rel='noopener noreferrer' target='_blank'>
+               <img src='https://res.cloudinary.com/did8behwz/image/upload/v1737387141/icons8-x-48_atygea.png'/>
+               
+              
+                <span class='text-base font-medium'>X (Twitter)</span>
+            </a>
+
+            <!-- Instagram -->
+            <a class='social-icon-wrapper-light instagram' href='https://www.instagram.com/yourprofile' rel='noopener noreferrer' target='_blank'>
+                <img src='https://res.cloudinary.com/did8behwz/image/upload/v1737374640/instagram-logo_hci4is.svg'/>
+                <span class='text-base font-medium'>Instagram</span>
+            </a>
+
+            <!-- Discord -->
+            <a class='social-icon-wrapper-light discord' href='https://discord.gg/yourserver' rel='noopener noreferrer' target='_blank'>
+                <img src=''/>
+                <span class='text-base font-medium'>Discord</span>
+            </a>
+        </div>
+
+        <!-- Call to Action Button (Optional) -->
+        <a class='inline-block game-button-light font-bold py-4 px-10 rounded-full text-xl shadow-lg' href='#loot-crate-signup'>
+            
+            SUBSCRIBE
+        </a>
+    </div>
+    </main>
+
+   
+    <!-- AI Summary Modal -->
+    <div class='modal fixed inset-0 bg-black bg-opacity-60 hidden items-center justify-center p-4 z-50' id='summary-modal'>
+        <div class='bg-white rounded-xl shadow-2xl w-full max-w-2xl transform transition-all' id='summary-modal-content'>
+            <!-- Modal content will be injected by JS -->
+        </div>
+    </div>
+      <!-- End of Blog section -->
+     
     </b:if>
     <b:if cond='data:view.isError'>
       <div class='post-container'>
@@ -1948,7 +2135,9 @@ aside .download-btn {
                         <data:post.title/>
                       </strong>
                     </div>
-                    <h1 class='post-heading'>
+                    
+                    <div class='post-body'>
+                      <h1 class='post-heading'>
                       <data:post.title/>
                     </h1>
                     <div class='post-meta'>
@@ -1970,7 +2159,6 @@ aside .download-btn {
                         </b:loop>
                       </div>
                     </div>
-                    <div class='post-body'>
                       <data:post.body/>
                     </div>
                   </b:if>
@@ -2071,10 +2259,6 @@ aside .download-btn {
   <div class='comment-form'>
     <a name='comment-form'/>
     <b:if cond='data:mobile'>
-      <p><data:blogCommentMessage/></p>
-      <data:blogTeamBlogMessage/>
-      <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'/>
-      <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' expr:height='data:cmtIframeInitialHeight' frameborder='0' id='comment-editor' name='comment-editor' src='' style='display: none' width='100%'/>
     <b:else/>
       <p><data:blogCommentMessage/></p>
       <data:blogTeamBlogMessage/>
@@ -2276,8 +2460,9 @@ aside .download-btn {
         window.goog.comments.loadQueue.push(render);
       }
     })();
-// ]]>
-                  </script>
+
+       
+// ]]></script>
             
                 </b:includable>
                 <b:includable id='threaded_comments' var='post'>
@@ -2312,81 +2497,112 @@ aside .download-btn {
               </b:widget>
             </b:section>
           </div>
-          <aside id='sidebar'><b:section id='popular-posts-container'/>
-            <img src='https://res.cloudinary.com/did8behwz/image/upload/v1739540924/unnamed-Photoroom_1_wjettu.png' style='height: 200px;'/>  
-            <h2 class='cookieCard'>Enjoy Jokes 😂</h2>
-            <img src='https://res.cloudinary.com/did8behwz/image/upload/v1739626835/df5b252e-cab0-4c05-899f-d4fca6125ca2_wb1m4v.jpg' style=' border: 1px solid grey;'/>
-            <img src='https://res.cloudinary.com/did8behwz/image/upload/v1739535397/ej_Pgl98TEeTnjhom3PDnA_ndgcih.jpg' style=', border: 1px solid grey;'/>
-             
-            <div class='twitter-container'>
-        <h2>Posts from @XPNewz</h2>
-        <a class='twitter-timeline' data-height='500' data-theme='light' href='https://twitter.com/XPNewz'>
-            Tweets by XPNewz
-        </a> 
-    </div>
+          <aside class='lg:col-span-1 space-y-8' id='sidebar'>
+   <!-- Sidebar -->
+            
+               <b:section id='popular-posts-container'>
+                 <b:widget id='PopularPosts1' locked='false' title='Popular Posts' type='PopularPosts' version='1'>
+                   <b:widget-settings>
+                     <b:widget-setting name='numItemsToShow'>3</b:widget-setting>
+                     <b:widget-setting name='showThumbnails'>true</b:widget-setting>
+                     <b:widget-setting name='showSnippets'>true</b:widget-setting>
+                     <b:widget-setting name='timeRange'>LAST_YEAR</b:widget-setting>
+                   </b:widget-settings>
+                   <b:includable id='main'>
+                  <div class='widget popular-posts'>
+                    <h3>Popular Picks</h3>
+                    <div class='widget-content'>
+                      <b:loop values='data:posts' var='post'>
+                        <div class='card'>
+                          <b:if cond='data:post.featuredImage.isResizable or data:post.thumbnail'>
+                            <a expr:href='data:post.href' target='_blank'>
+                              <b:with value='data:post.featuredImage.isResizable                                  ? resizeImage(data:post.featuredImage, 60, &quot;1:1&quot;)                                  : data:post.thumbnail' var='image'>
+                                <img alt='' border='0' expr:src='data:image'/>
+                              </b:with>
+                            </a>
+                            <b:else/>
+                            <a expr:href='data:post.href' target='_blank'>
+                              <img src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjX5fJEVBv14YTiDOZQ9AcgBY-FDLbiUNt0ypx2SjJELeHMRZ1EMXbu69YjNGiHY4IZcgdyX43vlRq-uzbfy3oDFUnXu0LUan_LvQVBKYB2LZk0o-jwW7wUlc1KEYdkmKvGM-BqU4E6Mr7EXKrLmnm3Ux8Z9WupJkcpjalNseP4_FQo7oM9sztHQQ-M4rkl/s16000/thumbnail-placeholder.jpg'/>
+                            </a>
+                          </b:if>
+                          <a expr:href='data:post.href' target='_blank'>
+                            <data:post.title/>
+                          </a>
+                        </div>
+                      </b:loop>
+                    </div>
+                  </div>
+                </b:includable>
+                 </b:widget>
+               </b:section>
+                <!-- Newsletter Signup -->
+                <div class='bg-accent p-8 rounded-xl shadow-md text-white text-center border border-accent'>
+                    <h3 class='text-2xl font-bold mb-4 font-orbitron'>JOIN THE ADVENTURE!</h3>
+                    <p class='text-white/80 mb-6'>Get our weekly newsletter with fresh reviews and indie game discoveries.</p>
+                    <form class='flex flex-col space-y-4'>
+                        <input class='p-3 rounded-lg bg-[#0E7490] border border-[#0891B2] text-white placeholder-white/70 focus:ring-white/50 focus:border-white/50 transition duration-200' placeholder='Enter your email' type='email'/>
+                        <button class='soft-accent-button bg-white text-accent font-bold py-3 rounded-full shadow-lg hover:text-white' type='submit'>
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
 
-    <script async='async' charset='utf-8' src='https://platform.twitter.com/widgets.js'/>
+                <!-- Categories -->
+                <div class='bg-white p-6 rounded-xl shadow-md border border-gray-100'>
+                    <h3 class='text-2xl font-bold text-gray-900 mb-6 font-orbitron'>EXPLORE TOPICS</h3>
+                    <div class='flex flex-wrap gap-3'>
+                        <a class='bg-gray-100 text-gray-700 px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-200 hover:text-accent transition duration-300' href='#'>Indie Games</a>
+                        <a class='bg-gray-100 text-gray-700 px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-200 hover:text-accent transition duration-300' href='#'>Relaxing</a>
+                        <a class='bg-gray-100 text-gray-700 px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-200 hover:text-accent transition duration-300' href='#'>Simulation</a>
+                        <a class='bg-gray-100 text-gray-700 px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-200 hover:text-accent transition duration-300' href='#'>Puzzle</a>
+                        <a class='bg-gray-100 text-gray-700 px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-200 hover:text-accent transition duration-300' href='#'>Reviews</a>
+                        <a class='bg-gray-100 text-gray-700 px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-200 hover:text-accent transition duration-300' href='#'>Cozy</a>
+                    </div>
+                </div>
+            
+        
 
-            <script>
-            if (window.location.href.indexOf(&quot;https://xpnewz.blogspot.com/p/contact-us_22.html#gsc.tab=0&quot;) &gt; -1) {
-  let sidebar = document.querySelector(&quot;#sidebar&quot;); // Replace with your sidebar selector
-  if (sidebar) {
-    sidebar.style.display = &quot;none&quot;;
-  }
-}
-             if (window.location.href.indexOf(&quot;https://xpnewz.blogspot.com/p/free-games-for-now.html#gsc.tab=0&quot;) &gt; -1) {
-  let sidebar = document.querySelector(&quot;#sidebar&quot;); // Replace with your sidebar selector
-  if (sidebar) {
-    sidebar.style.display = &quot;none&quot;;
-  }
-}  
-              if (window.location.href.indexOf(&quot;https://xpnewz.blogspot.com/p/game.html&quot;) &gt; -1) {
-  let sidebar = document.querySelector(&quot;#sidebar&quot;); // Replace with your sidebar selector
-  if (sidebar) {
-    sidebar.style.display = &quot;none&quot;;
-  }
-}  
-            </script>
-          <script async='async' crossorigin='anonymous' src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4944256940534542'/>
-<!-- total -->
-<ins class='adsbygoogle' data-ad-client='ca-pub-4944256940534542' data-ad-format='auto' data-ad-slot='4674452619' data-full-width-responsive='true' style='display:block'/>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script></aside></div></div></b:if>
+
+          </aside></div></div></b:if>
   <script async='async' crossorigin='anonymous' src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4944256940534542'/>
 <!-- bottom -->
 <ins class='adsbygoogle' data-ad-client='ca-pub-4944256940534542' data-ad-format='auto' data-ad-slot='6402762405' data-full-width-responsive='true' style='display:block'/>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-    <footer>
-      <div class='container'>
-        <div class='top'>
-          <div class='left'>
-            <a>XPNewz</a>
-            <p>Dive into the world of gaming with XPNewz, where we bring you the latest news, reviews, and updates from the gaming universe. From blockbuster titles to indie gems, we&#8217;ve got you covered.
-
-</p>
-          </div>
-          <div class='right'>
-            <p>Follow us on</p>
-            <div class='social'>
-              <a href='https://x.com/XPNewz'>
-                <img alt='' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEivffu88WSzbqw6qNLzZwojgxCNzl_b38UHxE06Gy8rKU0GFdEdmLapzI1lu9utloTUP7cwG8wlHvgxjMiSU36N8KxoXSy8y1sS5mpgaikxqwarH9B_bwnSgpb-_Z5g2sEc2SYc1gUHinBS94zMIr1NJU9wO0AauzKLf3QLzDO6SvhbyqZebZf7pGAra2RQ/s1600/x-logo.webp'/>
-              </a>
-              <a href='#'>
-                <img alt='' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh_0CPNm8sLNTV2J0yxqszOuo5FK9xBsSHG-0igLNrJfzI5j_9U3_v_xVn-g1pje0F2DCXHhDrfeoOD0G4lTQWzQLOogI9k_ZHLiHd14tWo6UCCp4FNjsHs5XGuNdThXEVlZD5FxdLPJ_FDLWyGV3hqCj-Uh4rWCn99OBwU-RhlT8uxsYT_J6fHYHceS1Hn/s1600/instagram-logo.webp'/>
-              </a>
-              <a>
-                <img alt='' src='https://res.cloudinary.com/did8behwz/image/upload/v1737386623/android-chrome-192x192-removebg-preview_su8bld.png'/>
-              </a>
+    
+      <footer class='bg-white mt-20 border-t-4 border-accent'>
+        <div class='container mx-auto px-4 sm:px-6 lg:px-8 py-12'>
+             <div class='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8'>
+                <div class='col-span-2 lg:col-span-1'>
+                     <h3 class='text-3xl font-black text-gray-800 font-orbitron'>X<span class='text-accent glow-accent'>P</span>Newz</h3>
+                     <p class='text-gray-500 mt-2 text-sm'>The final word in gaming culture. est. 2025</p>
+                </div>
+                <div>
+                    <h4 class='font-bold text-gray-800'>Content</h4>
+                    <ul class='mt-4 space-y-2 text-sm'><li class='text-gray-500 hover:text-accent transition'><a href='#'>Reviews</a></li><li class='text-gray-500 hover:text-accent transition'><a href='#'>News</a></li><li class='text-gray-500 hover:text-accent transition'><a href='#'>Guides</a></li><li class='text-gray-500 hover:text-accent transition'><a href='#'>Features</a></li></ul>
+                </div>
+                 <div>
+                    <h4 class='font-bold text-gray-800'>Legal</h4>
+                    <ul class='mt-4 space-y-2 text-sm'><li class='text-gray-500 hover:text-accent transition'><a href='https://xpnewz.blogspot.com/p/privacy-policy.html'>Privacy Policy</a></li><li class='text-gray-500 hover:text-accent transition'><a href='https://www.blogger.com/blog/pages/8019361699737944890'>Terms &amp; Conditions</a></li><li class='text-gray-500 hover:text-accent transition'><a href='https://xpnewz.blogspot.com/p/contact-us_22.html'>Contact Us</a></li></ul>
+                </div>
+                 <div class='col-span-2 lg:col-span-2'>
+                     <h4 class='font-bold text-gray-800'>Join the Newsletter</h4>
+                     <p class='text-gray-500 mt-2 text-sm'>Get weekly highlights and exclusive content straight to your inbox.</p>
+                     <form class='mt-4 flex'>
+                         <input class='w-full px-4 py-3 rounded-l-md bg-gray-100 border-gray-200 focus:outline-none focus:ring-2 focus:ring-accent' placeholder='Enter your email' type='email'/>
+                         <button class='px-5 py-3 bg-accent text-white font-bold rounded-r-md hover-bg-accent transition-colors' type='submit'>Sign Up</button>
+                     </form>
+              
+                 </div>
+                
+            </div>s
+              <div class='AA'>This website was developed by Asmit and Abhipray (2025)
+        </div>
+            <div class='mt-10 pt-8 border-t border-gray-200 text-center text-gray-400 text-sm'>
+                <p>&#169; 2025 XPNewz. All Rights Reserved.</p>
             </div>
-          </div>
         </div>
-        <div class='copyright'>
-          This website was developed by Asmit and Abhipray &#169; 2025
-        </div>
-      </div>
     </footer>
     <script>
       
@@ -2472,7 +2688,7 @@ document.addEventListener(&quot;click&quot;, (e) =&gt; {
             </a>
             <div class='labels'>
                 ${labels.map(label =&gt; `
-              <a class='label' href='/search/label/${label}'>${label}</a>`).join(&#39; &#39;)}
+              <a class='label' href='/search/label/${label}'>${label}</a>`).join(&#39;&#39;)}
               
             </div>
             <p class='snippet'>${summary}</p>
@@ -2559,6 +2775,286 @@ document.addEventListener(&quot;click&quot;, (e) =&gt; {
       
       </script>
       <script src='/feeds/comments/default?alt=json-in-script&amp;max-results=2&amp;callback=populateRecentComments'/>
+      
     </b:if>
+    <script>      
+        // --- Mobile Menu Toggle ---
+        const mobileMenuButton = document.getElementById(&#39;mobile-menu-button&#39;);
+        const mobileMenu = document.getElementById(&#39;mobile-menu&#39;);
+        mobileMenuButton.addEventListener(&#39;click&#39;, () =&gt; {
+            mobileMenu.classList.toggle(&#39;hidden&#39;);
+        });
+
+        // --- Header Style on Scroll ---
+        const header = document.getElementById(&#39;header&#39;);
+        window.addEventListener(&#39;scroll&#39;, () =&gt; {
+            if (window.scrollY &gt; 50) {
+                header.classList.add(&#39;header-blur&#39;, &#39;shadow-lg&#39;);
+            } else {
+                header.classList.remove(&#39;header-blur&#39;, &#39;shadow-lg&#39;);
+            }
+        });
+
+        // --- Hero Carousel Logic ---
+        const carouselItems = document.querySelectorAll(&#39;.carousel-item&#39;);
+        const prevBtn = document.getElementById(&#39;prevBtn&#39;);
+        const nextBtn = document.getElementById(&#39;nextBtn&#39;);
+        let currentIndex = 0;
+        let autoSlideInterval;
+
+        function showSlide(index) {
+            carouselItems.forEach((item, i) =&gt; {
+                item.classList.remove(&#39;active&#39;);
+                if (i === index) {
+                    item.classList.add(&#39;active&#39;);
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % carouselItems.length;
+            showSlide(currentIndex);
+        }
+        
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
+            showSlide(currentIndex);
+        }
+
+        function startAutoSlide() {
+             autoSlideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
+        }
+
+        function stopAutoSlide() {
+            clearInterval(autoSlideInterval);
+        }
+
+        if(prevBtn &amp;&amp; nextBtn) {
+            nextBtn.addEventListener(&#39;click&#39;, () =&gt; {
+                nextSlide();
+                stopAutoSlide();
+                startAutoSlide();
+            });
+
+            prevBtn.addEventListener(&#39;click&#39;, () =&gt; {
+                prevSlide();
+                stopAutoSlide();
+                startAutoSlide();
+            });
+        }
+        
+        // Start the carousel
+        showSlide(currentIndex);
+        startAutoSlide();
+        
+        // --- Gemini AI Features ---
+
+        const API_KEY = &quot;&quot;; // Leave blank, will be handled by the environment
+
+        /**
+         * A reusable function to call the Gemini API.
+         * @param {string} prompt The prompt to send to the Gemini model.
+         * @returns {Promise<string/>} The generated text from the model.
+         */
+        async function callGeminiAPI(prompt) {
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API_KEY}`;
+            
+            const payload = {
+                contents: [{
+                    role: &quot;user&quot;,
+                    parts: [{ text: prompt }]
+                }]
+            };
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: &#39;POST&#39;,
+                    headers: { &#39;Content-Type&#39;: &#39;application/json&#39; },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    throw new Error(`API call failed with status: ${response.status}`);
+                }
+
+                const result = await response.json();
+
+                if (result.candidates &amp;&amp; result.candidates.length &gt; 0 &amp;&amp;
+                    result.candidates[0].content &amp;&amp; result.candidates[0].content.parts &amp;&amp;
+                    result.candidates[0].content.parts.length &gt; 0) {
+                    return result.candidates[0].content.parts[0].text;
+                } else {
+                    console.error(&quot;Unexpected API response structure:&quot;, result);
+                    return &quot;Sorry, something went wrong while generating the content.&quot;;
+                }
+            } catch (error) {
+                console.error(&#39;Error calling Gemini API:&#39;, error);
+                return `Sorry, there was an error. Please try again later. Details: ${error.message}`;
+            }
+        }
+
+
+        // --- AI Summary Modal Logic ---
+        const summaryModal = document.getElementById(&#39;summary-modal&#39;);
+        const summaryModalContent = document.getElementById(&#39;summary-modal-content&#39;);
+        const summarizeBtns = document.querySelectorAll(&#39;.summarize-btn&#39;);
+
+        summarizeBtns.forEach(btn =&gt; {
+            btn.addEventListener(&#39;click&#39;, async (e) =&gt; {
+                const article = e.target.closest(&#39;article&#39;);
+                const title = article.querySelector(&#39;.article-title&#39;).textContent;
+                const content = article.querySelector(&#39;.article-content&#39;).textContent;
+
+                // Show modal with loading state
+                summaryModalContent.innerHTML = `
+                    <div class='p-8'>
+                        <div class='flex justify-between items-center mb-4'>
+                            <h3 class='text-2xl font-bold font-orbitron text-accent'>&#10024; AI Summary</h3>
+                            <button class='close-modal-btn text-gray-500 hover:text-black'>&#215;</button>
+                        </div>
+                        <h4 class='text-xl font-bold mb-4'>${title}</h4>
+                        <div class='flex items-center justify-center h-32'>
+                            <div class='loader'/>
+                        </div>
+                    </div>
+                `;
+                summaryModal.classList.remove(&#39;hidden&#39;);
+                summaryModal.classList.add(&#39;modal-active&#39;);
+                
+                // Call Gemini API
+                const prompt = `Summarize the following gaming article in 3 short, easy-to-read bullet points. Keep it concise and engaging. Article Title: &quot;${title}&quot;. Content: &quot;${content}&quot;`;
+                const summary = await callGeminiAPI(prompt);
+                
+                // Update modal with summary
+                summaryModalContent.innerHTML = `
+                    <div class='p-6 md:p-8'>
+                        <div class='flex justify-between items-center mb-4'>
+                            <h3 class='text-2xl font-bold font-orbitron text-accent'>&#10024; AI Summary</h3>
+                            <button class='close-modal-btn text-gray-500 hover:text-black text-3xl leading-none'>&#215;</button>
+                        </div>
+                        <h4 class='text-xl font-bold mb-4'>${title}</h4>
+                        <div class='prose max-w-none text-gray-600'>${summary.replace(/\*/g, &#39;&#8226;&#39;)}</div>
+                    </div>
+                `;
+            });
+        });
+
+        // Close modal listener (event delegation)
+        summaryModal.addEventListener(&#39;click&#39;, (e) =&gt; {
+            if (e.target.classList.contains(&#39;close-modal-btn&#39;) || e.target.id === &#39;summary-modal&#39;) {
+                summaryModal.classList.add(&#39;hidden&#39;);
+                summaryModal.classList.remove(&#39;modal-active&#39;);
+            }
+        });
+
+        // --- AI Game Suggester Logic ---
+        const generateGamesBtn = document.getElementById(&#39;generate-games-btn&#39;);
+        const gamePromptInput = document.getElementById(&#39;game-prompt&#39;);
+        const gameSuggestionsDiv = document.getElementById(&#39;game-suggestions&#39;);
+
+        generateGamesBtn.addEventListener(&#39;click&#39;, async () =&gt; {
+            const userPrompt = gamePromptInput.value.trim();
+            if (!userPrompt) {
+                gameSuggestionsDiv.innerHTML = `<p class='text-red-500 text-sm'>Please describe the type of game you&#39;d like to play.</p>`;
+                return;
+            }
+
+            // Show loading state
+            gameSuggestionsDiv.innerHTML = `
+                <div class='flex items-center justify-center p-4'>
+                    <div class='loader'/>
+                </div>
+            `;
+
+           const prompt = `You are a helpful and knowledgeable gaming assistant. Based on the user&#39;s request, suggest exactly 3 video games. For each game, provide a one-sentence reason why it fits the description. Format the response as a list with the game title in bold. User Request: &quot;${userPrompt}&quot;`;
+            const suggestions = await callGeminiAPI(prompt);
+
+            // Display suggestions
+            // Simple formatting to make it look nice
+            const formattedSuggestions = suggestions
+                .replace(/\*\*(.*?)\*\*/g, &#39;<strong class='text-gray-900'>$1</strong>&#39;) // Bold game titles
+                .replace(/(\r\n|\n|\r)/g, &#39;<br/>&#39;); // Replace newlines with <br/> for HTML
+
+            gameSuggestionsDiv.innerHTML = `<div class='text-sm text-gray-700 space-y-3 mt-2'>${formattedSuggestions}</div>`;
+        });
+
+    </script>
+    <script>
+        // --- Hero Carousel Logic ---
+        const carouselItems = document.querySelectorAll(&#39;.carousel-item&#39;);
+        const prevBtn = document.getElementById(&#39;prevBtn&#39;);
+        const nextBtn = document.getElementById(&#39;nextBtn&#39;);
+        let currentIndex = 0;
+        let autoSlideInterval;
+
+        /**
+         * Displays the slide at the given index and hides others.
+         * @param {number} index The index of the slide to show.
+         */
+        function showSlide(index) {
+            console.log(`Showing slide: ${index}`); // Debugging log
+            carouselItems.forEach((item, i) =&gt; {
+                item.classList.remove(&#39;active&#39;);
+            });
+            if (carouselItems[index]) {
+                carouselItems[index].classList.add(&#39;active&#39;);
+            }
+        }
+
+        /**
+         * Advances to the next slide in the carousel.
+         */
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % carouselItems.length;
+            showSlide(currentIndex);
+            console.log(&#39;Next slide triggered. Current index:&#39;, currentIndex); // Debugging log
+        }
+        
+        /**
+         * Goes back to the previous slide in the carousel.
+         */
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
+            showSlide(currentIndex);
+            console.log(&#39;Previous slide triggered. Current index:&#39;, currentIndex); // Debugging log
+        }
+
+        /**
+         * Starts the automatic slide transition.
+         */
+        function startAutoSlide() {
+             autoSlideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
+             console.log(&#39;Auto-slide started.&#39;); // Debugging log
+        }
+
+        /**
+         * Stops the automatic slide transition.
+         */
+        function stopAutoSlide() {
+            clearInterval(autoSlideInterval);
+            console.log(&#39;Auto-slide stopped.&#39;); // Debugging log
+        }
+
+        // Add event listeners for navigation buttons
+        if(prevBtn &amp;&amp; nextBtn) {
+            nextBtn.addEventListener(&#39;click&#39;, () =&gt; {
+                nextSlide();
+                stopAutoSlide(); // Stop auto-slide on manual interaction
+                startAutoSlide(); // Restart auto-slide
+            });
+
+            prevBtn.addEventListener(&#39;click&#39;, () =&gt; {
+                prevSlide();
+                stopAutoSlide(); // Stop auto-slide on manual interaction
+                startAutoSlide(); // Restart auto-slide
+            });
+        } else {
+            console.error(&#39;Carousel navigation buttons not found!&#39;); // Error log if buttons are missing
+        }
+        
+        // Initialize carousel: show the first slide and start auto-play
+        showSlide(currentIndex);
+        startAutoSlide();
+    </script>
   </body>
 </html>
