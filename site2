@@ -1,0 +1,349 @@
+
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NexusGT — Research-Driven Gaming & Technology Insights</title>
+  <meta name="description" content="NexusGT delivers expert research, in-depth analysis, and engaging coverage of gaming and technology. Your trusted source for data-driven insights." />
+  <meta name="keywords" content="gaming research, technology analysis, game reviews, tech news, esports, AI, VR, hardware reviews" />
+  <meta name="author" content="NexusGT" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="NexusGT — Research-Driven Gaming & Technology Insights" />
+  <meta property="og:description" content="Expert research, analysis, and engaging coverage of gaming and technology." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/hero-banner.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://nexusgt.com/" />
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ═══ NAVBAR ═══ -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="/" class="nav-brand" aria-label="NexusGT Home">
+        <img src="images/logo.png" alt="NexusGT Logo" width="40" height="40" />
+        <span class="nav-brand-name">Nexus<span>GT</span></span>
+      </a>
+      <div class="nav-right">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#hero" class="active" id="nav-home">Home</a></li>
+          <li><a href="#features" id="nav-features">Features</a></li>
+          <li><a href="#latest" id="nav-latest">Latest</a></li>
+          <li><a href="#newsletter" id="nav-newsletter">Subscribe</a></li>
+          <li><a href="#community" id="nav-community">Community</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button class="nav-btn" id="search-btn" aria-label="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <button class="nav-btn" id="theme-toggle" aria-label="Toggle dark mode">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══ MOBILE MENU ═══ -->
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#latest">Latest</a></li>
+      <li><a href="#newsletter">Subscribe</a></li>
+      <li><a href="#community">Community</a></li>
+    </ul>
+  </div>
+
+  <!-- ═══ SEARCH OVERLAY ═══ -->
+  <div class="search-overlay" id="search-overlay">
+    <div class="search-box">
+      <input type="search" id="search-input" placeholder="Search articles, topics, and more..." aria-label="Search" />
+    </div>
+  </div>
+
+  <!-- ═══ HERO ═══ -->
+  <header class="hero" id="hero">
+    <div class="container">
+      <div class="hero-badge">Research-Driven Insights</div>
+      <h1>Where <span class="highlight">Gaming</span> Meets <span class="highlight">Technology</span> Research</h1>
+      <p>We deliver expert analysis, data-backed insights, and in-depth coverage that makes complex gaming and tech topics accessible, engaging, and actionable.</p>
+      <div class="hero-actions">
+        <a href="#latest" class="btn btn-primary" id="hero-explore">
+          <i class="fa-solid fa-compass"></i> Explore Articles
+        </a>
+        <a href="#features" class="btn btn-secondary" id="hero-about">
+          <i class="fa-solid fa-circle-info"></i> How We Work
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <h3>2,500+</h3>
+          <p>Research Articles</p>
+        </div>
+        <div class="hero-stat">
+          <h3>150K+</h3>
+          <p>Monthly Readers</p>
+        </div>
+        <div class="hero-stat">
+          <h3>98%</h3>
+          <p>Accuracy Rating</p>
+        </div>
+        <div class="hero-stat">
+          <h3>50+</h3>
+          <p>Expert Analysts</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══ FEATURES ═══ -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="label">What We Offer</span>
+        <h2>Website Features</h2>
+        <p>From deep-dive stories to trending analysis — discover content crafted for curious minds.</p>
+      </div>
+      <div class="features-grid">
+        <article class="feature-card reveal" id="feature-stories">
+          <img src="images/story-article.png" alt="In-depth story articles" class="feature-img" loading="lazy" />
+          <div class="feature-icon"><i class="fa-solid fa-book-open"></i></div>
+          <h3>Story Articles</h3>
+          <p>Long-form narrative journalism that takes you behind the scenes of the gaming and tech world.</p>
+        </article>
+        <article class="feature-card reveal" id="feature-trending">
+          <img src="images/trending-article.png" alt="Trending topics" class="feature-img" loading="lazy" />
+          <div class="feature-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+          <h3>Trending Now</h3>
+          <p>Real-time coverage of the hottest topics making waves across gaming and technology today.</p>
+        </article>
+        <article class="feature-card reveal" id="feature-popular">
+          <img src="images/popular-article.png" alt="Most popular content" class="feature-img" loading="lazy" />
+          <div class="feature-icon"><i class="fa-solid fa-crown"></i></div>
+          <h3>Most Popular</h3>
+          <p>Community-validated content — our most read and highest-rated articles this month.</p>
+        </article>
+        <article class="feature-card reveal" id="feature-research">
+          <img src="images/tech-article.png" alt="Research reports" class="feature-img" loading="lazy" />
+          <div class="feature-icon"><i class="fa-solid fa-microscope"></i></div>
+          <h3>Research Reports</h3>
+          <p>Data-driven deep dives with charts, benchmarks, and methodology you can trust.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ LATEST POSTS ═══ -->
+  <section class="section latest-posts" id="latest">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="label">Fresh Content</span>
+        <h2>Latest Posts</h2>
+        <p>Stay ahead with our newest gaming and technology research articles.</p>
+      </div>
+      <div class="posts-tabs reveal">
+        <button class="tab-btn active" data-tab="all" id="tab-all">All Posts</button>
+        <button class="tab-btn" data-tab="gaming" id="tab-gaming">Gaming</button>
+        <button class="tab-btn" data-tab="tech" id="tab-tech">Technology</button>
+      </div>
+      <div class="posts-columns reveal">
+        <!-- Gaming Column -->
+        <div class="posts-column" id="gaming-column">
+          <div class="posts-column-header">
+            <h3><i class="fa-solid fa-gamepad" style="color:var(--accent);margin-right:8px;"></i> Gaming</h3>
+            <a href="#">View All →</a>
+          </div>
+          <div class="post-card" data-category="gaming" id="post-1">
+            <img src="images/gaming-article.png" alt="Gaming performance analysis" loading="lazy" />
+            <div class="post-card-content">
+              <span class="post-card-tag gaming">Gaming</span>
+              <h4>Next-Gen Console Performance: A Complete Benchmark Study</h4>
+              <div class="post-card-meta">
+                <span><i class="fa-regular fa-clock"></i> May 16, 2026</span>
+                <span><i class="fa-regular fa-eye"></i> 4.2K reads</span>
+              </div>
+            </div>
+          </div>
+          <div class="post-card" data-category="gaming" id="post-2">
+            <img src="images/gaming-post-1.png" alt="Esports strategy analysis" loading="lazy" />
+            <div class="post-card-content">
+              <span class="post-card-tag gaming">Esports</span>
+              <h4>How AI Is Revolutionizing Competitive Esports Strategy</h4>
+              <div class="post-card-meta">
+                <span><i class="fa-regular fa-clock"></i> May 15, 2026</span>
+                <span><i class="fa-regular fa-eye"></i> 3.8K reads</span>
+              </div>
+            </div>
+          </div>
+          <div class="post-card" data-category="gaming" id="post-3">
+            <img src="images/gaming-post-2.png" alt="Game design research" loading="lazy" />
+            <div class="post-card-content">
+              <span class="post-card-tag gaming">Game Design</span>
+              <h4>The Psychology of Player Engagement: Research Insights</h4>
+              <div class="post-card-meta">
+                <span><i class="fa-regular fa-clock"></i> May 14, 2026</span>
+                <span><i class="fa-regular fa-eye"></i> 2.9K reads</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Technology Column -->
+        <div class="posts-column" id="tech-column">
+          <div class="posts-column-header">
+            <h3><i class="fa-solid fa-microchip" style="color:var(--accent);margin-right:8px;"></i> Technology</h3>
+            <a href="#">View All →</a>
+          </div>
+          <div class="post-card" data-category="tech" id="post-4">
+            <img src="images/tech-article.png" alt="AI chip technology" loading="lazy" />
+            <div class="post-card-content">
+              <span class="post-card-tag tech">AI</span>
+              <h4>Quantum Computing Meets AI: The Next Frontier in Processing</h4>
+              <div class="post-card-meta">
+                <span><i class="fa-regular fa-clock"></i> May 16, 2026</span>
+                <span><i class="fa-regular fa-eye"></i> 5.1K reads</span>
+              </div>
+            </div>
+          </div>
+          <div class="post-card" data-category="tech" id="post-5">
+            <img src="images/tech-post-1.png" alt="Neural network research" loading="lazy" />
+            <div class="post-card-content">
+              <span class="post-card-tag tech">Research</span>
+              <h4>2026 GPU Architecture Comparison: Performance Per Watt Analysis</h4>
+              <div class="post-card-meta">
+                <span><i class="fa-regular fa-clock"></i> May 15, 2026</span>
+                <span><i class="fa-regular fa-eye"></i> 3.5K reads</span>
+              </div>
+            </div>
+          </div>
+          <div class="post-card" data-category="tech" id="post-6">
+            <img src="images/tech-post-2.png" alt="Smartphone technology" loading="lazy" />
+            <div class="post-card-content">
+              <span class="post-card-tag tech">Hardware</span>
+              <h4>Foldable Displays in 2026: Durability Testing and Research Results</h4>
+              <div class="post-card-meta">
+                <span><i class="fa-regular fa-clock"></i> May 14, 2026</span>
+                <span><i class="fa-regular fa-eye"></i> 2.7K reads</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ NEWSLETTER ═══ -->
+  <section class="newsletter" id="newsletter">
+    <div class="container">
+      <h2>Stay Ahead of the Curve</h2>
+      <p>Get our weekly research digest delivered straight to your inbox — no spam, just insights.</p>
+      <form class="newsletter-form" id="newsletter-form">
+        <input type="email" placeholder="Enter your email address" required aria-label="Email address" />
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ═══ SOCIAL MEDIA ═══ -->
+  <section class="social-section" id="community">
+    <div class="container reveal">
+      <div class="section-header">
+        <span class="label">Join Our Community</span>
+        <h2>Connect With Us</h2>
+        <p>Follow us across platforms for real-time updates, discussions, and exclusive content.</p>
+      </div>
+      <div class="social-links">
+        <a href="#" class="social-link" aria-label="Twitter" id="social-twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" class="social-link" aria-label="YouTube" id="social-youtube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" class="social-link" aria-label="Discord" id="social-discord"><i class="fa-brands fa-discord"></i></a>
+        <a href="#" class="social-link" aria-label="Reddit" id="social-reddit"><i class="fa-brands fa-reddit-alien"></i></a>
+        <a href="#" class="social-link" aria-label="Instagram" id="social-instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="social-link" aria-label="LinkedIn" id="social-linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-brand" style="margin-bottom:8px;">
+            <img src="images/logo.png" alt="NexusGT" width="36" height="36" />
+            <span class="nav-brand-name" style="color:#fff;">Nexus<span>GT</span></span>
+          </a>
+          <p>Your trusted source for research-driven gaming and technology insights. We combine rigorous analysis with engaging storytelling to bring you the information that matters.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#latest">Latest Posts</a></li>
+            <li><a href="#newsletter">Newsletter</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="#">Gaming News</a></li>
+            <li><a href="#">Tech Research</a></li>
+            <li><a href="#">Esports</a></li>
+            <li><a href="#">Hardware</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Advertise</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 NexusGT. All rights reserved.</span>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+
+  <!-- ═══ STRUCTURED DATA (SEO) ═══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "NexusGT",
+    "url": "https://nexusgt.com",
+    "description": "Research-driven gaming and technology insights",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://nexusgt.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "NexusGT",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://nexusgt.com/images/logo.png"
+      }
+    }
+  }
+  </script>
+</body>
+</html>
