@@ -1,0 +1,336 @@
+
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NexusGT — Gaming & Technology Research Hub</title>
+  <meta name="description" content="NexusGT: Research-grade gaming and technology analysis, expert reviews, esports data, and tech insights — delivered professionally and engagingly." />
+  <meta name="keywords" content="gaming research, technology analysis, esports, AI, game reviews, hardware, tech trends" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- SEARCH OVERLAY -->
+<div id="search-overlay" role="dialog" aria-modal="true" aria-label="Search">
+  <button id="overlay-close" aria-label="Close">✕</button>
+  <div class="search-overlay-box">
+    <input id="search-big" type="text" placeholder="Search articles, topics, reviews…" autocomplete="off" />
+    <p class="overlay-hint">Press <kbd>Esc</kbd> to close</p>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <!-- LEFT: Brand -->
+    <a href="#" class="nav-brand" aria-label="NexusGT Home">
+      <img src="images/logo.png" alt="NexusGT" class="nav-logo" />
+      <span class="nav-name">Nexus<span>GT</span></span>
+    </a>
+    <!-- RIGHT: Nav + Search + Toggle + Hamburger -->
+    <div class="nav-right">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#hero" class="active">Home</a></li>
+        <li><a href="#highlights">Articles</a></li>
+        <li><a href="#latest">Latest</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#social">Community</a></li>
+      </ul>
+      <div class="search-wrap">
+        <input type="text" id="search-input" placeholder="Search…" aria-label="Search" readonly />
+        <span class="search-icon">🔍</span>
+      </div>
+      <button id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark/light mode">🌙</button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-inner container">
+    <div class="hero-text">
+      <div class="hero-label"><span class="live-dot"></span> Live Research Hub</div>
+      <h1 class="hero-title">Where <span class="highlight">Gaming</span> Meets <span class="highlight">Technology</span> Research</h1>
+      <p class="hero-desc">Expert analysis, deep-dive research, and data-driven insights — covering everything from GPU architecture to esports economics, AI in gaming, and the technologies defining our future.</p>
+      <div class="hero-actions">
+        <button class="btn-primary" onclick="document.getElementById('highlights').scrollIntoView({behavior:'smooth'})" id="btn-explore">Explore Articles →</button>
+        <button class="btn-outline" onclick="document.getElementById('newsletter').scrollIntoView({behavior:'smooth'})" id="btn-subscribe">Subscribe Free</button>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="stat-val"><span id="cnt-articles">3,700</span>+</div>
+          <div class="stat-lbl">Articles Published</div>
+        </div>
+        <div>
+          <div class="stat-val"><span id="cnt-readers">2.4</span>M+</div>
+          <div class="stat-lbl">Monthly Readers</div>
+        </div>
+        <div>
+          <div class="stat-val"><span id="cnt-experts">84</span></div>
+          <div class="stat-lbl">Expert Authors</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-img-wrap">
+        <img src="images/hero-bg.png" alt="Gaming and Technology Research" loading="eager" />
+      </div>
+      <div class="hero-badge-float">
+        <div class="badge-icon">🔬</div>
+        <div class="badge-text">
+          <div class="badge-num">142 Countries</div>
+          <div class="badge-lbl">Global Readership</div>
+        </div>
+      </div>
+      <div class="hero-badge-float2">🔥 #1 Gaming Research Site</div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-tag">What We Offer</p>
+      <h2 class="section-title">Why Readers Choose <span>NexusGT</span></h2>
+      <p class="section-desc">Research-grade content made engaging — not opinion pieces, but verified, data-backed analysis.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feat-card reveal"><div class="feat-icon">🔬</div><h3>Research-Grade Analysis</h3><p>Every piece backed by primary sources, peer-reviewed data, and expert validation. Facts with context, always.</p></div>
+      <div class="feat-card reveal"><div class="feat-icon">📊</div><h3>Data & Visualizations</h3><p>Complex datasets transformed into clear charts and breakdowns that make statistics understandable at a glance.</p></div>
+      <div class="feat-card reveal"><div class="feat-icon">🎮</div><h3>Gaming Deep-Dives</h3><p>From indie gems to AAA titles — game dev insights, competitive breakdowns, lore analysis, and market research.</p></div>
+      <div class="feat-card reveal"><div class="feat-icon">🤖</div><h3>AI & Tech Frontier</h3><p>Cutting-edge coverage of AI, quantum computing, AR/VR, semiconductors, and the technologies reshaping industries.</p></div>
+      <div class="feat-card reveal"><div class="feat-icon">⚡</div><h3>Real-Time Trending</h3><p>Algorithmically curated trending topics across the global gaming and tech ecosystem — always current, always relevant.</p></div>
+      <div class="feat-card reveal"><div class="feat-icon">🌍</div><h3>Global Perspective</h3><p>Stories from every corner — Eastern esports, Silicon Valley breakthroughs, European indie scenes, and beyond.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- HIGHLIGHTS: Story / Trending / Popular -->
+<section id="highlights">
+  <div class="container">
+    <div class="section-header-row reveal">
+      <div class="section-header" style="margin-bottom:0">
+        <p class="section-tag">Must-Read Content</p>
+        <h2 class="section-title">Stories, <span>Trending</span> & Popular</h2>
+      </div>
+      <a href="#" class="view-all">All Articles →</a>
+    </div>
+    <div class="cards-grid" style="margin-top:2rem">
+
+      <article class="article-card reveal">
+        <div class="card-img">
+          <img src="images/gaming-card.png" alt="AI-Powered NPCs research" loading="lazy" />
+          <span class="card-badge badge-story">Story of Week</span>
+        </div>
+        <div class="card-body">
+          <div class="card-meta"><span>Dr. Aria Chen</span><span class="sep">·</span><span>May 16, 2026</span><span class="sep">·</span><span>12 min</span></div>
+          <h3>How AI-Powered NPCs Are Completely Rewriting Game Storytelling</h3>
+          <p>Generative AI has crossed a threshold — NPCs now adapt to player psychology. We research the companies leading this revolution and what it means for game design.</p>
+          <div class="card-footer">
+            <div class="card-tags"><span class="tag">AI</span><span class="tag">Game Dev</span></div>
+            <a href="#" class="read-more">Read →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="article-card reveal">
+        <div class="card-img">
+          <img src="images/trending-card.png" alt="Esports Revenue 2026" loading="lazy" />
+          <span class="card-badge badge-trending">🔥 Trending</span>
+        </div>
+        <div class="card-body">
+          <div class="card-meta"><span>Marcus Webb</span><span class="sep">·</span><span>May 17, 2026</span><span class="sep">·</span><span>8 min</span></div>
+          <h3>Esports Industry Revenue Breaks $3B — Full Breakdown & Data</h3>
+          <p>The global esports market hit a historic milestone. We dissect prize pools, broadcast rights, sponsorship data, and which regions are growing fastest.</p>
+          <div class="card-footer">
+            <div class="card-tags"><span class="tag">Esports</span><span class="tag">Business</span></div>
+            <a href="#" class="read-more">Read →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="article-card reveal">
+        <div class="card-img">
+          <img src="images/popular-card.png" alt="Brain-Computer Interfaces in Gaming" loading="lazy" />
+          <span class="card-badge badge-popular">⭐ Most Popular</span>
+        </div>
+        <div class="card-body">
+          <div class="card-meta"><span>Yuki Tanaka</span><span class="sep">·</span><span>May 10, 2026</span><span class="sep">·</span><span>15 min</span></div>
+          <h3>Brain-Computer Interfaces in Gaming: The Research Is Further Along Than You Think</h3>
+          <p>Neuralink, Valve, and 12 startups racing to build neural controllers. Our team reviewed 40 scientific papers over 3 months. Here's the real picture.</p>
+          <div class="card-footer">
+            <div class="card-tags"><span class="tag">BCI</span><span class="tag">Research</span></div>
+            <a href="#" class="read-more">Read →</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- LATEST POSTS -->
+<section id="latest">
+  <div class="container">
+    <div class="section-header-row reveal">
+      <div class="section-header" style="margin-bottom:0">
+        <p class="section-tag">Fresh Off the Press</p>
+        <h2 class="section-title">Latest <span>Posts</span></h2>
+      </div>
+      <a href="#" class="view-all">View All →</a>
+    </div>
+    <div class="latest-grid" style="margin-top:2rem">
+
+      <div class="col-gaming reveal">
+        <div class="col-heading"><div class="col-accent"></div>Gaming</div>
+        <a href="#" class="post-item">
+          <img src="images/gaming-card.png" alt="Quantum rendering" class="post-thumb" loading="lazy" />
+          <div><div class="post-cat">Graphics Tech</div><div class="post-title">Quantum Rendering: How Next-Gen Engines Simulate Photons at Real-Time Speed</div><div class="post-date">May 17, 2026</div></div>
+        </a>
+        <a href="#" class="post-item">
+          <img src="images/trending-card.png" alt="AI coaches" class="post-thumb" loading="lazy" />
+          <div><div class="post-cat">Esports</div><div class="post-title">AI Coaches Are Outperforming Human Analysts in Pro Esports Leagues</div><div class="post-date">May 16, 2026</div></div>
+        </a>
+        <a href="#" class="post-item">
+          <img src="images/popular-card.png" alt="Indie funding" class="post-thumb" loading="lazy" />
+          <div><div class="post-cat">Industry</div><div class="post-title">The $500M Indie Game Funding Surge: Who's Backing Developers in 2026</div><div class="post-date">May 15, 2026</div></div>
+        </a>
+        <a href="#" class="post-item">
+          <img src="images/gaming-card.png" alt="Haptic suits" class="post-thumb" loading="lazy" />
+          <div><div class="post-cat">Hardware</div><div class="post-title">Full-Body Haptic Suits Reviewed: 5 Models Tested Head-to-Head</div><div class="post-date">May 14, 2026</div></div>
+        </a>
+      </div>
+
+      <div class="col-tech reveal">
+        <div class="col-heading"><div class="col-accent"></div>Technology</div>
+        <a href="#" class="post-item">
+          <img src="images/tech-card.png" alt="Quantum chip" class="post-thumb" loading="lazy" />
+          <div><div class="post-cat">Quantum Computing</div><div class="post-title">Google's 1000-Qubit Chip: What It Actually Means for the Real World</div><div class="post-date">May 17, 2026</div></div>
+        </a>
+        <a href="#" class="post-item">
+          <img src="images/tech-card.png" alt="AI regulation" class="post-thumb" loading="lazy" />
+          <div><div class="post-cat">AI Policy</div><div class="post-title">The Global AI Regulation Race: 47 Countries, One Year, Zero Consensus</div><div class="post-date">May 16, 2026</div></div>
+        </a>
+        <a href="#" class="post-item">
+          <img src="images/popular-card.png" alt="Spatial computing" class="post-thumb" loading="lazy" />
+          <div><div class="post-cat">Spatial Computing</div><div class="post-title">Apple Vision Pro 3: The Research Behind Its Retinal Display Breakthrough</div><div class="post-date">May 15, 2026</div></div>
+        </a>
+        <a href="#" class="post-item">
+          <img src="images/tech-card.png" alt="Chip war" class="post-thumb" loading="lazy" />
+          <div><div class="post-cat">Semiconductors</div><div class="post-title">The 2nm Chip War: TSMC, Intel & Samsung's High-Stakes Manufacturing Battle</div><div class="post-date">May 14, 2026</div></div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section id="newsletter">
+  <div class="newsletter-inner">
+    <h2>Stay Ahead of the Curve</h2>
+    <p>The week's best gaming & technology research — delivered every Friday. Zero spam. Unsubscribe anytime.</p>
+    <div class="newsletter-form">
+      <input type="email" id="email-input" placeholder="your@email.com" aria-label="Email address" />
+      <button id="subscribe-btn">Subscribe →</button>
+    </div>
+    <p id="sub-msg">✅ You're subscribed! Welcome to NexusGT.</p>
+  </div>
+</section>
+
+<!-- SOCIAL MEDIA -->
+<section id="social">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-tag">Join 2M+ Readers</p>
+      <h2 class="section-title">Follow <span>NexusGT</span></h2>
+      <p class="section-desc">Connect with our global community of gamers, researchers, and technology enthusiasts.</p>
+    </div>
+    <div class="social-grid">
+      <a href="#" class="social-card sc-twitter reveal" aria-label="Twitter">
+        <span class="social-icon">🐦</span>
+        <div><div class="social-name">Twitter / X</div><div class="social-handle">@NexusGT · 580K followers</div></div>
+      </a>
+      <a href="#" class="social-card sc-youtube reveal" aria-label="YouTube">
+        <span class="social-icon">▶️</span>
+        <div><div class="social-name">YouTube</div><div class="social-handle">NexusGT · 1.2M subscribers</div></div>
+      </a>
+      <a href="#" class="social-card sc-discord reveal" aria-label="Discord">
+        <span class="social-icon">💬</span>
+        <div><div class="social-name">Discord</div><div class="social-handle">Research Server · 280K members</div></div>
+      </a>
+      <a href="#" class="social-card sc-reddit reveal" aria-label="Reddit">
+        <span class="social-icon">👾</span>
+        <div><div class="social-name">Reddit</div><div class="social-handle">r/NexusGT · 145K members</div></div>
+      </a>
+      <a href="#" class="social-card sc-twitch reveal" aria-label="Twitch">
+        <span class="social-icon">🎙️</span>
+        <div><div class="social-name">Twitch</div><div class="social-handle">NexusGT Live Streams</div></div>
+      </a>
+      <a href="#" class="social-card sc-instagram reveal" aria-label="Instagram">
+        <span class="social-icon">📸</span>
+        <div><div class="social-name">Instagram</div><div class="social-handle">@nexusgt · 390K followers</div></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer" role="contentinfo">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="#" class="nav-brand" aria-label="NexusGT">
+        <img src="images/logo.png" alt="NexusGT" class="nav-logo" />
+        <span class="nav-name">Nexus<span>GT</span></span>
+      </a>
+      <p>The world's premier research-based gaming & technology platform. Facts-first, always engaging.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Content</h4>
+      <ul>
+        <li><a href="#">Gaming Research</a></li>
+        <li><a href="#">Tech Analysis</a></li>
+        <li><a href="#">Esports</a></li>
+        <li><a href="#">Hardware Reviews</a></li>
+        <li><a href="#">AI & Future Tech</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#">About NexusGT</a></li>
+        <li><a href="#">Our Team</a></li>
+        <li><a href="#">Methodology</a></li>
+        <li><a href="#">Advertise</a></li>
+        <li><a href="#">Careers</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="#">Research Archive</a></li>
+        <li><a href="#">Data & Reports</a></li>
+        <li><a href="#">Newsletter</a></li>
+        <li><a href="#">RSS Feed</a></li>
+        <li><a href="#">API Access</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 NexusGT. All rights reserved.</p>
+    <div class="footer-legal">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Cookie Settings</a>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
